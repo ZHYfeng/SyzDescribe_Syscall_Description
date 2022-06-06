@@ -13,17 +13,13 @@ meta arches["amd64"]
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L827
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L788
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L788
+# not find any syscall handler in the structure
+
 resource fd_2727327433277945273_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_dp_aux_dev.c#L306
-syz_open_dev$syz_describe_2727327433277945273_open_0(dev ptr[in, string["/dev/drm_dp_aux#"]], id intptr, flags flags[open_flags]) fd_2727327433277945273_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L788
-openat$syz_describe_2727327433277945273_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/i915"]], flags flags[open_flags], mode const[0]) fd_2727327433277945273_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/./drivers/gpu/drm/i915/selftests/mock_gem_device.c#L126
-openat$syz_describe_2727327433277945273_open_2(fd const[AT_FDCWD], file ptr[in, string["/dev/mock"]], flags flags[open_flags], mode const[0]) fd_2727327433277945273_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L788
-
+openat$syz_describe_2727327433277945273_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/i915"]], flags flags[open_flags], mode const[0]) fd_2727327433277945273_fd
 
 # driver found at module init function i915_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_pci.c#L1122
 # call chain: 
@@ -36,11 +32,16 @@ openat$syz_describe_2727327433277945273_open_2(fd const[AT_FDCWD], file ptr[in, 
 # 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_perf.c#L3754
 # 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_perf.c#L3490
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_perf.c#L3490
+# find handler ioctl: i915_perf_ioctl
+# find handler read: i915_perf_read
+
 resource not_find_non_open_parent[fd]
 
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_perf.c#L3490
-
+ioctl$syz_describe_9454951359371020519_26880(fd not_find_non_open_parent, cmd const[26880], arg ptr[in, array[int8]])
+ioctl$syz_describe_9454951359371020519_26881(fd not_find_non_open_parent, cmd const[26881], arg ptr[in, array[int8]])
+ioctl$syz_describe_9454951359371020519_26882(fd not_find_non_open_parent, cmd const[26882], arg ptr[in, array[int8]])
 
 # driver found at module init function i915_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_pci.c#L1122
 # call chain: 
@@ -51,8 +52,9 @@ resource not_find_non_open_parent[fd]
 # 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/gem/i915_gem_mman.c#L879
 # 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/gem/i915_gem_mman.c#L821
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/gem/i915_gem_mman.c#L821
+# not find any syscall handler in the structure
+
 resource not_find_non_open_parent[fd]
 
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/gem/i915_gem_mman.c#L821
 

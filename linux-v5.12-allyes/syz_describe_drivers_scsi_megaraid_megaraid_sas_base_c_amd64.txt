@@ -10,30 +10,75 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/megaraid/megaraid_sas_base.c#L8881
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/megaraid/megaraid_sas_base.c#L8881
+# find handler ioctl: megasas_mgmt_ioctl
+# find handler open: megasas_mgmt_open
+
 resource fd_12552266124122253257_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_sysfs.c#L1605
-syz_open_dev$syz_describe_12552266124122253257_open_0(dev ptr[in, string["/dev/#:#:#:lu"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_0(dev ptr[in, string["/dev/#:#:#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/st.c#L4224
-openat$syz_describe_12552266124122253257_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_12552266124122253257_fd
+# not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1447
-syz_open_dev$syz_describe_12552266124122253257_open_2(dev ptr[in, string["/dev/end_device-#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_1(dev ptr[in, string["/dev/end_device-#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1443
-syz_open_dev$syz_describe_12552266124122253257_open_3(dev ptr[in, string["/dev/end_device-#:#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_2(dev ptr[in, string["/dev/end_device-#:#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1488
-syz_open_dev$syz_describe_12552266124122253257_open_4(dev ptr[in, string["/dev/expander-#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_3(dev ptr[in, string["/dev/expander-#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/hosts.c#L473
-syz_open_dev$syz_describe_12552266124122253257_open_5(dev ptr[in, string["/dev/host#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_4(dev ptr[in, string["/dev/host#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L892
-syz_open_dev$syz_describe_12552266124122253257_open_6(dev ptr[in, string["/dev/port-#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_5(dev ptr[in, string["/dev/port-#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L889
-syz_open_dev$syz_describe_12552266124122253257_open_7(dev ptr[in, string["/dev/port-#:#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_6(dev ptr[in, string["/dev/port-#:#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/ch.c#L953
-openat$syz_describe_12552266124122253257_open_8(fd const[AT_FDCWD], file ptr[in, string["/dev/s%s"]], flags flags[open_flags], mode const[0]) fd_12552266124122253257_fd
+openat$syz_describe_12552266124122253257_open_7(fd const[AT_FDCWD], file ptr[in, string["/dev/s%s"]], flags flags[open_flags], mode const[0]) fd_12552266124122253257_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_scan.c#L430
-syz_open_dev$syz_describe_12552266124122253257_open_9(dev ptr[in, string["/dev/target#:#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
+syz_open_dev$syz_describe_12552266124122253257_open_8(dev ptr[in, string["/dev/target#:#:#"]], id intptr, flags flags[open_flags]) fd_12552266124122253257_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/megaraid/megaraid_sas_base.c#L8881
-ioctl$syz_describe_12552266124122253257_1074547971(fd fd_12552266124122253257_fd, cmd const[1074547971], arg intptr)
-ioctl$syz_describe_12552266124122253257_3247721729(fd fd_12552266124122253257_fd, cmd const[3247721729], arg intptr)
+ioctl$syz_describe_12552266124122253257_1074547971_0(fd fd_12552266124122253257_fd, cmd const[1074547971], arg ptr[in, struct_megasas_aen_12552266124122253257])
+ioctl$syz_describe_12552266124122253257_3247721729(fd fd_12552266124122253257_fd, cmd const[3247721729], arg ptr[in, array[int8]])
+ioctl$syz_describe_12552266124122253257_3247721729_1(fd fd_12552266124122253257_fd, cmd const[3247721729], arg ptr[in, struct_megasas_iocpacket_12552266124122253257])
+ioctl$syz_describe_12552266124122253257_3247721729(fd fd_12552266124122253257_fd, cmd const[3247721729], arg ptr[in, array[int8]])
+ioctl$syz_describe_12552266124122253257_3247721729_3(fd fd_12552266124122253257_fd, cmd const[3247721729], arg struct_megasas_header_12552266124122253257)
 
+struct_iovec_12552266124122253257 {
+    field_0    ptr[in, int8]
+    field_1    int64
+}
+struct_megasas_header_12552266124122253257 {
+    field_0    int8
+    field_1    int8
+    field_2    int8
+    field_3    int8
+    field_4    int8
+    field_5    int8
+    field_6    int8
+    field_7    int8
+    field_8    int32
+    field_9    int32
+    field_10    int16
+    field_11    int16
+    field_12    int32
+}
+union_anon_188_31861_12552266124122253257 {
+    field_0    struct_megasas_header_12552266124122253257
+    field_1    array[int8, 104]
+}
+struct_megasas_iocpacket_12552266124122253257 {
+    field_0    int16
+    field_1    int16
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    union_anon_188_31861_12552266124122253257
+    field_7    array[struct_iovec_12552266124122253257, 16]
+} [packed]
+struct_megasas_aen_12552266124122253257 {
+    field_0    int16
+    field_1    int16
+    field_2    int32
+    field_3    int32
+}

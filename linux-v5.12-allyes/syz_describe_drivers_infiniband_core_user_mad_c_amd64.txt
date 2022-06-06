@@ -14,24 +14,50 @@ meta arches["amd64"]
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1389
 # 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1307
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1307
+# find handler ioctl: ib_umad_ioctl
+# find handler open: ib_umad_open
+# find handler read: ib_umad_read
+# find handler write: ib_umad_write
+
 resource fd_140763865089487765_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/./include/rdma/rdma_vt.h#L447
-openat$syz_describe_140763865089487765_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/"]], flags flags[open_flags], mode const[0]) fd_140763865089487765_fd
+# not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1316
-syz_open_dev$syz_describe_140763865089487765_open_1(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
+syz_open_dev$syz_describe_140763865089487765_open_0(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1306
-syz_open_dev$syz_describe_140763865089487765_open_2(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
+syz_open_dev$syz_describe_140763865089487765_open_1(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/uverbs_main.c#L1153
-syz_open_dev$syz_describe_140763865089487765_open_3(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
+syz_open_dev$syz_describe_140763865089487765_open_2(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1307
-ioctl$syz_describe_140763865089487765_6915(fd fd_140763865089487765_fd, cmd const[6915], arg intptr)
-ioctl$syz_describe_140763865089487765_1074010882(fd fd_140763865089487765_fd, cmd const[1074010882], arg intptr)
-ioctl$syz_describe_140763865089487765_3223067393(fd fd_140763865089487765_fd, cmd const[3223067393], arg intptr)
-ioctl$syz_describe_140763865089487765_3223853828(fd fd_140763865089487765_fd, cmd const[3223853828], arg intptr)
+ioctl$syz_describe_140763865089487765_6915(fd fd_140763865089487765_fd, cmd const[6915], arg ptr[in, array[int8]])
+ioctl$syz_describe_140763865089487765_1074010882(fd fd_140763865089487765_fd, cmd const[1074010882], arg ptr[in, array[int8]])
+ioctl$syz_describe_140763865089487765_3223067393_0(fd fd_140763865089487765_fd, cmd const[3223067393], arg ptr[in, struct_ib_user_mad_reg_req_140763865089487765])
+ioctl$syz_describe_140763865089487765_3223853828_0(fd fd_140763865089487765_fd, cmd const[3223853828], arg ptr[in, struct_ib_user_mad_reg_req2_140763865089487765])
 
-
+struct_ib_user_mad_reg_req_140763865089487765 {
+    field_0    int32
+    field_1    array[int64, 2]
+    field_2    int8
+    field_3    int8
+    field_4    int8
+    field_5    array[int8, 3]
+    field_6    int8
+    field_7    int8
+} [packed]
+struct_ib_user_mad_reg_req2_140763865089487765 {
+    field_0    int32
+    field_1    int32
+    field_2    int8
+    field_3    int8
+    field_4    int16
+    field_5    int32
+    field_6    array[int64, 2]
+    field_7    int32
+    field_8    int8
+    field_9    array[int8, 3]
+}
 # driver found at module init function ib_umad_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1433
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1460
@@ -40,16 +66,17 @@ ioctl$syz_describe_140763865089487765_3223853828(fd fd_140763865089487765_fd, cm
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1389
 # 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1317
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1317
+# find handler open: ib_umad_sm_open
+
 resource fd_633673016942799771_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/./include/rdma/rdma_vt.h#L447
-openat$syz_describe_633673016942799771_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/"]], flags flags[open_flags], mode const[0]) fd_633673016942799771_fd
+# not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1316
-syz_open_dev$syz_describe_633673016942799771_open_1(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
+syz_open_dev$syz_describe_633673016942799771_open_0(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1306
-syz_open_dev$syz_describe_633673016942799771_open_2(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
+syz_open_dev$syz_describe_633673016942799771_open_1(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/uverbs_main.c#L1153
-syz_open_dev$syz_describe_633673016942799771_open_3(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1317
+syz_open_dev$syz_describe_633673016942799771_open_2(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
 

@@ -14,8 +14,10 @@ meta arches["amd64"]
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/bcache/super.c#L1438
 # 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/bcache/super.c#L957
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/bcache/super.c#L957
+# not find any syscall handler in the structure
+
 resource fd_6142509188972423790_fd[fd]
 
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/bcache/super.c#L957
+# not get possible device file name
 

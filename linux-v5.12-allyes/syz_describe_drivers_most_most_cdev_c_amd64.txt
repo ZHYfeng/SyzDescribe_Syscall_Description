@@ -11,10 +11,13 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L493
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L438
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L438
+# find handler open: comp_open
+# find handler read: comp_read
+# find handler write: comp_write
+
 resource fd_17352494408259974474_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L457
-openat$syz_describe_17352494408259974474_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_17352494408259974474_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L438
+# not get correct value for this device file name
 

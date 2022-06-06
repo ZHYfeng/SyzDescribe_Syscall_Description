@@ -11,6 +11,12 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/fsi/fsi-scom.c#L650
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/fsi/fsi-scom.c#L600
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/fsi/fsi-scom.c#L600
+# find handler ioctl: scom_ioctl
+# find handler open: scom_open
+# find handler read: scom_read
+# find handler write: scom_write
+
 resource fd_10955179145591503868_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/fsi/fsi-core.c#L532
@@ -24,9 +30,18 @@ syz_open_dev$syz_describe_10955179145591503868_open_3(dev ptr[in, string["/dev/s
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/fsi/fsi-core.c#L1038
 openat$syz_describe_10955179145591503868_open_4(fd const[AT_FDCWD], file ptr[in, string["/dev/slave@2x:2x"]], flags flags[open_flags], mode const[0]) fd_10955179145591503868_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/fsi/fsi-scom.c#L600
-ioctl$syz_describe_10955179145591503868_1074033411(fd fd_10955179145591503868_fd, cmd const[1074033411], arg intptr)
-ioctl$syz_describe_10955179145591503868_2147775232(fd fd_10955179145591503868_fd, cmd const[2147775232], arg intptr)
-ioctl$syz_describe_10955179145591503868_3223352065(fd fd_10955179145591503868_fd, cmd const[3223352065], arg intptr)
-ioctl$syz_describe_10955179145591503868_3223352066(fd fd_10955179145591503868_fd, cmd const[3223352066], arg intptr)
+ioctl$syz_describe_10955179145591503868_1074033411(fd fd_10955179145591503868_fd, cmd const[1074033411], arg ptr[in, array[int8]])
+ioctl$syz_describe_10955179145591503868_2147775232(fd fd_10955179145591503868_fd, cmd const[2147775232], arg ptr[in, array[int8]])
+ioctl$syz_describe_10955179145591503868_3223352065_0(fd fd_10955179145591503868_fd, cmd const[3223352065], arg ptr[in, struct_scom_access_10955179145591503868])
+ioctl$syz_describe_10955179145591503868_3223352065_1(fd fd_10955179145591503868_fd, cmd const[3223352065], arg ptr[out, struct_scom_access_10955179145591503868])
+ioctl$syz_describe_10955179145591503868_3223352066_0(fd fd_10955179145591503868_fd, cmd const[3223352066], arg ptr[in, struct_scom_access_10955179145591503868])
+ioctl$syz_describe_10955179145591503868_3223352066_1(fd fd_10955179145591503868_fd, cmd const[3223352066], arg ptr[out, struct_scom_access_10955179145591503868])
 
+struct_scom_access_10955179145591503868 {
+    field_0    int64
+    field_1    int64
+    field_2    int64
+    field_3    int32
+    field_4    int8
+    field_5    int8
+}

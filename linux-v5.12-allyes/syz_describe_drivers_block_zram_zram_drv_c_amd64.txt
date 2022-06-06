@@ -14,15 +14,12 @@ meta arches["amd64"]
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L1716
 # 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L411
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L411
+# find handler open: zram_open
+
 resource fd_2283947160314258343_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/pktcdvd.c#L317
-openat$syz_describe_2283947160314258343_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_2283947160314258343_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rnbd/rnbd-clt-sysfs.c#L619
-openat$syz_describe_2283947160314258343_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/ctl"]], flags flags[open_flags], mode const[0]) fd_2283947160314258343_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L411
-
+# not get possible device file name
 
 # driver found at module init function zram_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L2094
 # call chain: 
@@ -31,12 +28,10 @@ openat$syz_describe_2283947160314258343_open_1(fd const[AT_FDCWD], file ptr[in, 
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L1964
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L525
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L525
+# find handler open: zram_open
+
 resource fd_16386645509889660184_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/pktcdvd.c#L317
-openat$syz_describe_16386645509889660184_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_16386645509889660184_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rnbd/rnbd-clt-sysfs.c#L619
-openat$syz_describe_16386645509889660184_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/ctl"]], flags flags[open_flags], mode const[0]) fd_16386645509889660184_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/zram/zram_drv.c#L525
+# not get possible device file name
 

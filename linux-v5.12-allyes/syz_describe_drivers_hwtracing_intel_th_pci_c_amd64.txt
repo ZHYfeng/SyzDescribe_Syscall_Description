@@ -12,15 +12,15 @@ meta arches["amd64"]
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/pci.c#L102
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L863
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L863
+# find handler open: intel_th_output_open
+
 resource fd_16883249438036224670_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L384
 syz_open_dev$syz_describe_16883249438036224670_open_0(dev ptr[in, string["/dev/#-%s"]], id intptr, flags flags[open_flags]) fd_16883249438036224670_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L382
 syz_open_dev$syz_describe_16883249438036224670_open_1(dev ptr[in, string["/dev/#-%s#"]], id intptr, flags flags[open_flags]) fd_16883249438036224670_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L863
-
 
 # driver found at module init function intel_th_pci_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/pci.c#L293
 # call chain: 
@@ -29,8 +29,9 @@ syz_open_dev$syz_describe_16883249438036224670_open_1(dev ptr[in, string["/dev/#
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L863
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L804
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L804
+# not find any syscall handler in the structure
+
 resource not_find_non_open_parent[fd]
 
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L804
 

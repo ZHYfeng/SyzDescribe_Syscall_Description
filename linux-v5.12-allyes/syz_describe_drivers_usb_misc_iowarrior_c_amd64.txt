@@ -9,19 +9,36 @@ meta arches["amd64"]
 # driver found at module init function iowarrior_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/iowarrior.c#L930
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/iowarrior.c#L930
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/iowarrior.c#L865
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/driver.c#L1057
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/driver.c#L396
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/iowarrior.c#L865
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/iowarrior.c#L865
+# find handler ioctl: iowarrior_ioctl
+# find handler open: iowarrior_open
+# find handler read: iowarrior_read
+# find handler write: iowarrior_write
 
 resource fd_487486271844998259_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/endpoint.c#L194
-openat$syz_describe_487486271844998259_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/ep_2x"]], flags flags[open_flags], mode const[0]) fd_487486271844998259_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/iowarrior.c#L865
-syz_open_dev$syz_describe_487486271844998259_open_1(dev ptr[in, string["/dev/iowarrior#"]], id intptr, flags flags[open_flags]) fd_487486271844998259_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/mon/mon_bin.c#L1359
-syz_open_dev$syz_describe_487486271844998259_open_2(dev ptr[in, string["/dev/usbmon#"]], id intptr, flags flags[open_flags]) fd_487486271844998259_fd
+syz_open_dev$syz_describe_487486271844998259_open_0(dev ptr[in, string["/dev/iowarrior#"]], id intptr, flags flags[open_flags]) fd_487486271844998259_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/iowarrior.c#L865
-ioctl$syz_describe_487486271844998259_1074315265(fd fd_487486271844998259_fd, cmd const[1074315265], arg intptr)
-ioctl$syz_describe_487486271844998259_1074315266(fd fd_487486271844998259_fd, cmd const[1074315266], arg intptr)
-ioctl$syz_describe_487486271844998259_2150154243(fd fd_487486271844998259_fd, cmd const[2150154243], arg intptr)
+ioctl$syz_describe_487486271844998259_1074315265(fd fd_487486271844998259_fd, cmd const[1074315265], arg ptr[in, array[int8]])
+ioctl$syz_describe_487486271844998259_1074315265(fd fd_487486271844998259_fd, cmd const[1074315265], arg ptr[in, array[int8]])
+ioctl$syz_describe_487486271844998259_1074315265_2(fd fd_487486271844998259_fd, cmd const[1074315265], arg ptr[out, struct_iowarrior_info_487486271844998259])
+ioctl$syz_describe_487486271844998259_1074315266(fd fd_487486271844998259_fd, cmd const[1074315266], arg ptr[in, array[int8]])
+ioctl$syz_describe_487486271844998259_2150154243(fd fd_487486271844998259_fd, cmd const[2150154243], arg ptr[in, array[int8]])
+ioctl$syz_describe_487486271844998259_2150154243(fd fd_487486271844998259_fd, cmd const[2150154243], arg ptr[in, array[int8]])
+ioctl$syz_describe_487486271844998259_2150154243_2(fd fd_487486271844998259_fd, cmd const[2150154243], arg ptr[out, struct_iowarrior_info_487486271844998259])
 
+struct_iowarrior_info_487486271844998259 {
+    field_0    int32
+    field_1    int32
+    field_2    array[int8, 9]
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+}

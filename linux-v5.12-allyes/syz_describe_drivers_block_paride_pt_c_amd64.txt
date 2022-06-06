@@ -10,6 +10,12 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pt.c#L977
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pt.c#L977
+# find handler ioctl: pt_ioctl
+# find handler open: pt_open
+# find handler read: pt_read
+# find handler write: pt_write
+
 resource fd_10642309090346188665_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pt.c#L994
@@ -17,7 +23,6 @@ syz_open_dev$syz_describe_10642309090346188665_open_0(dev ptr[in, string["/dev/p
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pt.c#L996
 syz_open_dev$syz_describe_10642309090346188665_open_1(dev ptr[in, string["/dev/pt#n"]], id intptr, flags flags[open_flags]) fd_10642309090346188665_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pt.c#L977
 ioctl$syz_describe_10642309090346188665_1074294017_0(fd fd_10642309090346188665_fd, cmd const[1074294017], arg ptr[in, struct_mtop_10642309090346188665])
 
 struct_mtop_10642309090346188665 {

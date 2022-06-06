@@ -10,16 +10,11 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pcie/aer_inject.c#L520
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pcie/aer_inject.c#L520
+# find handler write: aer_inject_write
+
 resource fd_9819827184984224687_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/probe.c#L1071
-openat$syz_describe_9819827184984224687_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/4x:2x"]], flags flags[open_flags], mode const[0]) fd_9819827184984224687_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/probe.c#L1799
-syz_open_dev$syz_describe_9819827184984224687_open_1(dev ptr[in, string["/dev/4x:2x:2x.#"]], id intptr, flags flags[open_flags]) fd_9819827184984224687_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pcie/aer_inject.c#L520
-openat$syz_describe_9819827184984224687_open_2(fd const[AT_FDCWD], file ptr[in, string["/dev/aer_inject"]], flags flags[open_flags], mode const[0]) fd_9819827184984224687_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1329
-syz_open_dev$syz_describe_9819827184984224687_open_3(dev ptr[in, string["/dev/switchtec#"]], id intptr, flags flags[open_flags]) fd_9819827184984224687_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pcie/aer_inject.c#L520
+openat$syz_describe_9819827184984224687_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/aer_inject"]], flags flags[open_flags], mode const[0]) fd_9819827184984224687_fd
 

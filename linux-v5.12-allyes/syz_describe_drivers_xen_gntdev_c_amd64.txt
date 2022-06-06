@@ -10,19 +10,71 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/xen/gntdev.c#L1120
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/xen/gntdev.c#L1120
+# find handler ioctl: gntdev_ioctl
+# find handler open: gntdev_open
+
 resource fd_14170722726368114731_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/xen/gntdev.c#L1120
 openat$syz_describe_14170722726368114731_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/xen/gntdev"]], flags flags[open_flags], mode const[0]) fd_14170722726368114731_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/xen/gntdev.c#L1120
-ioctl$syz_describe_14170722726368114731_542474(fd fd_14170722726368114731_fd, cmd const[542474], arg intptr)
-ioctl$syz_describe_14170722726368114731_542476(fd fd_14170722726368114731_fd, cmd const[542476], arg intptr)
-ioctl$syz_describe_14170722726368114731_1066753(fd fd_14170722726368114731_fd, cmd const[1066753], arg intptr)
-ioctl$syz_describe_14170722726368114731_1066759(fd fd_14170722726368114731_fd, cmd const[1066759], arg intptr)
-ioctl$syz_describe_14170722726368114731_1066760(fd fd_14170722726368114731_fd, cmd const[1066760], arg intptr)
-ioctl$syz_describe_14170722726368114731_1328905(fd fd_14170722726368114731_fd, cmd const[1328905], arg intptr)
-ioctl$syz_describe_14170722726368114731_1328907(fd fd_14170722726368114731_fd, cmd const[1328907], arg intptr)
-ioctl$syz_describe_14170722726368114731_1591040(fd fd_14170722726368114731_fd, cmd const[1591040], arg intptr)
-ioctl$syz_describe_14170722726368114731_1591042(fd fd_14170722726368114731_fd, cmd const[1591042], arg intptr)
+ioctl$syz_describe_14170722726368114731_542474_0(fd fd_14170722726368114731_fd, cmd const[542474], arg ptr[in, struct_util_est_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_542476_0(fd fd_14170722726368114731_fd, cmd const[542476], arg ptr[in, struct_util_est_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1066753_0(fd fd_14170722726368114731_fd, cmd const[1066753], arg ptr[in, struct_arch_uprobe_task_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1066759_0(fd fd_14170722726368114731_fd, cmd const[1066759], arg ptr[in, struct_arch_uprobe_task_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1066760_0(fd fd_14170722726368114731_fd, cmd const[1066760], arg ptr[in, struct_gntdev_grant_copy_segment_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1066760_1(fd fd_14170722726368114731_fd, cmd const[1066760], arg ptr[in, struct_ioctl_gntdev_grant_copy_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1328905_0(fd fd_14170722726368114731_fd, cmd const[1328905], arg ptr[in, int32])
+ioctl$syz_describe_14170722726368114731_1328905_1(fd fd_14170722726368114731_fd, cmd const[1328905], arg ptr[in, struct_ioctl_gntdev_dmabuf_exp_from_refs_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1328905_2(fd fd_14170722726368114731_fd, cmd const[1328905], arg ptr[out, struct_ioctl_gntdev_dmabuf_exp_from_refs_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1328907_0(fd fd_14170722726368114731_fd, cmd const[1328907], arg ptr[in, struct_ioctl_gntdev_dmabuf_exp_from_refs_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1328907_1(fd fd_14170722726368114731_fd, cmd const[1328907], arg ptr[out, int32])
+ioctl$syz_describe_14170722726368114731_1591040_0(fd fd_14170722726368114731_fd, cmd const[1591040], arg ptr[in, struct_util_est_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1591040_1(fd fd_14170722726368114731_fd, cmd const[1591040], arg ptr[in, struct_ioctl_gntdev_map_grant_ref_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1591040_2(fd fd_14170722726368114731_fd, cmd const[1591040], arg ptr[out, struct_ioctl_gntdev_map_grant_ref_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1591042_0(fd fd_14170722726368114731_fd, cmd const[1591042], arg ptr[in, struct_ioctl_gntdev_get_offset_for_vaddr_14170722726368114731])
+ioctl$syz_describe_14170722726368114731_1591042_1(fd fd_14170722726368114731_fd, cmd const[1591042], arg ptr[out, struct_ioctl_gntdev_get_offset_for_vaddr_14170722726368114731])
 
+union_anon_2_14170722726368114731 {
+    field_0    ptr[in, int8]
+}
+struct_util_est_14170722726368114731 {
+    field_0    int32
+    field_1    int32
+}
+struct_arch_uprobe_task_14170722726368114731 {
+    field_0    int64
+    field_1    int32
+    field_2    int32
+}
+struct_ioctl_gntdev_map_grant_ref_14170722726368114731 {
+    field_0    int32
+    field_1    int32
+    field_2    int64
+    field_3    array[struct_util_est_14170722726368114731, 1]
+}
+struct_ioctl_gntdev_get_offset_for_vaddr_14170722726368114731 {
+    field_0    int64
+    field_1    int64
+    field_2    int32
+    field_3    int32
+}
+struct_ioctl_gntdev_dmabuf_exp_from_refs_14170722726368114731 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    array[int32, 1]
+}
+struct_gntdev_grant_copy_segment_14170722726368114731 {
+    field_0    union_anon_2_14170722726368114731
+    field_1    union_anon_2_14170722726368114731
+    field_2    int16
+    field_3    int16
+    field_4    int16
+}
+struct_ioctl_gntdev_grant_copy_14170722726368114731 {
+    field_0    int32
+    field_1    ptr[in, struct_gntdev_grant_copy_segment_14170722726368114731]
+}

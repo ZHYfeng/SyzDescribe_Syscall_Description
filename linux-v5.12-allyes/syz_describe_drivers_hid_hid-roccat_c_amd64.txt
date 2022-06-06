@@ -10,9 +10,14 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/hid/hid-roccat.c#L428
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hid/hid-roccat.c#L428
+# find handler ioctl: roccat_ioctl
+# find handler open: roccat_open
+# find handler read: roccat_read
+
 resource fd_14947879846868626117_fd[fd]
 
+# not get possible device file name
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hid/hid-roccat.c#L428
-ioctl$syz_describe_14947879846868626117_2147764465(fd fd_14947879846868626117_fd, cmd const[2147764465], arg intptr)
+ioctl$syz_describe_14947879846868626117_2147764465(fd fd_14947879846868626117_fd, cmd const[2147764465], arg ptr[in, array[int8]])
 

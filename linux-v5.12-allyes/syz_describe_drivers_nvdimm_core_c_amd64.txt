@@ -11,6 +11,10 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/core.c#L584
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/bus.c#L1292
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/bus.c#L1292
+# find handler ioctl: bus_ioctl
+# find handler open: nd_open
+
 resource fd_10672174594120710261_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/btt_devs.c#L205
@@ -24,13 +28,37 @@ syz_open_dev$syz_describe_10672174594120710261_open_3(dev ptr[in, string["/dev/n
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/pfn_devs.c#L332
 syz_open_dev$syz_describe_10672174594120710261_open_4(dev ptr[in, string["/dev/pfn#.#"]], id intptr, flags flags[open_flags]) fd_10672174594120710261_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/bus.c#L1292
+ioctl$syz_describe_10672174594120710261_1(fd fd_10672174594120710261_fd, cmd const[1], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_2(fd fd_10672174594120710261_fd, cmd const[2], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_3(fd fd_10672174594120710261_fd, cmd const[3], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_4(fd fd_10672174594120710261_fd, cmd const[4], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_5(fd fd_10672174594120710261_fd, cmd const[5], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_6(fd fd_10672174594120710261_fd, cmd const[6], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_7(fd fd_10672174594120710261_fd, cmd const[7], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_8(fd fd_10672174594120710261_fd, cmd const[8], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_9(fd fd_10672174594120710261_fd, cmd const[9], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_10(fd fd_10672174594120710261_fd, cmd const[10], arg ptr[in, array[int8]])
+ioctl$syz_describe_10672174594120710261_10_1(fd fd_10672174594120710261_fd, cmd const[10], arg int8)
+ioctl$syz_describe_10672174594120710261_10_2(fd fd_10672174594120710261_fd, cmd const[10], arg ptr[in, struct_nd_cmd_pkg_10672174594120710261])
+ioctl$syz_describe_10672174594120710261_10(fd fd_10672174594120710261_fd, cmd const[10], arg ptr[in, array[int8]])
 
-
+struct_nd_cmd_pkg_10672174594120710261 {
+    field_0    int64
+    field_1    int64
+    field_2    int32
+    field_3    int32
+    field_4    array[int32, 9]
+    field_5    int32
+    field_6    array[int8]
+}
 # driver found at module init function libnvdimm_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/core.c#L580
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/core.c#L584
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/bus.c#L1297
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/bus.c#L1297
+# find handler ioctl: dimm_ioctl
+# find handler open: nd_open
 
 resource fd_16192780749749273032_fd[fd]
 
@@ -45,5 +73,26 @@ syz_open_dev$syz_describe_16192780749749273032_open_3(dev ptr[in, string["/dev/n
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/pfn_devs.c#L332
 syz_open_dev$syz_describe_16192780749749273032_open_4(dev ptr[in, string["/dev/pfn#.#"]], id intptr, flags flags[open_flags]) fd_16192780749749273032_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvdimm/bus.c#L1297
+ioctl$syz_describe_16192780749749273032_1(fd fd_16192780749749273032_fd, cmd const[1], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_2(fd fd_16192780749749273032_fd, cmd const[2], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_3(fd fd_16192780749749273032_fd, cmd const[3], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_4(fd fd_16192780749749273032_fd, cmd const[4], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_5(fd fd_16192780749749273032_fd, cmd const[5], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_6(fd fd_16192780749749273032_fd, cmd const[6], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_7(fd fd_16192780749749273032_fd, cmd const[7], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_8(fd fd_16192780749749273032_fd, cmd const[8], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_9(fd fd_16192780749749273032_fd, cmd const[9], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_10(fd fd_16192780749749273032_fd, cmd const[10], arg ptr[in, array[int8]])
+ioctl$syz_describe_16192780749749273032_10_1(fd fd_16192780749749273032_fd, cmd const[10], arg int8)
+ioctl$syz_describe_16192780749749273032_10_2(fd fd_16192780749749273032_fd, cmd const[10], arg ptr[in, struct_nd_cmd_pkg_16192780749749273032])
+ioctl$syz_describe_16192780749749273032_10(fd fd_16192780749749273032_fd, cmd const[10], arg ptr[in, array[int8]])
 
+struct_nd_cmd_pkg_16192780749749273032 {
+    field_0    int64
+    field_1    int64
+    field_2    int32
+    field_3    int32
+    field_4    array[int32, 9]
+    field_5    int32
+    field_6    array[int8]
+}

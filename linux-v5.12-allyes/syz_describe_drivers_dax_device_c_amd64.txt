@@ -13,8 +13,10 @@ meta arches["amd64"]
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/dax/bus.c#L160
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/dax/device.c#L435
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/dax/device.c#L435
+# find handler open: dax_open
+
 resource fd_6792852118070063699_fd[fd]
 
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/dax/device.c#L435
+# not get possible device file name
 

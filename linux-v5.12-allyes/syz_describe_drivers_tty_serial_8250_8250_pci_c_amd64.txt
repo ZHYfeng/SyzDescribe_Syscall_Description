@@ -17,42 +17,113 @@ meta arches["amd64"]
 # 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3308
 # 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3197
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3197
+# find handler ioctl: tty_ioctl
+# find handler open: tty_open
+
 resource fd_17574705964761174362_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3287
-openat$syz_describe_17574705964761174362_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_17574705964761174362_fd
+# not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/pty.c#L956
-openat$syz_describe_17574705964761174362_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/ptmx"]], flags flags[open_flags], mode const[0]) fd_17574705964761174362_fd
+openat$syz_describe_17574705964761174362_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/ptmx"]], flags flags[open_flags], mode const[0]) fd_17574705964761174362_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serdev/core.c#L507
-syz_open_dev$syz_describe_17574705964761174362_open_2(dev ptr[in, string["/dev/serial#"]], id intptr, flags flags[open_flags]) fd_17574705964761174362_fd
+syz_open_dev$syz_describe_17574705964761174362_open_1(dev ptr[in, string["/dev/serial#"]], id intptr, flags flags[open_flags]) fd_17574705964761174362_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3197
-ioctl$syz_describe_17574705964761174362_21513(fd fd_17574705964761174362_fd, cmd const[21513], arg intptr)
-ioctl$syz_describe_17574705964761174362_21515(fd fd_17574705964761174362_fd, cmd const[21515], arg intptr) fd_17574705964761174362_cmd_21515_fd
-ioctl$syz_describe_17574705964761174362_21516(fd fd_17574705964761174362_fd, cmd const[21516], arg intptr)
-ioctl$syz_describe_17574705964761174362_21517(fd fd_17574705964761174362_fd, cmd const[21517], arg intptr)
-ioctl$syz_describe_17574705964761174362_21522(fd fd_17574705964761174362_fd, cmd const[21522], arg intptr)
-ioctl$syz_describe_17574705964761174362_21523(fd fd_17574705964761174362_fd, cmd const[21523], arg intptr)
-ioctl$syz_describe_17574705964761174362_21524(fd fd_17574705964761174362_fd, cmd const[21524], arg intptr)
-ioctl$syz_describe_17574705964761174362_21525(fd fd_17574705964761174362_fd, cmd const[21525], arg intptr)
-ioctl$syz_describe_17574705964761174362_21526(fd fd_17574705964761174362_fd, cmd const[21526], arg intptr)
-ioctl$syz_describe_17574705964761174362_21527(fd fd_17574705964761174362_fd, cmd const[21527], arg intptr)
-ioctl$syz_describe_17574705964761174362_21528(fd fd_17574705964761174362_fd, cmd const[21528], arg intptr)
-ioctl$syz_describe_17574705964761174362_21533(fd fd_17574705964761174362_fd, cmd const[21533], arg intptr)
-ioctl$syz_describe_17574705964761174362_21534(fd fd_17574705964761174362_fd, cmd const[21534], arg intptr)
-ioctl$syz_describe_17574705964761174362_21535(fd fd_17574705964761174362_fd, cmd const[21535], arg intptr)
-ioctl$syz_describe_17574705964761174362_21539(fd fd_17574705964761174362_fd, cmd const[21539], arg intptr)
-ioctl$syz_describe_17574705964761174362_21540(fd fd_17574705964761174362_fd, cmd const[21540], arg intptr)
-ioctl$syz_describe_17574705964761174362_21541(fd fd_17574705964761174362_fd, cmd const[21541], arg intptr)
-ioctl$syz_describe_17574705964761174362_21543(fd fd_17574705964761174362_fd, cmd const[21543], arg intptr)
-ioctl$syz_describe_17574705964761174362_21544(fd fd_17574705964761174362_fd, cmd const[21544], arg intptr)
-ioctl$syz_describe_17574705964761174362_21559(fd fd_17574705964761174362_fd, cmd const[21559], arg intptr) fd_17574705964761174362_cmd_21559_fd
-ioctl$syz_describe_17574705964761174362_21569(fd fd_17574705964761174362_fd, cmd const[21569], arg intptr)
-ioctl$syz_describe_17574705964761174362_21597(fd fd_17574705964761174362_fd, cmd const[21597], arg intptr)
-ioctl$syz_describe_17574705964761174362_2147767346(fd fd_17574705964761174362_fd, cmd const[2147767346], arg intptr)
-ioctl$syz_describe_17574705964761174362_2147767360(fd fd_17574705964761174362_fd, cmd const[2147767360], arg intptr)
+ioctl$syz_describe_17574705964761174362_21513_0(fd fd_17574705964761174362_fd, cmd const[21513], arg ptr[in, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21513_1(fd fd_17574705964761174362_fd, cmd const[21513], arg ptr[in, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21513_2(fd fd_17574705964761174362_fd, cmd const[21513], arg ptr[out, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21513_3(fd fd_17574705964761174362_fd, cmd const[21513], arg ptr[out, struct_serial_icounter_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21513_4(fd fd_17574705964761174362_fd, cmd const[21513], arg ptr[out, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21515_0(fd fd_17574705964761174362_fd, cmd const[21515], arg ptr[in, struct_winsize_17574705964761174362]) fd_17574705964761174362_cmd_21515_fd
+ioctl$syz_describe_17574705964761174362_21515_1(fd fd_17574705964761174362_fd, cmd const[21515], arg ptr[in, struct_serial_struct_17574705964761174362]) fd_17574705964761174362_cmd_21515_fd
+ioctl$syz_describe_17574705964761174362_21515_2(fd fd_17574705964761174362_fd, cmd const[21515], arg ptr[out, struct_winsize_17574705964761174362]) fd_17574705964761174362_cmd_21515_fd
+ioctl$syz_describe_17574705964761174362_21515_3(fd fd_17574705964761174362_fd, cmd const[21515], arg ptr[out, struct_serial_icounter_struct_17574705964761174362]) fd_17574705964761174362_cmd_21515_fd
+ioctl$syz_describe_17574705964761174362_21515_4(fd fd_17574705964761174362_fd, cmd const[21515], arg ptr[out, struct_serial_struct_17574705964761174362]) fd_17574705964761174362_cmd_21515_fd
+ioctl$syz_describe_17574705964761174362_21516(fd fd_17574705964761174362_fd, cmd const[21516], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21517(fd fd_17574705964761174362_fd, cmd const[21517], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21518(fd fd_17574705964761174362_fd, cmd const[21518], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21519(fd fd_17574705964761174362_fd, cmd const[21519], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21520(fd fd_17574705964761174362_fd, cmd const[21520], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21522(fd fd_17574705964761174362_fd, cmd const[21522], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21523_0(fd fd_17574705964761174362_fd, cmd const[21523], arg ptr[out, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21524_0(fd fd_17574705964761174362_fd, cmd const[21524], arg ptr[in, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21525(fd fd_17574705964761174362_fd, cmd const[21525], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21526(fd fd_17574705964761174362_fd, cmd const[21526], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21527(fd fd_17574705964761174362_fd, cmd const[21527], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21528(fd fd_17574705964761174362_fd, cmd const[21528], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21533(fd fd_17574705964761174362_fd, cmd const[21533], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21534_0(fd fd_17574705964761174362_fd, cmd const[21534], arg ptr[out, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21535_0(fd fd_17574705964761174362_fd, cmd const[21535], arg ptr[in, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21538(fd fd_17574705964761174362_fd, cmd const[21538], arg ptr[in, array[int8]]) fd_17574705964761174362_cmd_21538_fd
+ioctl$syz_describe_17574705964761174362_21539_0(fd fd_17574705964761174362_fd, cmd const[21539], arg ptr[in, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21539_1(fd fd_17574705964761174362_fd, cmd const[21539], arg ptr[in, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21539_2(fd fd_17574705964761174362_fd, cmd const[21539], arg ptr[out, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21539_3(fd fd_17574705964761174362_fd, cmd const[21539], arg ptr[out, struct_serial_icounter_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21539_4(fd fd_17574705964761174362_fd, cmd const[21539], arg ptr[out, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21540(fd fd_17574705964761174362_fd, cmd const[21540], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21541_0(fd fd_17574705964761174362_fd, cmd const[21541], arg ptr[in, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21541_1(fd fd_17574705964761174362_fd, cmd const[21541], arg ptr[in, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21541_2(fd fd_17574705964761174362_fd, cmd const[21541], arg ptr[out, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21541_3(fd fd_17574705964761174362_fd, cmd const[21541], arg ptr[out, struct_serial_icounter_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21541_4(fd fd_17574705964761174362_fd, cmd const[21541], arg ptr[out, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21543_0(fd fd_17574705964761174362_fd, cmd const[21543], arg ptr[in, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21543_1(fd fd_17574705964761174362_fd, cmd const[21543], arg ptr[in, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21543_2(fd fd_17574705964761174362_fd, cmd const[21543], arg ptr[out, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21543_3(fd fd_17574705964761174362_fd, cmd const[21543], arg ptr[out, struct_serial_icounter_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21543_4(fd fd_17574705964761174362_fd, cmd const[21543], arg ptr[out, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21544_0(fd fd_17574705964761174362_fd, cmd const[21544], arg ptr[in, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21544_1(fd fd_17574705964761174362_fd, cmd const[21544], arg ptr[in, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21544_2(fd fd_17574705964761174362_fd, cmd const[21544], arg ptr[out, struct_winsize_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21544_3(fd fd_17574705964761174362_fd, cmd const[21544], arg ptr[out, struct_serial_icounter_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21544_4(fd fd_17574705964761174362_fd, cmd const[21544], arg ptr[out, struct_serial_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_21545(fd fd_17574705964761174362_fd, cmd const[21545], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21559(fd fd_17574705964761174362_fd, cmd const[21559], arg ptr[in, array[int8]]) fd_17574705964761174362_cmd_21559_fd
+ioctl$syz_describe_17574705964761174362_21569(fd fd_17574705964761174362_fd, cmd const[21569], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_21597_0(fd fd_17574705964761174362_fd, cmd const[21597], arg ptr[out, struct_serial_icounter_struct_17574705964761174362])
+ioctl$syz_describe_17574705964761174362_2147767346(fd fd_17574705964761174362_fd, cmd const[2147767346], arg ptr[in, array[int8]])
+ioctl$syz_describe_17574705964761174362_2147767360(fd fd_17574705964761174362_fd, cmd const[2147767360], arg ptr[in, array[int8]])
 
-
+struct_winsize_17574705964761174362 {
+    field_0    int16
+    field_1    int16
+    field_2    int16
+    field_3    int16
+}
+struct_serial_icounter_struct_17574705964761174362 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    array[int32, 9]
+}
+struct_serial_struct_17574705964761174362 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int16
+    field_9    int8
+    field_10    array[int8, 1]
+    field_11    int32
+    field_12    int16
+    field_13    int16
+    field_14    ptr[in, int8]
+    field_15    int16
+    field_16    int32
+    field_17    int64
+}
 # driver found at module init function serial_pci_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L5723
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L5723
@@ -63,8 +134,9 @@ ioctl$syz_describe_17574705964761174362_2147767360(fd fd_17574705964761174362_fd
 # 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L712
 # 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L630
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L630
+# find handler ioctl: hung_up_tty_ioctl
+
 resource not_find_non_open_parent[fd]
 
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L630
 

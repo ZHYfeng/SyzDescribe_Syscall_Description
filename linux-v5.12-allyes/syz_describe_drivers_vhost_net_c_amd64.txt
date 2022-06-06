@@ -10,19 +10,82 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/vhost/net.c#L1790
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/vhost/net.c#L1790
+# find handler ioctl: vhost_net_ioctl
+# find handler open: vhost_net_open
+
 resource fd_12214429713091680734_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/vhost/net.c#L1790
 openat$syz_describe_12214429713091680734_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/vhost-net"]], flags flags[open_flags], mode const[0]) fd_12214429713091680734_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/vhost/vdpa.c#L1062
-syz_open_dev$syz_describe_12214429713091680734_open_1(dev ptr[in, string["/dev/vhost-vdpa-#"]], id intptr, flags flags[open_flags]) fd_12214429713091680734_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/vhost/net.c#L1790
-ioctl$syz_describe_12214429713091680734_44801(fd fd_12214429713091680734_fd, cmd const[44801], arg intptr)
-ioctl$syz_describe_12214429713091680734_44802(fd fd_12214429713091680734_fd, cmd const[44802], arg intptr)
-ioctl$syz_describe_12214429713091680734_1074310912(fd fd_12214429713091680734_fd, cmd const[1074310912], arg intptr)
-ioctl$syz_describe_12214429713091680734_1074310949(fd fd_12214429713091680734_fd, cmd const[1074310949], arg intptr)
-ioctl$syz_describe_12214429713091680734_1074310960(fd fd_12214429713091680734_fd, cmd const[1074310960], arg intptr)
-ioctl$syz_describe_12214429713091680734_2148052736(fd fd_12214429713091680734_fd, cmd const[2148052736], arg intptr)
-ioctl$syz_describe_12214429713091680734_2148052774(fd fd_12214429713091680734_fd, cmd const[2148052774], arg intptr)
+ioctl$syz_describe_12214429713091680734_44801(fd fd_12214429713091680734_fd, cmd const[44801], arg ptr[in, array[int8]])
+ioctl$syz_describe_12214429713091680734_44802(fd fd_12214429713091680734_fd, cmd const[44802], arg ptr[in, array[int8]])
+ioctl$syz_describe_12214429713091680734_1074048775_0(fd fd_12214429713091680734_fd, cmd const[1074048775], arg ptr[in, int64])
+ioctl$syz_describe_12214429713091680734_1074048775_1(fd fd_12214429713091680734_fd, cmd const[1074048775], arg ptr[in, struct_vhost_memory_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074048775_2(fd fd_12214429713091680734_fd, cmd const[1074048775], arg ptr[in, struct_sched_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310912_0(fd fd_12214429713091680734_fd, cmd const[1074310912], arg ptr[in, int64])
+ioctl$syz_describe_12214429713091680734_1074310915_0(fd fd_12214429713091680734_fd, cmd const[1074310915], arg ptr[in, struct_vhost_memory_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310915_1(fd fd_12214429713091680734_fd, cmd const[1074310915], arg ptr[in, struct_sched_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310916_0(fd fd_12214429713091680734_fd, cmd const[1074310916], arg ptr[in, int64])
+ioctl$syz_describe_12214429713091680734_1074310916_1(fd fd_12214429713091680734_fd, cmd const[1074310916], arg ptr[in, struct_vhost_memory_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310916_2(fd fd_12214429713091680734_fd, cmd const[1074310916], arg ptr[in, struct_sched_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310928_0(fd fd_12214429713091680734_fd, cmd const[1074310928], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310928_1(fd fd_12214429713091680734_fd, cmd const[1074310928], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310930_0(fd fd_12214429713091680734_fd, cmd const[1074310930], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310930_1(fd fd_12214429713091680734_fd, cmd const[1074310930], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310930_2(fd fd_12214429713091680734_fd, cmd const[1074310930], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310931_0(fd fd_12214429713091680734_fd, cmd const[1074310931], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310931_1(fd fd_12214429713091680734_fd, cmd const[1074310931], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310931_2(fd fd_12214429713091680734_fd, cmd const[1074310931], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310932_0(fd fd_12214429713091680734_fd, cmd const[1074310932], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310932_1(fd fd_12214429713091680734_fd, cmd const[1074310932], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310932_2(fd fd_12214429713091680734_fd, cmd const[1074310932], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310944_0(fd fd_12214429713091680734_fd, cmd const[1074310944], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310944_1(fd fd_12214429713091680734_fd, cmd const[1074310944], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310944_2(fd fd_12214429713091680734_fd, cmd const[1074310944], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310945_0(fd fd_12214429713091680734_fd, cmd const[1074310945], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310945_1(fd fd_12214429713091680734_fd, cmd const[1074310945], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310945_2(fd fd_12214429713091680734_fd, cmd const[1074310945], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310946_0(fd fd_12214429713091680734_fd, cmd const[1074310946], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310946_1(fd fd_12214429713091680734_fd, cmd const[1074310946], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310946_2(fd fd_12214429713091680734_fd, cmd const[1074310946], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310947_0(fd fd_12214429713091680734_fd, cmd const[1074310947], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310947_1(fd fd_12214429713091680734_fd, cmd const[1074310947], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310947_2(fd fd_12214429713091680734_fd, cmd const[1074310947], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310948_0(fd fd_12214429713091680734_fd, cmd const[1074310948], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310948_1(fd fd_12214429713091680734_fd, cmd const[1074310948], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310948_2(fd fd_12214429713091680734_fd, cmd const[1074310948], arg ptr[out, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1074310949_0(fd fd_12214429713091680734_fd, cmd const[1074310949], arg ptr[in, int64])
+ioctl$syz_describe_12214429713091680734_1074310960_0(fd fd_12214429713091680734_fd, cmd const[1074310960], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1076408081_0(fd fd_12214429713091680734_fd, cmd const[1076408081], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_1076408081_1(fd fd_12214429713091680734_fd, cmd const[1076408081], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_2148052736_0(fd fd_12214429713091680734_fd, cmd const[2148052736], arg ptr[out, int64])
+ioctl$syz_describe_12214429713091680734_2148052774_0(fd fd_12214429713091680734_fd, cmd const[2148052774], arg ptr[out, int64])
+ioctl$syz_describe_12214429713091680734_3221794578_0(fd fd_12214429713091680734_fd, cmd const[3221794578], arg ptr[in, struct_util_est_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_3221794578_1(fd fd_12214429713091680734_fd, cmd const[3221794578], arg ptr[in, struct_iommu_inv_addr_info_12214429713091680734])
+ioctl$syz_describe_12214429713091680734_3221794578_2(fd fd_12214429713091680734_fd, cmd const[3221794578], arg ptr[out, struct_util_est_12214429713091680734])
 
+struct_util_est_12214429713091680734 {
+    field_0    int32
+    field_1    int32
+}
+struct_sched_info_12214429713091680734 {
+    field_0    int64
+    field_1    int64
+    field_2    int64
+    field_3    int64
+}
+struct_iommu_inv_addr_info_12214429713091680734 {
+    field_0    int32
+    field_1    int32
+    field_2    int64
+    field_3    int64
+    field_4    int64
+    field_5    int64
+}
+struct_vhost_memory_12214429713091680734 {
+    field_0    int32
+    field_1    int32
+    field_2    array[struct_sched_info_12214429713091680734]
+}

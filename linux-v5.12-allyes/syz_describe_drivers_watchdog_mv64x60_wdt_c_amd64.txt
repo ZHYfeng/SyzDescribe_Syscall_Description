@@ -11,22 +11,24 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/watchdog/mv64x60_wdt.c#L310
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/watchdog/mv64x60_wdt.c#L286
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/watchdog/mv64x60_wdt.c#L286
+# find handler ioctl: mv64x60_wdt_ioctl
+# find handler open: mv64x60_wdt_open
+# find handler write: mv64x60_wdt_write
+
 resource fd_15957405936552565866_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/watchdog/mv64x60_wdt.c#L286
 openat$syz_describe_15957405936552565866_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/watchdog"]], flags flags[open_flags], mode const[0]) fd_15957405936552565866_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/watchdog/watchdog_dev.c#L1007
-syz_open_dev$syz_describe_15957405936552565866_open_1(dev ptr[in, string["/dev/watchdog#"]], id intptr, flags flags[open_flags]) fd_15957405936552565866_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/watchdog/mv64x60_wdt.c#L286
-ioctl$syz_describe_15957405936552565866_2147768065(fd fd_15957405936552565866_fd, cmd const[2147768065], arg intptr)
-ioctl$syz_describe_15957405936552565866_2147768066(fd fd_15957405936552565866_fd, cmd const[2147768066], arg intptr)
-ioctl$syz_describe_15957405936552565866_2147768067(fd fd_15957405936552565866_fd, cmd const[2147768067], arg intptr)
-ioctl$syz_describe_15957405936552565866_2147768068(fd fd_15957405936552565866_fd, cmd const[2147768068], arg intptr)
-ioctl$syz_describe_15957405936552565866_2147768069(fd fd_15957405936552565866_fd, cmd const[2147768069], arg intptr)
-ioctl$syz_describe_15957405936552565866_2147768071(fd fd_15957405936552565866_fd, cmd const[2147768071], arg intptr)
-ioctl$syz_describe_15957405936552565866_2150127360_0(fd fd_15957405936552565866_fd, cmd const[2150127360], arg ptr[in, struct_watchdog_info_15957405936552565866])
-ioctl$syz_describe_15957405936552565866_3221509894(fd fd_15957405936552565866_fd, cmd const[3221509894], arg intptr)
+ioctl$syz_describe_15957405936552565866_2147768065(fd fd_15957405936552565866_fd, cmd const[2147768065], arg ptr[in, array[int8]])
+ioctl$syz_describe_15957405936552565866_2147768066(fd fd_15957405936552565866_fd, cmd const[2147768066], arg ptr[in, array[int8]])
+ioctl$syz_describe_15957405936552565866_2147768067(fd fd_15957405936552565866_fd, cmd const[2147768067], arg ptr[in, array[int8]])
+ioctl$syz_describe_15957405936552565866_2147768068(fd fd_15957405936552565866_fd, cmd const[2147768068], arg ptr[in, array[int8]])
+ioctl$syz_describe_15957405936552565866_2147768069(fd fd_15957405936552565866_fd, cmd const[2147768069], arg ptr[in, array[int8]])
+ioctl$syz_describe_15957405936552565866_2147768071(fd fd_15957405936552565866_fd, cmd const[2147768071], arg ptr[in, array[int8]])
+ioctl$syz_describe_15957405936552565866_2150127360_0(fd fd_15957405936552565866_fd, cmd const[2150127360], arg ptr[out, struct_watchdog_info_15957405936552565866])
+ioctl$syz_describe_15957405936552565866_3221509894(fd fd_15957405936552565866_fd, cmd const[3221509894], arg ptr[in, array[int8]])
 
 struct_watchdog_info_15957405936552565866 {
     field_0    int32

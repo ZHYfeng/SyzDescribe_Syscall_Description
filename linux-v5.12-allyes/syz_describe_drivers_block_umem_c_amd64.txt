@@ -10,16 +10,11 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/umem.c#L1089
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/umem.c#L1089
+# not find any syscall handler in the structure
+
 resource fd_17744305540507897179_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rbd.c#L6843
-syz_open_dev$syz_describe_17744305540507897179_open_0(dev ptr[in, string["/dev/#"]], id intptr, flags flags[open_flags]) fd_17744305540507897179_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/pktcdvd.c#L317
-openat$syz_describe_17744305540507897179_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_17744305540507897179_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rnbd/rnbd-clt-sysfs.c#L619
-openat$syz_describe_17744305540507897179_open_2(fd const[AT_FDCWD], file ptr[in, string["/dev/ctl"]], flags flags[open_flags], mode const[0]) fd_17744305540507897179_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/umem.c#L1085
-openat$syz_describe_17744305540507897179_open_3(fd const[AT_FDCWD], file ptr[in, string["/dev/umem"]], flags flags[open_flags], mode const[0]) fd_17744305540507897179_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/umem.c#L1089
+openat$syz_describe_17744305540507897179_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/umem"]], flags flags[open_flags], mode const[0]) fd_17744305540507897179_fd
 

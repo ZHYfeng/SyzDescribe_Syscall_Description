@@ -11,29 +11,123 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/vmw_vmci/vmci_driver.c#L141
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/vmw_vmci/vmci_host.c#L992
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/vmw_vmci/vmci_host.c#L992
+# find handler ioctl: vmci_host_unlocked_ioctl
+# find handler open: vmci_host_open
+
 resource fd_16740253572681636052_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/genwqe/card_dev.c#L1283
-syz_open_dev$syz_describe_16740253572681636052_open_0(dev ptr[in, string["/dev/genwqe#_card"]], id intptr, flags flags[open_flags]) fd_16740253572681636052_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/vmw_vmci/vmci_host.c#L992
-openat$syz_describe_16740253572681636052_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/vmci"]], flags flags[open_flags], mode const[0]) fd_16740253572681636052_fd
+openat$syz_describe_16740253572681636052_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/vmci"]], flags flags[open_flags], mode const[0]) fd_16740253572681636052_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/vmw_vmci/vmci_host.c#L992
-ioctl$syz_describe_16740253572681636052_1951(fd fd_16740253572681636052_fd, cmd const[1951], arg intptr)
-ioctl$syz_describe_16740253572681636052_1952(fd fd_16740253572681636052_fd, cmd const[1952], arg intptr)
-ioctl$syz_describe_16740253572681636052_1956(fd fd_16740253572681636052_fd, cmd const[1956], arg intptr)
-ioctl$syz_describe_16740253572681636052_1957(fd fd_16740253572681636052_fd, cmd const[1957], arg intptr)
-ioctl$syz_describe_16740253572681636052_1958(fd fd_16740253572681636052_fd, cmd const[1958], arg intptr)
-ioctl$syz_describe_16740253572681636052_1959(fd fd_16740253572681636052_fd, cmd const[1959], arg intptr)
-ioctl$syz_describe_16740253572681636052_1960(fd fd_16740253572681636052_fd, cmd const[1960], arg intptr)
-ioctl$syz_describe_16740253572681636052_1961(fd fd_16740253572681636052_fd, cmd const[1961], arg intptr)
-ioctl$syz_describe_16740253572681636052_1962(fd fd_16740253572681636052_fd, cmd const[1962], arg intptr)
-ioctl$syz_describe_16740253572681636052_1963(fd fd_16740253572681636052_fd, cmd const[1963], arg intptr)
-ioctl$syz_describe_16740253572681636052_1964(fd fd_16740253572681636052_fd, cmd const[1964], arg intptr)
-ioctl$syz_describe_16740253572681636052_1967(fd fd_16740253572681636052_fd, cmd const[1967], arg intptr)
-ioctl$syz_describe_16740253572681636052_1968(fd fd_16740253572681636052_fd, cmd const[1968], arg intptr)
-ioctl$syz_describe_16740253572681636052_1969(fd fd_16740253572681636052_fd, cmd const[1969], arg intptr)
-ioctl$syz_describe_16740253572681636052_1970(fd fd_16740253572681636052_fd, cmd const[1970], arg intptr)
-ioctl$syz_describe_16740253572681636052_1971(fd fd_16740253572681636052_fd, cmd const[1971], arg intptr)
-ioctl$syz_describe_16740253572681636052_1995(fd fd_16740253572681636052_fd, cmd const[1995], arg intptr)
+ioctl$syz_describe_16740253572681636052_1951(fd fd_16740253572681636052_fd, cmd const[1951], arg ptr[in, array[int8]])
+ioctl$syz_describe_16740253572681636052_1952_0(fd fd_16740253572681636052_fd, cmd const[1952], arg ptr[in, struct_util_est_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1952_1(fd fd_16740253572681636052_fd, cmd const[1952], arg ptr[out, struct_util_est_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1956_0(fd fd_16740253572681636052_fd, cmd const[1956], arg ptr[in, struct_vmci_qp_set_va_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1957_0(fd fd_16740253572681636052_fd, cmd const[1957], arg ptr[in, struct_vmci_dbell_notify_resource_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1957_1(fd fd_16740253572681636052_fd, cmd const[1957], arg ptr[out, struct_vmci_dbell_notify_resource_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1958_0(fd fd_16740253572681636052_fd, cmd const[1958], arg ptr[in, struct_vmci_ctx_notify_recv_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1958_1(fd fd_16740253572681636052_fd, cmd const[1958], arg ptr[out, struct_vmci_ctx_notify_recv_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1959(fd fd_16740253572681636052_fd, cmd const[1959], arg ptr[in, array[int8]])
+ioctl$syz_describe_16740253572681636052_1960_0(fd fd_16740253572681636052_fd, cmd const[1960], arg ptr[in, struct_vmci_qp_alloc_info_vmvm_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1960_1(fd fd_16740253572681636052_fd, cmd const[1960], arg ptr[in, struct_vmci_qp_alloc_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1961_0(fd fd_16740253572681636052_fd, cmd const[1961], arg ptr[in, struct_vmci_qp_page_file_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1962_0(fd fd_16740253572681636052_fd, cmd const[1962], arg ptr[in, struct_vmci_qp_dtch_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1963_0(fd fd_16740253572681636052_fd, cmd const[1963], arg ptr[in, struct_arch_uprobe_task_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1963_1(fd fd_16740253572681636052_fd, cmd const[1963], arg ptr[out, struct_arch_uprobe_task_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1964_0(fd fd_16740253572681636052_fd, cmd const[1964], arg ptr[in, struct_arch_uprobe_task_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1964_1(fd fd_16740253572681636052_fd, cmd const[1964], arg ptr[out, struct_arch_uprobe_task_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1964_2(fd fd_16740253572681636052_fd, cmd const[1964], arg ptr[out, struct_vmci_datagram_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1967_0(fd fd_16740253572681636052_fd, cmd const[1967], arg ptr[in, struct_util_est_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1968_0(fd fd_16740253572681636052_fd, cmd const[1968], arg ptr[in, struct_util_est_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1969_0(fd fd_16740253572681636052_fd, cmd const[1969], arg ptr[in, struct_vmci_ctx_chkpt_buf_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1969(fd fd_16740253572681636052_fd, cmd const[1969], arg ptr[in, array[int8]])
+ioctl$syz_describe_16740253572681636052_1969_2(fd fd_16740253572681636052_fd, cmd const[1969], arg ptr[out, struct_vmci_ctx_chkpt_buf_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1970_0(fd fd_16740253572681636052_fd, cmd const[1970], arg ptr[in, struct_vmci_ctx_chkpt_buf_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1970_1(fd fd_16740253572681636052_fd, cmd const[1970], arg ptr[out, struct_vmci_ctx_chkpt_buf_info_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1971(fd fd_16740253572681636052_fd, cmd const[1971], arg ptr[in, array[int8]])
+ioctl$syz_describe_16740253572681636052_1995_0(fd fd_16740253572681636052_fd, cmd const[1995], arg ptr[in, struct_arch_uprobe_task_16740253572681636052])
+ioctl$syz_describe_16740253572681636052_1995_1(fd fd_16740253572681636052_fd, cmd const[1995], arg ptr[out, struct_arch_uprobe_task_16740253572681636052])
 
+struct_util_est_16740253572681636052 {
+    field_0    int32
+    field_1    int32
+}
+struct_arch_uprobe_task_16740253572681636052 {
+    field_0    int64
+    field_1    int32
+    field_2    int32
+}
+struct_vmci_datagram_16740253572681636052 {
+    field_0    struct_util_est_16740253572681636052
+    field_1    struct_util_est_16740253572681636052
+    field_2    int64
+}
+struct_vmci_qp_dtch_info_16740253572681636052 {
+    field_0    struct_util_est_16740253572681636052
+    field_1    int32
+    field_2    int32
+}
+struct_vmci_qp_alloc_info_vmvm_16740253572681636052 {
+    field_0    struct_util_est_16740253572681636052
+    field_1    int32
+    field_2    int32
+    field_3    int64
+    field_4    int64
+    field_5    int64
+    field_6    int64
+    field_7    int64
+    field_8    int64
+    field_9    int32
+    field_10    int32
+}
+struct_vmci_qp_alloc_info_16740253572681636052 {
+    field_0    struct_util_est_16740253572681636052
+    field_1    int32
+    field_2    int32
+    field_3    int64
+    field_4    int64
+    field_5    int64
+    field_6    int64
+    field_7    int32
+    field_8    int32
+}
+struct_vmci_qp_set_va_info_16740253572681636052 {
+    field_0    struct_util_est_16740253572681636052
+    field_1    int64
+    field_2    int64
+    field_3    int32
+    field_4    int32
+}
+struct_vmci_qp_page_file_info_16740253572681636052 {
+    field_0    struct_util_est_16740253572681636052
+    field_1    int64
+    field_2    int64
+    field_3    int64
+    field_4    int64
+    field_5    int32
+    field_6    int32
+    field_7    int64
+    field_8    int64
+}
+struct_vmci_ctx_chkpt_buf_info_16740253572681636052 {
+    field_0    int64
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+}
+struct_vmci_dbell_notify_resource_info_16740253572681636052 {
+    field_0    struct_util_est_16740253572681636052
+    field_1    int16
+    field_2    int16
+    field_3    int32
+}
+struct_vmci_ctx_notify_recv_info_16740253572681636052 {
+    field_0    int64
+    field_1    int64
+    field_2    int64
+    field_3    int64
+    field_4    int32
+    field_5    int32
+}

@@ -12,8 +12,12 @@ meta arches["amd64"]
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/uio/uio.c#L874
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/uio/uio.c#L845
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/uio/uio.c#L845
+# find handler open: uio_open
+# find handler read: uio_read
+# find handler write: uio_write
+
 resource fd_5682049289601325518_fd[fd]
 
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/uio/uio.c#L845
+# not get possible device file name
 

@@ -10,8 +10,10 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_drv.c#L1055
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_drv.c#L1055
+# find handler open: drm_stub_open
+
 resource fd_2871929152973238670_fd[fd]
 
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_drv.c#L1055
+# not get possible device file name
 

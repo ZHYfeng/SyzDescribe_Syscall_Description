@@ -11,15 +11,32 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/hsi/clients/hsi_char.c#L766
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/hsi/clients/hsi_char.c#L707
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hsi/clients/hsi_char.c#L707
+# find handler ioctl: hsc_ioctl
+# find handler open: hsc_open
+# find handler read: hsc_read
+# find handler write: hsc_write
+
 resource fd_17736114124194382758_fd[fd]
 
+# not get possible device file name
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hsi/clients/hsi_char.c#L707
-ioctl$syz_describe_17736114124194382758_27408(fd fd_17736114124194382758_fd, cmd const[27408], arg intptr)
-ioctl$syz_describe_17736114124194382758_27409(fd fd_17736114124194382758_fd, cmd const[27409], arg intptr)
-ioctl$syz_describe_17736114124194382758_27410(fd fd_17736114124194382758_fd, cmd const[27410], arg intptr)
-ioctl$syz_describe_17736114124194382758_1074555667(fd fd_17736114124194382758_fd, cmd const[1074555667], arg intptr)
-ioctl$syz_describe_17736114124194382758_1074555668(fd fd_17736114124194382758_fd, cmd const[1074555668], arg intptr)
-ioctl$syz_describe_17736114124194382758_1074817813(fd fd_17736114124194382758_fd, cmd const[1074817813], arg intptr)
-ioctl$syz_describe_17736114124194382758_1074817814(fd fd_17736114124194382758_fd, cmd const[1074817814], arg intptr)
+ioctl$syz_describe_17736114124194382758_27408(fd fd_17736114124194382758_fd, cmd const[27408], arg ptr[in, array[int8]])
+ioctl$syz_describe_17736114124194382758_27409_0(fd fd_17736114124194382758_fd, cmd const[27409], arg ptr[in, int32])
+ioctl$syz_describe_17736114124194382758_27410(fd fd_17736114124194382758_fd, cmd const[27410], arg ptr[in, array[int8]])
+ioctl$syz_describe_17736114124194382758_1074555667_0(fd fd_17736114124194382758_fd, cmd const[1074555667], arg ptr[in, struct_kernel_symbol_17736114124194382758])
+ioctl$syz_describe_17736114124194382758_1074555668_0(fd fd_17736114124194382758_fd, cmd const[1074555668], arg ptr[out, struct_kernel_symbol_17736114124194382758])
+ioctl$syz_describe_17736114124194382758_1074817813_0(fd fd_17736114124194382758_fd, cmd const[1074817813], arg ptr[in, struct_hsc_tx_config_17736114124194382758])
+ioctl$syz_describe_17736114124194382758_1074817814_0(fd fd_17736114124194382758_fd, cmd const[1074817814], arg ptr[out, struct_hsc_tx_config_17736114124194382758])
 
+struct_kernel_symbol_17736114124194382758 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+}
+struct_hsc_tx_config_17736114124194382758 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+    field_3    int32
+}

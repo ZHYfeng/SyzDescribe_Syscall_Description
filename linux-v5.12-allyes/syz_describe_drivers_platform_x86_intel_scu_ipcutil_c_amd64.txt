@@ -10,11 +10,15 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/platform/x86/intel_scu_ipcutil.c#L135
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/platform/x86/intel_scu_ipcutil.c#L135
+# find handler ioctl: scu_ipc_ioctl
+# find handler open: scu_ipc_open
+
 resource fd_196137433950975120_fd[fd]
 
+# not get possible device file name
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/platform/x86/intel_scu_ipcutil.c#L135
-ioctl$syz_describe_196137433950975120_0(fd fd_196137433950975120_fd, cmd const[0], arg intptr)
-ioctl$syz_describe_196137433950975120_1(fd fd_196137433950975120_fd, cmd const[1], arg intptr)
-ioctl$syz_describe_196137433950975120_2(fd fd_196137433950975120_fd, cmd const[2], arg intptr)
+ioctl$syz_describe_196137433950975120_0(fd fd_196137433950975120_fd, cmd const[0], arg ptr[in, array[int8]])
+ioctl$syz_describe_196137433950975120_1(fd fd_196137433950975120_fd, cmd const[1], arg ptr[in, array[int8]])
+ioctl$syz_describe_196137433950975120_2(fd fd_196137433950975120_fd, cmd const[2], arg ptr[in, array[int8]])
 

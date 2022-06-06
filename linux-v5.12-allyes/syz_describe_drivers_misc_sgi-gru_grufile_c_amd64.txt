@@ -10,28 +10,88 @@ meta arches["amd64"]
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/sgi-gru/grufile.c#L527
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/sgi-gru/grufile.c#L527
+# find handler ioctl: gru_file_unlocked_ioctl
+
 resource fd_787568634654566786_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/genwqe/card_dev.c#L1283
-syz_open_dev$syz_describe_787568634654566786_open_0(dev ptr[in, string["/dev/genwqe#_card"]], id intptr, flags flags[open_flags]) fd_787568634654566786_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/sgi-gru/grufile.c#L527
-openat$syz_describe_787568634654566786_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/gru"]], flags flags[open_flags], mode const[0]) fd_787568634654566786_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/hpilo.c#L840
-syz_open_dev$syz_describe_787568634654566786_open_2(dev ptr[in, string["/dev/hpilo!d#ccb#"]], id intptr, flags flags[open_flags]) fd_787568634654566786_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/mei/main.c#L1238
-syz_open_dev$syz_describe_787568634654566786_open_3(dev ptr[in, string["/dev/mei#"]], id intptr, flags flags[open_flags]) fd_787568634654566786_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/phantom.c#L406
-syz_open_dev$syz_describe_787568634654566786_open_4(dev ptr[in, string["/dev/phantom#"]], id intptr, flags flags[open_flags]) fd_787568634654566786_fd
+openat$syz_describe_787568634654566786_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/gru"]], flags flags[open_flags], mode const[0]) fd_787568634654566786_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/sgi-gru/grufile.c#L527
-ioctl$syz_describe_787568634654566786_3221767937(fd fd_787568634654566786_fd, cmd const[3221767937], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767940(fd fd_787568634654566786_fd, cmd const[3221767940], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767942(fd fd_787568634654566786_fd, cmd const[3221767942], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767944(fd fd_787568634654566786_fd, cmd const[3221767944], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767945(fd fd_787568634654566786_fd, cmd const[3221767945], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767947(fd fd_787568634654566786_fd, cmd const[3221767947], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767948(fd fd_787568634654566786_fd, cmd const[3221767948], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767986(fd fd_787568634654566786_fd, cmd const[3221767986], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767987(fd fd_787568634654566786_fd, cmd const[3221767987], arg intptr)
-ioctl$syz_describe_787568634654566786_3221767988(fd fd_787568634654566786_fd, cmd const[3221767988], arg intptr)
+ioctl$syz_describe_787568634654566786_3221767937_0(fd fd_787568634654566786_fd, cmd const[3221767937], arg ptr[in, struct_gru_create_context_req_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767940_0(fd fd_787568634654566786_fd, cmd const[3221767940], arg ptr[in, struct_gru_set_context_option_req_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767942_0(fd fd_787568634654566786_fd, cmd const[3221767942], arg ptr[in, struct_control_block_extended_exc_detail_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767942_1(fd fd_787568634654566786_fd, cmd const[3221767942], arg ptr[out, struct_control_block_extended_exc_detail_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767944(fd fd_787568634654566786_fd, cmd const[3221767944], arg ptr[in, array[int8]])
+ioctl$syz_describe_787568634654566786_3221767945_0(fd fd_787568634654566786_fd, cmd const[3221767945], arg ptr[in, union_anon_20_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767947_0(fd fd_787568634654566786_fd, cmd const[3221767947], arg ptr[in, struct_gru_dump_chiplet_state_req_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767947_1(fd fd_787568634654566786_fd, cmd const[3221767947], arg ptr[out, struct_gru_dump_chiplet_state_req_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767948_0(fd fd_787568634654566786_fd, cmd const[3221767948], arg ptr[in, struct_gru_get_gseg_statistics_req_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767948_1(fd fd_787568634654566786_fd, cmd const[3221767948], arg ptr[out, struct_gru_get_gseg_statistics_req_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767986_0(fd fd_787568634654566786_fd, cmd const[3221767986], arg ptr[in, struct_em_perf_state_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767987_0(fd fd_787568634654566786_fd, cmd const[3221767987], arg ptr[out, struct_gru_config_info_787568634654566786])
+ioctl$syz_describe_787568634654566786_3221767988(fd fd_787568634654566786_fd, cmd const[3221767988], arg ptr[in, array[int8]])
 
+union_anon_20_787568634654566786 {
+    field_0    int64
+}
+struct_em_perf_state_787568634654566786 {
+    field_0    int64
+    field_1    int64
+    field_2    int64
+}
+struct_gru_gseg_statistics_787568634654566786 {
+    field_0    int64
+    field_1    int64
+    field_2    int64
+    field_3    int64
+    field_4    array[int64, 10]
+}
+struct_control_block_extended_exc_detail_787568634654566786 {
+    field_0    int64
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int64
+    field_5    int32
+    field_6    int32
+    field_7    int32
+}
+struct_gru_create_context_req_787568634654566786 {
+    field_0    int64
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int8
+}
+struct_gru_set_context_option_req_787568634654566786 {
+    field_0    int64
+    field_1    int32
+    field_2    int32
+    field_3    int64
+}
+struct_gru_get_gseg_statistics_req_787568634654566786 {
+    field_0    int64
+    field_1    struct_gru_gseg_statistics_787568634654566786
+}
+struct_gru_config_info_787568634654566786 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    array[int32, 16]
+}
+struct_gru_dump_chiplet_state_req_787568634654566786 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+    field_3    int8
+    field_4    int8
+    field_5    int8
+    field_6    array[int8, 10]
+    field_7    int32
+    field_8    ptr[in, int8]
+    field_9    int64
+    field_10    int32
+}

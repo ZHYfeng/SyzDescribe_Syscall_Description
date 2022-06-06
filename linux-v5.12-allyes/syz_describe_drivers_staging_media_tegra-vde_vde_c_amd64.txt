@@ -11,56 +11,63 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1176
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1057
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1057
+# not find any syscall handler in the structure
+
 resource fd_6142509188972423790_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1047
-openat$syz_describe_6142509188972423790_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/"]], flags flags[open_flags], mode const[0]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/comedi/comedi_fops.c#L3264
-syz_open_dev$syz_describe_6142509188972423790_open_1(dev ptr[in, string["/dev/comedi#"]], id intptr, flags flags[open_flags]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/comedi/comedi_fops.c#L3313
-syz_open_dev$syz_describe_6142509188972423790_open_2(dev ptr[in, string["/dev/comedi#_subd#"]], id intptr, flags flags[open_flags]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/fieldbus/dev_core.c#L286
-syz_open_dev$syz_describe_6142509188972423790_open_3(dev ptr[in, string["/dev/fieldbus_dev#"]], id intptr, flags flags[open_flags]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/greybus/raw.c#L198
-syz_open_dev$syz_describe_6142509188972423790_open_4(dev ptr[in, string["/dev/gb!raw#"]], id intptr, flags flags[open_flags]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/greybus/authentication.c#L339
-syz_open_dev$syz_describe_6142509188972423790_open_5(dev ptr[in, string["/dev/gb-authenticate-#"]], id intptr, flags flags[open_flags]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/greybus/fw-management.c#L632
-syz_open_dev$syz_describe_6142509188972423790_open_6(dev ptr[in, string["/dev/gb-fw-mgmt-#"]], id intptr, flags flags[open_flags]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/pi433/pi433_if.c#L1201
-syz_open_dev$syz_describe_6142509188972423790_open_7(dev ptr[in, string["/dev/pi433.#"]], id intptr, flags flags[open_flags]) fd_6142509188972423790_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c#L2757
-openat$syz_describe_6142509188972423790_open_8(fd const[AT_FDCWD], file ptr[in, string["/dev/vchiq"]], flags flags[open_flags], mode const[0]) fd_6142509188972423790_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1057
-
+# not get correct value for this device file name
 
 # driver found at module init function tegra_vde_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1176
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1176
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1048
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1048
+# find handler ioctl: tegra_vde_unlocked_ioctl
+
 resource fd_12221659209924115886_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1047
-openat$syz_describe_12221659209924115886_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/"]], flags flags[open_flags], mode const[0]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/comedi/comedi_fops.c#L3264
-syz_open_dev$syz_describe_12221659209924115886_open_1(dev ptr[in, string["/dev/comedi#"]], id intptr, flags flags[open_flags]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/comedi/comedi_fops.c#L3313
-syz_open_dev$syz_describe_12221659209924115886_open_2(dev ptr[in, string["/dev/comedi#_subd#"]], id intptr, flags flags[open_flags]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/fieldbus/dev_core.c#L286
-syz_open_dev$syz_describe_12221659209924115886_open_3(dev ptr[in, string["/dev/fieldbus_dev#"]], id intptr, flags flags[open_flags]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/greybus/raw.c#L198
-syz_open_dev$syz_describe_12221659209924115886_open_4(dev ptr[in, string["/dev/gb!raw#"]], id intptr, flags flags[open_flags]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/greybus/authentication.c#L339
-syz_open_dev$syz_describe_12221659209924115886_open_5(dev ptr[in, string["/dev/gb-authenticate-#"]], id intptr, flags flags[open_flags]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/greybus/fw-management.c#L632
-syz_open_dev$syz_describe_12221659209924115886_open_6(dev ptr[in, string["/dev/gb-fw-mgmt-#"]], id intptr, flags flags[open_flags]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/pi433/pi433_if.c#L1201
-syz_open_dev$syz_describe_12221659209924115886_open_7(dev ptr[in, string["/dev/pi433.#"]], id intptr, flags flags[open_flags]) fd_12221659209924115886_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c#L2757
-openat$syz_describe_12221659209924115886_open_8(fd const[AT_FDCWD], file ptr[in, string["/dev/vchiq"]], flags flags[open_flags], mode const[0]) fd_12221659209924115886_fd
+# not get correct value for this device file name
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/media/tegra-vde/vde.c#L1048
-ioctl$syz_describe_12221659209924115886_1082168832(fd fd_12221659209924115886_fd, cmd const[1082168832], arg intptr)
+ioctl$syz_describe_12221659209924115886_1082168832_0(fd fd_12221659209924115886_fd, cmd const[1082168832], arg ptr[in, struct_tegra_vde_h264_decoder_ctx_12221659209924115886])
+ioctl$syz_describe_12221659209924115886_1082168832_1(fd fd_12221659209924115886_fd, cmd const[1082168832], arg ptr[in, struct_tegra_vde_h264_frame_12221659209924115886])
 
+struct_tegra_vde_h264_decoder_ctx_12221659209924115886 {
+    field_0    int32
+    field_1    int32
+    field_2    int64
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    int32
+    field_12    int32
+    field_13    int32
+    field_14    int32
+    field_15    int32
+    field_16    int32
+    field_17    int32
+    field_18    int32
+    field_19    int32
+    field_20    array[int32, 11]
+}
+struct_tegra_vde_h264_frame_12221659209924115886 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    array[int32, 6]
+}

@@ -11,14 +11,13 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/ftdi-elan.c#L2763
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/ftdi-elan.c#L2687
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/ftdi-elan.c#L2687
+# find handler open: ftdi_elan_open
+# find handler read: ftdi_elan_read
+# find handler write: ftdi_elan_write
+
 resource fd_7102270217983714735_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/endpoint.c#L194
-openat$syz_describe_7102270217983714735_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/ep_2x"]], flags flags[open_flags], mode const[0]) fd_7102270217983714735_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/ftdi-elan.c#L2687
-syz_open_dev$syz_describe_7102270217983714735_open_1(dev ptr[in, string["/dev/ftdi-#-jtag"]], id intptr, flags flags[open_flags]) fd_7102270217983714735_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/mon/mon_bin.c#L1359
-syz_open_dev$syz_describe_7102270217983714735_open_2(dev ptr[in, string["/dev/usbmon#"]], id intptr, flags flags[open_flags]) fd_7102270217983714735_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/misc/ftdi-elan.c#L2687
+syz_open_dev$syz_describe_7102270217983714735_open_0(dev ptr[in, string["/dev/ftdi-#-jtag"]], id intptr, flags flags[open_flags]) fd_7102270217983714735_fd
 

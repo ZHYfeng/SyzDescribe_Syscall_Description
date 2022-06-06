@@ -13,38 +13,42 @@ meta arches["amd64"]
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/input/input.c#L1035
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/input/joydev.c#L989
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/joydev.c#L989
+# find handler ioctl: joydev_ioctl
+# find handler open: joydev_open
+# find handler read: joydev_read
+
 resource fd_11494646299163861410_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/input.c#L1924
-openat$syz_describe_11494646299163861410_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/inputu"]], flags flags[open_flags], mode const[0]) fd_11494646299163861410_fd
+syz_open_dev$syz_describe_11494646299163861410_open_0(dev ptr[in, string["/dev/input#"]], id intptr, flags flags[open_flags]) fd_11494646299163861410_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/joydev.c#L931
 syz_open_dev$syz_describe_11494646299163861410_open_1(dev ptr[in, string["/dev/js#"]], id intptr, flags flags[open_flags]) fd_11494646299163861410_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/joydev.c#L989
 ioctl$syz_describe_11494646299163861410_1_0(fd fd_11494646299163861410_fd, cmd const[1], arg ptr[in, struct_kernel_symbol_11494646299163861410])
-ioctl$syz_describe_11494646299163861410_2_0(fd fd_11494646299163861410_fd, cmd const[2], arg ptr[in, struct_kernel_symbol_11494646299163861410])
-ioctl$syz_describe_11494646299163861410_3(fd fd_11494646299163861410_fd, cmd const[3], arg intptr)
-ioctl$syz_describe_11494646299163861410_4(fd fd_11494646299163861410_fd, cmd const[4], arg intptr)
-ioctl$syz_describe_11494646299163861410_5(fd fd_11494646299163861410_fd, cmd const[5], arg intptr)
-ioctl$syz_describe_11494646299163861410_6(fd fd_11494646299163861410_fd, cmd const[6], arg intptr)
-ioctl$syz_describe_11494646299163861410_7_0(fd fd_11494646299163861410_fd, cmd const[7], arg ptr[in, struct_JS_DATA_SAVE_TYPE_64_11494646299163861410])
+ioctl$syz_describe_11494646299163861410_2_0(fd fd_11494646299163861410_fd, cmd const[2], arg ptr[out, struct_kernel_symbol_11494646299163861410])
+ioctl$syz_describe_11494646299163861410_3(fd fd_11494646299163861410_fd, cmd const[3], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_4(fd fd_11494646299163861410_fd, cmd const[4], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_5(fd fd_11494646299163861410_fd, cmd const[5], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_6(fd fd_11494646299163861410_fd, cmd const[6], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_7_0(fd fd_11494646299163861410_fd, cmd const[7], arg ptr[out, struct_JS_DATA_SAVE_TYPE_64_11494646299163861410])
 ioctl$syz_describe_11494646299163861410_8_0(fd fd_11494646299163861410_fd, cmd const[8], arg ptr[in, struct_JS_DATA_SAVE_TYPE_64_11494646299163861410])
-ioctl$syz_describe_11494646299163861410_1073769009(fd fd_11494646299163861410_fd, cmd const[1073769009], arg intptr)
-ioctl$syz_describe_11494646299163861410_1073769011(fd fd_11494646299163861410_fd, cmd const[1073769011], arg intptr)
+ioctl$syz_describe_11494646299163861410_1073769009(fd fd_11494646299163861410_fd, cmd const[1073769009], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_1073769011(fd fd_11494646299163861410_fd, cmd const[1073769011], arg ptr[in, array[int8]])
 ioctl$syz_describe_11494646299163861410_1076128289_0(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[in, struct_kernel_symbol_11494646299163861410])
-ioctl$syz_describe_11494646299163861410_1076128289_1(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[in, struct_kernel_symbol_11494646299163861410])
-ioctl$syz_describe_11494646299163861410_1076128289_2(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[in, struct_js_corr_11494646299163861410])
-ioctl$syz_describe_11494646299163861410_1076128289_3(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[in, struct_js_corr_11494646299163861410])
-ioctl$syz_describe_11494646299163861410_1076128289_4(fd fd_11494646299163861410_fd, cmd const[1076128289], arg array[int8, 64])
-ioctl$syz_describe_11494646299163861410_1076128289_5(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[in, int16])
-ioctl$syz_describe_11494646299163861410_1076128289(fd fd_11494646299163861410_fd, cmd const[1076128289], arg intptr)
-ioctl$syz_describe_11494646299163861410_2147510803(fd fd_11494646299163861410_fd, cmd const[2147510803], arg intptr)
+ioctl$syz_describe_11494646299163861410_1076128289_1(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[in, struct_js_corr_11494646299163861410])
+ioctl$syz_describe_11494646299163861410_1076128289(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_1076128289_3(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[out, int16])
+ioctl$syz_describe_11494646299163861410_1076128289_4(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[out, struct_kernel_symbol_11494646299163861410])
+ioctl$syz_describe_11494646299163861410_1076128289_5(fd fd_11494646299163861410_fd, cmd const[1076128289], arg array[int8, 64])
+ioctl$syz_describe_11494646299163861410_1076128289_6(fd fd_11494646299163861410_fd, cmd const[1076128289], arg ptr[out, struct_js_corr_11494646299163861410])
+ioctl$syz_describe_11494646299163861410_2147510803(fd fd_11494646299163861410_fd, cmd const[2147510803], arg ptr[in, array[int8]])
 ioctl$syz_describe_11494646299163861410_2147510834_0(fd fd_11494646299163861410_fd, cmd const[2147510834], arg array[int8, 64])
-ioctl$syz_describe_11494646299163861410_2147510836_0(fd fd_11494646299163861410_fd, cmd const[2147510836], arg ptr[in, int16])
-ioctl$syz_describe_11494646299163861410_2147576337(fd fd_11494646299163861410_fd, cmd const[2147576337], arg intptr)
-ioctl$syz_describe_11494646299163861410_2147576338(fd fd_11494646299163861410_fd, cmd const[2147576338], arg intptr)
-ioctl$syz_describe_11494646299163861410_2147772929(fd fd_11494646299163861410_fd, cmd const[2147772929], arg intptr)
-ioctl$syz_describe_11494646299163861410_2149870114_0(fd fd_11494646299163861410_fd, cmd const[2149870114], arg ptr[in, struct_js_corr_11494646299163861410])
+ioctl$syz_describe_11494646299163861410_2147510836_0(fd fd_11494646299163861410_fd, cmd const[2147510836], arg ptr[out, int16])
+ioctl$syz_describe_11494646299163861410_2147576337(fd fd_11494646299163861410_fd, cmd const[2147576337], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_2147576338(fd fd_11494646299163861410_fd, cmd const[2147576338], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_2147772929(fd fd_11494646299163861410_fd, cmd const[2147772929], arg ptr[in, array[int8]])
+ioctl$syz_describe_11494646299163861410_2149870114_0(fd fd_11494646299163861410_fd, cmd const[2149870114], arg ptr[out, struct_js_corr_11494646299163861410])
 
 struct_kernel_symbol_11494646299163861410 {
     field_0    int32

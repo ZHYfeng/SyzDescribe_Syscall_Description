@@ -11,63 +11,378 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_scsih.c#L12599
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4023
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4023
+# find handler ioctl: _ctl_ioctl
+
 resource fd_14122621390931164804_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_sysfs.c#L1605
-syz_open_dev$syz_describe_14122621390931164804_open_0(dev ptr[in, string["/dev/#:#:#:lu"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/st.c#L4224
-openat$syz_describe_14122621390931164804_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1447
-syz_open_dev$syz_describe_14122621390931164804_open_2(dev ptr[in, string["/dev/end_device-#:#"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1443
-syz_open_dev$syz_describe_14122621390931164804_open_3(dev ptr[in, string["/dev/end_device-#:#:#"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1488
-syz_open_dev$syz_describe_14122621390931164804_open_4(dev ptr[in, string["/dev/expander-#:#"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/hosts.c#L473
-syz_open_dev$syz_describe_14122621390931164804_open_5(dev ptr[in, string["/dev/host#"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4023
-openat$syz_describe_14122621390931164804_open_6(fd const[AT_FDCWD], file ptr[in, string["/dev/mpt3ctl"]], flags flags[open_flags], mode const[0]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L892
-syz_open_dev$syz_describe_14122621390931164804_open_7(dev ptr[in, string["/dev/port-#:#"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L889
-syz_open_dev$syz_describe_14122621390931164804_open_8(dev ptr[in, string["/dev/port-#:#:#"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/ch.c#L953
-openat$syz_describe_14122621390931164804_open_9(fd const[AT_FDCWD], file ptr[in, string["/dev/s%s"]], flags flags[open_flags], mode const[0]) fd_14122621390931164804_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_scan.c#L430
-syz_open_dev$syz_describe_14122621390931164804_open_10(dev ptr[in, string["/dev/target#:#:#"]], id intptr, flags flags[open_flags]) fd_14122621390931164804_fd
+openat$syz_describe_14122621390931164804_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mpt3ctl"]], flags flags[open_flags], mode const[0]) fd_14122621390931164804_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4023
+ioctl$syz_describe_14122621390931164804_56(fd fd_14122621390931164804_fd, cmd const[56], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_72(fd fd_14122621390931164804_fd, cmd const[72], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_72_1(fd fd_14122621390931164804_fd, cmd const[72], arg ptr[in, struct__MPI2_IOC_FACTS_REQUEST_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_72(fd fd_14122621390931164804_fd, cmd const[72], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_3222031384_0(fd fd_14122621390931164804_fd, cmd const[3222031384], arg ptr[in, union_anon_177_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3222293531_0(fd fd_14122621390931164804_fd, cmd const[3222293531], arg ptr[in, struct_mpt3_diag_release_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3222293532_0(fd fd_14122621390931164804_fd, cmd const[3222293532], arg ptr[in, struct_mpt3_diag_release_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3222817823_0(fd fd_14122621390931164804_fd, cmd const[3222817823], arg ptr[in, struct_mpt3_ioctl_btdh_mapping_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3222817823_1(fd fd_14122621390931164804_fd, cmd const[3222817823], arg ptr[out, struct_mpt3_ioctl_btdh_mapping_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3223079958_0(fd fd_14122621390931164804_fd, cmd const[3223079958], arg ptr[in, struct_mpt3_ioctl_eventenable_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3223342101_0(fd fd_14122621390931164804_fd, cmd const[3223342101], arg ptr[in, struct_mpt3_ioctl_eventquery_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3223342101_1(fd fd_14122621390931164804_fd, cmd const[3223342101], arg ptr[out, struct_mpt3_ioctl_eventquery_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3223342110_0(fd fd_14122621390931164804_fd, cmd const[3223342110], arg ptr[in, struct_mpt3_diag_read_buffer_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3223342110(fd fd_14122621390931164804_fd, cmd const[3223342110], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_3223866400_0(fd fd_14122621390931164804_fd, cmd const[3223866400], arg ptr[in, struct_mpt3_addnl_diag_query_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3223866400_1(fd fd_14122621390931164804_fd, cmd const[3223866400], arg ptr[out, struct_mpt3_addnl_diag_query_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3224914964(fd fd_14122621390931164804_fd, cmd const[3224914964], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_3224914964_1(fd fd_14122621390931164804_fd, cmd const[3224914964], arg ptr[in, struct__MPI2_IOC_FACTS_REQUEST_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3224914964_2(fd fd_14122621390931164804_fd, cmd const[3224914964], arg ptr[in, struct_mpt3_ioctl_command_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3224914964_3(fd fd_14122621390931164804_fd, cmd const[3224914964], arg ptr[in, struct_mpt3_ioctl_command32_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3224914964(fd fd_14122621390931164804_fd, cmd const[3224914964], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_3225963540(fd fd_14122621390931164804_fd, cmd const[3225963540], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_3225963540_1(fd fd_14122621390931164804_fd, cmd const[3225963540], arg ptr[in, struct__MPI2_IOC_FACTS_REQUEST_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3225963540_2(fd fd_14122621390931164804_fd, cmd const[3225963540], arg ptr[in, struct_mpt3_ioctl_command_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3225963540_3(fd fd_14122621390931164804_fd, cmd const[3225963540], arg ptr[in, struct_mpt3_ioctl_command32_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3225963540(fd fd_14122621390931164804_fd, cmd const[3225963540], arg ptr[in, array[int8]])
+ioctl$syz_describe_14122621390931164804_3227274257_0(fd fd_14122621390931164804_fd, cmd const[3227274257], arg ptr[out, struct_mpt3_ioctl_iocinfo_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3229109274_0(fd fd_14122621390931164804_fd, cmd const[3229109274], arg ptr[in, struct_mpt3_diag_register_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3229371421_0(fd fd_14122621390931164804_fd, cmd const[3229371421], arg ptr[in, struct_mpt3_diag_query_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3229371421_1(fd fd_14122621390931164804_fd, cmd const[3229371421], arg ptr[out, struct_mpt3_diag_query_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3235138583_0(fd fd_14122621390931164804_fd, cmd const[3235138583], arg ptr[in, struct_mpt3_ioctl_eventreport_14122621390931164804])
+ioctl$syz_describe_14122621390931164804_3235138583(fd fd_14122621390931164804_fd, cmd const[3235138583], arg ptr[in, array[int8]])
 
-
+struct_atomic_t_14122621390931164804 {
+    field_0    int32
+}
+union_anon_3_14122621390931164804 {
+    field_0    struct_atomic_t_14122621390931164804
+}
+struct_uid_gid_extent_14122621390931164804 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+}
+struct_kqid_14122621390931164804 {
+    field_0    union_anon_3_14122621390931164804
+    field_1    int32
+}
+union_anon_177_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+}
+struct__MPI2_IOC_FACTS_REQUEST_14122621390931164804 {
+    field_0    int16
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int8
+    field_5    int8
+    field_6    int8
+    field_7    int8
+    field_8    int16
+}
+struct_mpt3_diag_register_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int32
+    field_5    array[int32, 23]
+    field_6    int32
+    field_7    int32
+}
+struct_mpt3_ioctl_command_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int32
+    field_2    ptr[in, int8]
+    field_3    ptr[in, int8]
+    field_4    ptr[in, int8]
+    field_5    ptr[in, int8]
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    array[int8, 1]
+}
+struct_mpt3_ioctl_btdh_mapping_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int32
+    field_2    int32
+    field_3    int16
+    field_4    int16
+}
+struct_MPT3_IOCTL_EVENTS_14122621390931164804 {
+    field_0    int32
+    field_1    int32
+    field_2    array[int8, 192]
+}
+struct_mpt3_ioctl_iocinfo_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    array[int8, 32]
+    field_11    int8
+    field_12    int8
+    field_13    int16
+    field_14    struct_kqid_14122621390931164804
+}
+struct_mpt3_ioctl_command32_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    array[int8, 1]
+}
+struct_mpt3_ioctl_eventquery_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int16
+    field_2    int16
+    field_3    array[int32, 4]
+}
+struct_mpt3_ioctl_eventenable_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    array[int32, 4]
+}
+struct_mpt3_ioctl_eventreport_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    array[struct_MPT3_IOCTL_EVENTS_14122621390931164804, 1]
+}
+struct_mpt3_diag_release_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int32
+}
+struct_mpt3_diag_query_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int32
+    field_5    array[int32, 23]
+    field_6    int32
+    field_7    int32
+    field_8    int32
+}
+struct_mpt3_diag_read_buffer_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    array[int32, 1]
+}
+struct_mpt3_addnl_diag_query_14122621390931164804 {
+    field_0    struct_uid_gid_extent_14122621390931164804
+    field_1    int32
+    field_2    int16
+    field_3    int16
+    field_4    int32
+    field_5    array[int32, 2]
+    field_6    array[int32, 2]
+}
 # driver found at module init function _mpt3sas_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_scsih.c#L12557
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_scsih.c#L12599
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4031
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4031
+# find handler ioctl: _ctl_mpt2_ioctl
+
 resource fd_2349236706551957055_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_sysfs.c#L1605
-syz_open_dev$syz_describe_2349236706551957055_open_0(dev ptr[in, string["/dev/#:#:#:lu"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/st.c#L4224
-openat$syz_describe_2349236706551957055_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1447
-syz_open_dev$syz_describe_2349236706551957055_open_2(dev ptr[in, string["/dev/end_device-#:#"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1443
-syz_open_dev$syz_describe_2349236706551957055_open_3(dev ptr[in, string["/dev/end_device-#:#:#"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L1488
-syz_open_dev$syz_describe_2349236706551957055_open_4(dev ptr[in, string["/dev/expander-#:#"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/hosts.c#L473
-syz_open_dev$syz_describe_2349236706551957055_open_5(dev ptr[in, string["/dev/host#"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4031
-openat$syz_describe_2349236706551957055_open_6(fd const[AT_FDCWD], file ptr[in, string["/dev/mpt2ctl"]], flags flags[open_flags], mode const[0]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L892
-syz_open_dev$syz_describe_2349236706551957055_open_7(dev ptr[in, string["/dev/port-#:#"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_transport_sas.c#L889
-syz_open_dev$syz_describe_2349236706551957055_open_8(dev ptr[in, string["/dev/port-#:#:#"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/ch.c#L953
-openat$syz_describe_2349236706551957055_open_9(fd const[AT_FDCWD], file ptr[in, string["/dev/s%s"]], flags flags[open_flags], mode const[0]) fd_2349236706551957055_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/scsi_scan.c#L430
-syz_open_dev$syz_describe_2349236706551957055_open_10(dev ptr[in, string["/dev/target#:#:#"]], id intptr, flags flags[open_flags]) fd_2349236706551957055_fd
+openat$syz_describe_2349236706551957055_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mpt2ctl"]], flags flags[open_flags], mode const[0]) fd_2349236706551957055_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/mpt3sas/mpt3sas_ctl.c#L4031
+ioctl$syz_describe_2349236706551957055_56(fd fd_2349236706551957055_fd, cmd const[56], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_72(fd fd_2349236706551957055_fd, cmd const[72], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_72_1(fd fd_2349236706551957055_fd, cmd const[72], arg ptr[in, struct__MPI2_IOC_FACTS_REQUEST_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_72(fd fd_2349236706551957055_fd, cmd const[72], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_3222031384_0(fd fd_2349236706551957055_fd, cmd const[3222031384], arg ptr[in, union_anon_177_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3222293531_0(fd fd_2349236706551957055_fd, cmd const[3222293531], arg ptr[in, struct_mpt3_diag_release_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3222293532_0(fd fd_2349236706551957055_fd, cmd const[3222293532], arg ptr[in, struct_mpt3_diag_release_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3222817823_0(fd fd_2349236706551957055_fd, cmd const[3222817823], arg ptr[in, struct_mpt3_ioctl_btdh_mapping_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3222817823_1(fd fd_2349236706551957055_fd, cmd const[3222817823], arg ptr[out, struct_mpt3_ioctl_btdh_mapping_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3223079958_0(fd fd_2349236706551957055_fd, cmd const[3223079958], arg ptr[in, struct_mpt3_ioctl_eventenable_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3223342101_0(fd fd_2349236706551957055_fd, cmd const[3223342101], arg ptr[in, struct_mpt3_ioctl_eventquery_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3223342101_1(fd fd_2349236706551957055_fd, cmd const[3223342101], arg ptr[out, struct_mpt3_ioctl_eventquery_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3223342110_0(fd fd_2349236706551957055_fd, cmd const[3223342110], arg ptr[in, struct_mpt3_diag_read_buffer_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3223342110(fd fd_2349236706551957055_fd, cmd const[3223342110], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_3223866400_0(fd fd_2349236706551957055_fd, cmd const[3223866400], arg ptr[in, struct_mpt3_addnl_diag_query_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3223866400_1(fd fd_2349236706551957055_fd, cmd const[3223866400], arg ptr[out, struct_mpt3_addnl_diag_query_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3224914964(fd fd_2349236706551957055_fd, cmd const[3224914964], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_3224914964_1(fd fd_2349236706551957055_fd, cmd const[3224914964], arg ptr[in, struct__MPI2_IOC_FACTS_REQUEST_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3224914964_2(fd fd_2349236706551957055_fd, cmd const[3224914964], arg ptr[in, struct_mpt3_ioctl_command_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3224914964_3(fd fd_2349236706551957055_fd, cmd const[3224914964], arg ptr[in, struct_mpt3_ioctl_command32_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3224914964(fd fd_2349236706551957055_fd, cmd const[3224914964], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_3225963540(fd fd_2349236706551957055_fd, cmd const[3225963540], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_3225963540_1(fd fd_2349236706551957055_fd, cmd const[3225963540], arg ptr[in, struct__MPI2_IOC_FACTS_REQUEST_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3225963540_2(fd fd_2349236706551957055_fd, cmd const[3225963540], arg ptr[in, struct_mpt3_ioctl_command_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3225963540_3(fd fd_2349236706551957055_fd, cmd const[3225963540], arg ptr[in, struct_mpt3_ioctl_command32_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3225963540(fd fd_2349236706551957055_fd, cmd const[3225963540], arg ptr[in, array[int8]])
+ioctl$syz_describe_2349236706551957055_3227274257_0(fd fd_2349236706551957055_fd, cmd const[3227274257], arg ptr[out, struct_mpt3_ioctl_iocinfo_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3229109274_0(fd fd_2349236706551957055_fd, cmd const[3229109274], arg ptr[in, struct_mpt3_diag_register_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3229371421_0(fd fd_2349236706551957055_fd, cmd const[3229371421], arg ptr[in, struct_mpt3_diag_query_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3229371421_1(fd fd_2349236706551957055_fd, cmd const[3229371421], arg ptr[out, struct_mpt3_diag_query_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3235138583_0(fd fd_2349236706551957055_fd, cmd const[3235138583], arg ptr[in, struct_mpt3_ioctl_eventreport_2349236706551957055])
+ioctl$syz_describe_2349236706551957055_3235138583(fd fd_2349236706551957055_fd, cmd const[3235138583], arg ptr[in, array[int8]])
 
+struct_atomic_t_2349236706551957055 {
+    field_0    int32
+}
+union_anon_3_2349236706551957055 {
+    field_0    struct_atomic_t_2349236706551957055
+}
+struct_uid_gid_extent_2349236706551957055 {
+    field_0    int32
+    field_1    int32
+    field_2    int32
+}
+struct_kqid_2349236706551957055 {
+    field_0    union_anon_3_2349236706551957055
+    field_1    int32
+}
+union_anon_177_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+}
+struct__MPI2_IOC_FACTS_REQUEST_2349236706551957055 {
+    field_0    int16
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int8
+    field_5    int8
+    field_6    int8
+    field_7    int8
+    field_8    int16
+}
+struct_mpt3_diag_register_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int32
+    field_5    array[int32, 23]
+    field_6    int32
+    field_7    int32
+}
+struct_mpt3_ioctl_command_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int32
+    field_2    ptr[in, int8]
+    field_3    ptr[in, int8]
+    field_4    ptr[in, int8]
+    field_5    ptr[in, int8]
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    array[int8, 1]
+}
+struct_mpt3_ioctl_btdh_mapping_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int32
+    field_2    int32
+    field_3    int16
+    field_4    int16
+}
+struct_MPT3_IOCTL_EVENTS_2349236706551957055 {
+    field_0    int32
+    field_1    int32
+    field_2    array[int8, 192]
+}
+struct_mpt3_ioctl_iocinfo_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    array[int8, 32]
+    field_11    int8
+    field_12    int8
+    field_13    int16
+    field_14    struct_kqid_2349236706551957055
+}
+struct_mpt3_ioctl_command32_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int32
+    field_2    int32
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    int32
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    array[int8, 1]
+}
+struct_mpt3_ioctl_eventquery_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int16
+    field_2    int16
+    field_3    array[int32, 4]
+}
+struct_mpt3_ioctl_eventenable_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    array[int32, 4]
+}
+struct_mpt3_ioctl_eventreport_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    array[struct_MPT3_IOCTL_EVENTS_2349236706551957055, 1]
+}
+struct_mpt3_diag_release_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int32
+}
+struct_mpt3_diag_query_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int32
+    field_5    array[int32, 23]
+    field_6    int32
+    field_7    int32
+    field_8    int32
+}
+struct_mpt3_diag_read_buffer_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int8
+    field_2    int8
+    field_3    int16
+    field_4    int32
+    field_5    int32
+    field_6    int32
+    field_7    array[int32, 1]
+}
+struct_mpt3_addnl_diag_query_2349236706551957055 {
+    field_0    struct_uid_gid_extent_2349236706551957055
+    field_1    int32
+    field_2    int16
+    field_3    int16
+    field_4    int32
+    field_5    array[int32, 2]
+    field_6    array[int32, 2]
+}

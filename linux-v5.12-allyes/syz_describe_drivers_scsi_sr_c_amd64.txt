@@ -11,16 +11,40 @@ meta arches["amd64"]
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/sr.c#L1058
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/sr.c#L731
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/sr.c#L731
+# find handler ioctl: sr_block_ioctl
+# find handler open: sr_block_open
+
 resource fd_16769235456197474187_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/sg.c#L1558
-openat$syz_describe_16769235456197474187_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_16769235456197474187_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/ch.c#L953
-openat$syz_describe_16769235456197474187_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/s%s"]], flags flags[open_flags], mode const[0]) fd_16769235456197474187_fd
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/sg.c#L1492
+syz_open_dev$syz_describe_16769235456197474187_open_0(dev ptr[in, string["/dev/sg#"]], id intptr, flags flags[open_flags]) fd_16769235456197474187_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/sr.c#L730
-syz_open_dev$syz_describe_16769235456197474187_open_2(dev ptr[in, string["/dev/sr#"]], id intptr, flags flags[open_flags]) fd_16769235456197474187_fd
+syz_open_dev$syz_describe_16769235456197474187_open_1(dev ptr[in, string["/dev/sr#"]], id intptr, flags flags[open_flags]) fd_16769235456197474187_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/sr.c#L731
-ioctl$syz_describe_16769235456197474187_21378(fd fd_16769235456197474187_fd, cmd const[21378], arg intptr)
-ioctl$syz_describe_16769235456197474187_21382(fd fd_16769235456197474187_fd, cmd const[21382], arg intptr)
+ioctl$syz_describe_16769235456197474187_1(fd fd_16769235456197474187_fd, cmd const[1], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_1_1(fd fd_16769235456197474187_fd, cmd const[1], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_2(fd fd_16769235456197474187_fd, cmd const[2], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_2_1(fd fd_16769235456197474187_fd, cmd const[2], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_3(fd fd_16769235456197474187_fd, cmd const[3], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_3_1(fd fd_16769235456197474187_fd, cmd const[3], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_4(fd fd_16769235456197474187_fd, cmd const[4], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_4_1(fd fd_16769235456197474187_fd, cmd const[4], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_5(fd fd_16769235456197474187_fd, cmd const[5], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_5_1(fd fd_16769235456197474187_fd, cmd const[5], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_6(fd fd_16769235456197474187_fd, cmd const[6], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_6_1(fd fd_16769235456197474187_fd, cmd const[6], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_8836(fd fd_16769235456197474187_fd, cmd const[8836], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_21376(fd fd_16769235456197474187_fd, cmd const[21376], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_21377(fd fd_16769235456197474187_fd, cmd const[21377], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_21378(fd fd_16769235456197474187_fd, cmd const[21378], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_21378_1(fd fd_16769235456197474187_fd, cmd const[21378], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_21381(fd fd_16769235456197474187_fd, cmd const[21381], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_21382(fd fd_16769235456197474187_fd, cmd const[21382], arg ptr[in, array[int8]])
+ioctl$syz_describe_16769235456197474187_21382_1(fd fd_16769235456197474187_fd, cmd const[21382], arg ptr[out, struct_util_est_16769235456197474187])
+ioctl$syz_describe_16769235456197474187_21383(fd fd_16769235456197474187_fd, cmd const[21383], arg ptr[in, array[int8]])
 
+struct_util_est_16769235456197474187 {
+    field_0    int32
+    field_1    int32
+}

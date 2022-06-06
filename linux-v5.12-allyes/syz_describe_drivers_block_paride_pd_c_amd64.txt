@@ -12,17 +12,14 @@ meta arches["amd64"]
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pd.c#L969
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pd.c#L898
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pd.c#L898
+# find handler ioctl: pd_ioctl
+# find handler open: pd_open
+
 resource fd_11003013785131838404_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pd.c#L897
-openat$syz_describe_11003013785131838404_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/"]], flags flags[open_flags], mode const[0]) fd_11003013785131838404_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pg.c#L701
-syz_open_dev$syz_describe_11003013785131838404_open_1(dev ptr[in, string["/dev/pg#"]], id intptr, flags flags[open_flags]) fd_11003013785131838404_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pt.c#L994
-syz_open_dev$syz_describe_11003013785131838404_open_2(dev ptr[in, string["/dev/pt#"]], id intptr, flags flags[open_flags]) fd_11003013785131838404_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pt.c#L996
-syz_open_dev$syz_describe_11003013785131838404_open_3(dev ptr[in, string["/dev/pt#n"]], id intptr, flags flags[open_flags]) fd_11003013785131838404_fd
+# not get correct value for this device file name
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/paride/pd.c#L898
-ioctl$syz_describe_11003013785131838404_21257(fd fd_11003013785131838404_fd, cmd const[21257], arg intptr)
+ioctl$syz_describe_11003013785131838404_21257(fd fd_11003013785131838404_fd, cmd const[21257], arg ptr[in, array[int8]])
 

@@ -12,6 +12,10 @@ meta arches["amd64"]
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/nvme/host/tcp.c#L2521
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/nvme/host/core.c#L4567
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvme/host/core.c#L4567
+# find handler ioctl: nvme_dev_ioctl
+# find handler open: nvme_dev_open
+
 resource fd_15888572626593040990_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvme/host/fabrics.c#L1191
@@ -23,11 +27,51 @@ syz_open_dev$syz_describe_15888572626593040990_open_2(dev ptr[in, string["/dev/n
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvme/host/core.c#L2949
 syz_open_dev$syz_describe_15888572626593040990_open_3(dev ptr[in, string["/dev/nvme-subsys#"]], id intptr, flags flags[open_flags]) fd_15888572626593040990_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/nvme/host/core.c#L4567
-ioctl$syz_describe_15888572626593040990_20036(fd fd_15888572626593040990_fd, cmd const[20036], arg intptr)
-ioctl$syz_describe_15888572626593040990_20037(fd fd_15888572626593040990_fd, cmd const[20037], arg intptr)
-ioctl$syz_describe_15888572626593040990_20038(fd fd_15888572626593040990_fd, cmd const[20038], arg intptr)
-ioctl$syz_describe_15888572626593040990_3225964097(fd fd_15888572626593040990_fd, cmd const[3225964097], arg intptr)
-ioctl$syz_describe_15888572626593040990_3225964099(fd fd_15888572626593040990_fd, cmd const[3225964099], arg intptr)
-ioctl$syz_describe_15888572626593040990_3226488391(fd fd_15888572626593040990_fd, cmd const[3226488391], arg intptr)
+ioctl$syz_describe_15888572626593040990_20036(fd fd_15888572626593040990_fd, cmd const[20036], arg ptr[in, array[int8]])
+ioctl$syz_describe_15888572626593040990_20037(fd fd_15888572626593040990_fd, cmd const[20037], arg ptr[in, array[int8]])
+ioctl$syz_describe_15888572626593040990_20038(fd fd_15888572626593040990_fd, cmd const[20038], arg ptr[in, array[int8]])
+ioctl$syz_describe_15888572626593040990_3225964097_0(fd fd_15888572626593040990_fd, cmd const[3225964097], arg ptr[in, struct_nvme_passthru_cmd_15888572626593040990])
+ioctl$syz_describe_15888572626593040990_3225964099_0(fd fd_15888572626593040990_fd, cmd const[3225964099], arg ptr[in, struct_nvme_passthru_cmd_15888572626593040990])
+ioctl$syz_describe_15888572626593040990_3226488391_0(fd fd_15888572626593040990_fd, cmd const[3226488391], arg ptr[in, struct_nvme_passthru_cmd64_15888572626593040990])
 
+struct_nvme_passthru_cmd_15888572626593040990 {
+    field_0    int8
+    field_1    int8
+    field_2    int16
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int64
+    field_7    int64
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    int32
+    field_12    int32
+    field_13    int32
+    field_14    int32
+    field_15    int32
+    field_16    int32
+    field_17    int32
+}
+struct_nvme_passthru_cmd64_15888572626593040990 {
+    field_0    int8
+    field_1    int8
+    field_2    int16
+    field_3    int32
+    field_4    int32
+    field_5    int32
+    field_6    int64
+    field_7    int64
+    field_8    int32
+    field_9    int32
+    field_10    int32
+    field_11    int32
+    field_12    int32
+    field_13    int32
+    field_14    int32
+    field_15    int32
+    field_16    int32
+    field_17    int32
+    field_18    int64
+}

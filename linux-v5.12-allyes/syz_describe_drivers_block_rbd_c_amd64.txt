@@ -16,14 +16,10 @@ meta arches["amd64"]
 # 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rbd.c#L6836
 # 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rbd.c#L4938
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rbd.c#L4938
+# find handler open: rbd_open
+
 resource fd_999792933797335074_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rbd.c#L6843
-syz_open_dev$syz_describe_999792933797335074_open_0(dev ptr[in, string["/dev/#"]], id intptr, flags flags[open_flags]) fd_999792933797335074_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/pktcdvd.c#L317
-openat$syz_describe_999792933797335074_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/%s"]], flags flags[open_flags], mode const[0]) fd_999792933797335074_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rnbd/rnbd-clt-sysfs.c#L619
-openat$syz_describe_999792933797335074_open_2(fd const[AT_FDCWD], file ptr[in, string["/dev/ctl"]], flags flags[open_flags], mode const[0]) fd_999792933797335074_fd
-
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rbd.c#L4938
+# not get possible device file name
 

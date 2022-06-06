@@ -13,11 +13,16 @@ meta arches["amd64"]
 # 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/arm/display/komeda/komeda_drv.c#L67
 # 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/arm/display/komeda/komeda_kms.c#L259
 
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/arm/display/komeda/komeda_kms.c#L259
+# find handler ioctl: drm_ioctl
+# find handler open: drm_open
+# find handler read: drm_read
+
 resource fd_12486119319362930236_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/arm/display/komeda/komeda_kms.c#L259
 openat$syz_describe_12486119319362930236_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/komeda"]], flags flags[open_flags], mode const[0]) fd_12486119319362930236_fd
 
-# syscall handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/arm/display/komeda/komeda_kms.c#L259
-ioctl$syz_describe_12486119319362930236_0(fd fd_12486119319362930236_fd, cmd const[0], arg intptr) fd_12486119319362930236_cmd_0_fd
+ioctl$syz_describe_12486119319362930236_0(fd fd_12486119319362930236_fd, cmd const[0], arg ptr[in, array[int8]]) fd_12486119319362930236_cmd_0_fd
+ioctl$syz_describe_12486119319362930236_0(fd fd_12486119319362930236_fd, cmd const[0], arg ptr[in, array[int8]]) fd_12486119319362930236_cmd_0_fd
 
