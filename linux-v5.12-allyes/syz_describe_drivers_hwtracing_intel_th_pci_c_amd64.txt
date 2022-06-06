@@ -32,6 +32,7 @@ syz_open_dev$syz_describe_16883249438036224670_open_1(dev ptr[in, string["/dev/#
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/hwtracing/intel_th/core.c#L804
 # not find any syscall handler in the structure
 
-resource not_find_non_open_parent[fd]
+resource fd_6142509188972423790_fd[fd]
 
+# non open fd
 

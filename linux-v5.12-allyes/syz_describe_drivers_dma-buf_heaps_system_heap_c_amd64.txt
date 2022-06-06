@@ -24,28 +24,3 @@ ioctl$syz_describe_1338567048086834045_0(fd fd_1338567048086834045_fd, cmd const
 ioctl$syz_describe_1338567048086834045_0(fd fd_1338567048086834045_fd, cmd const[0], arg ptr[in, array[int8]])
 ioctl$syz_describe_1338567048086834045_3222816768(fd fd_1338567048086834045_fd, cmd const[3222816768], arg ptr[in, array[int8]])
 
-# driver found at module init function system_heap_create() in https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/heaps/system_heap.c#L423
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/heaps/system_heap.c#L431
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/dma-heap.c#L254
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/dma-heap.c#L169
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/dma-heap.c#L110
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/dma-heap.c#L66
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/heaps/system_heap.c#L397
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/dma-buf.c#L574
-# 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/dma-buf.c#L456
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/dma-buf/dma-buf.c#L456
-# find handler ioctl: dma_buf_ioctl
-
-resource fd_11115176424471321544_fd[fd]
-
-# non open fd
-
-ioctl$syz_describe_11115176424471321544_1074029057(fd fd_11115176424471321544_fd, cmd const[1074029057], arg ptr[in, array[int8]])
-ioctl$syz_describe_11115176424471321544_1074291200_0(fd fd_11115176424471321544_fd, cmd const[1074291200], arg ptr[in, union_anon_5_11115176424471321544])
-ioctl$syz_describe_11115176424471321544_1074291201(fd fd_11115176424471321544_fd, cmd const[1074291201], arg ptr[in, array[int8]])
-
-union_anon_5_11115176424471321544 {
-    field_0    int64
-}

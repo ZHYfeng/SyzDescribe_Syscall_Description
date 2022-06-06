@@ -27,3 +27,37 @@ ioctl$syz_describe_8846870542708488638_3(fd fd_8846870542708488638_fd, cmd const
 ioctl$syz_describe_8846870542708488638_13(fd fd_8846870542708488638_fd, cmd const[13], arg ptr[in, array[int8]])
 ioctl$syz_describe_8846870542708488638_253(fd fd_8846870542708488638_fd, cmd const[253], arg ptr[in, array[int8]])
 
+# driver found at module init function dm_ctl_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L1916
+# parent id hash: 8846870542708488638
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L1918
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L1896
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L783
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm.c#L2107
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm.c#L1896
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm.c#L1896
+# find handler ioctl: dm_blk_ioctl
+# find handler open: dm_blk_open
+
+resource fd_9268305247227569048_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm.c#L1899
+syz_open_dev$syz_describe_9268305247227569048_open_0(dev ptr[in, string["/dev/dm-#"]], id intptr, flags flags[open_flags]) fd_9268305247227569048_fd
+
+# driver found at module init function dm_ctl_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L1916
+# parent id hash: 8846870542708488638
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L1918
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L1896
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-ioctl.c#L1366
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm.c#L2173
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm.c#L2173
+# find handler ioctl: dm_blk_ioctl
+# find handler open: dm_blk_open
+
+resource fd_3900207953985595978_fd[fd]
+
+# not get possible device file name
+

@@ -34,14 +34,3 @@ struct_util_est_4905187623653184996 {
     field_0    int32
     field_1    int32
 }
-# driver found at module init function ashmem_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/android/ashmem.c#L922
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/android/ashmem.c#L942
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/android/ashmem.c#L435
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/android/ashmem.c#L435
-# not find any syscall handler in the structure
-
-resource not_find_non_open_parent[fd]
-
-

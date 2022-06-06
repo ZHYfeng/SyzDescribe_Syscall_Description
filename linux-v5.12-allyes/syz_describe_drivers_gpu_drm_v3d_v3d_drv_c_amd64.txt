@@ -24,3 +24,19 @@ openat$syz_describe_17724343364728047329_open_0(fd const[AT_FDCWD], file ptr[in,
 ioctl$syz_describe_17724343364728047329_0(fd fd_17724343364728047329_fd, cmd const[0], arg ptr[in, array[int8]]) fd_17724343364728047329_cmd_0_fd
 ioctl$syz_describe_17724343364728047329_0(fd fd_17724343364728047329_fd, cmd const[0], arg ptr[in, array[int8]]) fd_17724343364728047329_cmd_0_fd
 
+# driver found at (not module init) function drm_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L810
+# parent id hash: 17724343364728047329
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L887
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L787
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L799
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L615
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+# not find any syscall handler in the structure
+
+resource fd_17724343364728047329_cmd_0_fd[fd]
+
+# non open fd
+

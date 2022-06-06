@@ -6,16 +6,12 @@
 
 meta arches["amd64"]
 
-# driver found at module init function serial_pci_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L5723
+# driver found at module init function serial8250_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_core.c#L1166
 # call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L5723
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L4114
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L3971
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_core.c#L1092
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/serial_core.c#L2928
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_port.c#L167
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3308
-# 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3197
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_core.c#L1182
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/serial_core.c#L2579
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3487
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3197
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L3197
 # find handler ioctl: tty_ioctl
@@ -124,23 +120,6 @@ struct_serial_struct_17574705964761174362 {
     field_16    int32
     field_17    int64
 }
-# driver found at module init function serial_pci_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L5723
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L5723
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L4114
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_pci.c#L3971
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/8250/8250_core.c#L998
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/serial/serial_core.c#L2995
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L712
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L630
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L630
-# find handler ioctl: hung_up_tty_ioctl
-
-resource fd_17405850292705195007_fd[fd]
-
-# non open fd
-
 # driver found at (not module init) function tty_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/tty/tty_io.c#L2679
 # parent id hash: 17574705964761174362
 # call chain: 

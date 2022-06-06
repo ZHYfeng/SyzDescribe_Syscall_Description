@@ -28,208 +28,6 @@ ioctl$syz_describe_4164426063393708362_15206(fd fd_4164426063393708362_fd, cmd c
 # driver found at module init function vfio_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L2373
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L2403
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L1560
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L1474
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L1474
-# find handler ioctl: vfio_device_fops_unl_ioctl
-# find handler read: vfio_device_fops_read
-# find handler write: vfio_device_fops_write
-
-resource not_find_non_open_parent[fd]
-
-
-ioctl$syz_describe_7826318875969576453_15211_0(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, int32])
-ioctl$syz_describe_7826318875969576453_15211_1(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_2(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_uuid_t_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_3(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_4(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_5(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_6(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_7(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_8(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_pci_hot_reset_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_9(fd not_find_non_open_parent, cmd const[15211], arg ptr[in, struct_vfio_device_ioeventfd_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_10(fd not_find_non_open_parent, cmd const[15211], arg ptr[out, struct_desc_struct_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_11(fd not_find_non_open_parent, cmd const[15211], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_12(fd not_find_non_open_parent, cmd const[15211], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_13(fd not_find_non_open_parent, cmd const[15211], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_14(fd not_find_non_open_parent, cmd const[15211], arg ptr[out, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15211_15(fd not_find_non_open_parent, cmd const[15211], arg ptr[out, struct_vfio_pci_dependent_device_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_0(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, int32])
-ioctl$syz_describe_7826318875969576453_15212_1(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_2(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_uuid_t_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_3(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_4(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_5(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_6(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_7(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_8(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_pci_hot_reset_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_9(fd not_find_non_open_parent, cmd const[15212], arg ptr[in, struct_vfio_device_ioeventfd_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_10(fd not_find_non_open_parent, cmd const[15212], arg ptr[out, struct_desc_struct_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_11(fd not_find_non_open_parent, cmd const[15212], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_12(fd not_find_non_open_parent, cmd const[15212], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_13(fd not_find_non_open_parent, cmd const[15212], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_14(fd not_find_non_open_parent, cmd const[15212], arg ptr[out, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15212_15(fd not_find_non_open_parent, cmd const[15212], arg ptr[out, struct_vfio_pci_dependent_device_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_0(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, int32])
-ioctl$syz_describe_7826318875969576453_15213_1(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_2(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_uuid_t_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_3(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_4(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_5(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_6(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_7(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_8(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_pci_hot_reset_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_9(fd not_find_non_open_parent, cmd const[15213], arg ptr[in, struct_vfio_device_ioeventfd_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_10(fd not_find_non_open_parent, cmd const[15213], arg ptr[out, struct_desc_struct_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_11(fd not_find_non_open_parent, cmd const[15213], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_12(fd not_find_non_open_parent, cmd const[15213], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_13(fd not_find_non_open_parent, cmd const[15213], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_14(fd not_find_non_open_parent, cmd const[15213], arg ptr[out, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15213_15(fd not_find_non_open_parent, cmd const[15213], arg ptr[out, struct_vfio_pci_dependent_device_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15214_0(fd not_find_non_open_parent, cmd const[15214], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15214_1(fd not_find_non_open_parent, cmd const[15214], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15214_2(fd not_find_non_open_parent, cmd const[15214], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15214_3(fd not_find_non_open_parent, cmd const[15214], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15214_4(fd not_find_non_open_parent, cmd const[15214], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15214_5(fd not_find_non_open_parent, cmd const[15214], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15214_6(fd not_find_non_open_parent, cmd const[15214], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15215(fd not_find_non_open_parent, cmd const[15215], arg ptr[in, array[int8]])
-ioctl$syz_describe_7826318875969576453_15216_0(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, int32])
-ioctl$syz_describe_7826318875969576453_15216_1(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_2(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_uuid_t_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_3(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_4(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_5(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_6(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_7(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_8(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_pci_hot_reset_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_9(fd not_find_non_open_parent, cmd const[15216], arg ptr[in, struct_vfio_device_ioeventfd_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_10(fd not_find_non_open_parent, cmd const[15216], arg ptr[out, struct_desc_struct_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_11(fd not_find_non_open_parent, cmd const[15216], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_12(fd not_find_non_open_parent, cmd const[15216], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_13(fd not_find_non_open_parent, cmd const[15216], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_14(fd not_find_non_open_parent, cmd const[15216], arg ptr[out, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15216_15(fd not_find_non_open_parent, cmd const[15216], arg ptr[out, struct_vfio_pci_dependent_device_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_0(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, int32])
-ioctl$syz_describe_7826318875969576453_15217_1(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_2(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_uuid_t_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_3(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_4(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_5(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_6(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_7(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_8(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_pci_hot_reset_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_9(fd not_find_non_open_parent, cmd const[15217], arg ptr[in, struct_vfio_device_ioeventfd_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_10(fd not_find_non_open_parent, cmd const[15217], arg ptr[out, struct_desc_struct_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_11(fd not_find_non_open_parent, cmd const[15217], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_12(fd not_find_non_open_parent, cmd const[15217], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_13(fd not_find_non_open_parent, cmd const[15217], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_14(fd not_find_non_open_parent, cmd const[15217], arg ptr[out, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15217_15(fd not_find_non_open_parent, cmd const[15217], arg ptr[out, struct_vfio_pci_dependent_device_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_0(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, int32])
-ioctl$syz_describe_7826318875969576453_15220_1(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_2(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_uuid_t_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_3(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_4(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_5(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_6(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_7(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_8(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_pci_hot_reset_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_9(fd not_find_non_open_parent, cmd const[15220], arg ptr[in, struct_vfio_device_ioeventfd_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_10(fd not_find_non_open_parent, cmd const[15220], arg ptr[out, struct_desc_struct_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_11(fd not_find_non_open_parent, cmd const[15220], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_12(fd not_find_non_open_parent, cmd const[15220], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_13(fd not_find_non_open_parent, cmd const[15220], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_14(fd not_find_non_open_parent, cmd const[15220], arg ptr[out, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15220_15(fd not_find_non_open_parent, cmd const[15220], arg ptr[out, struct_vfio_pci_dependent_device_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_0(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, int32])
-ioctl$syz_describe_7826318875969576453_15221_1(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_irq_set_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_2(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_uuid_t_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_3(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_4(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_5(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_6(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_7(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_8(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_pci_hot_reset_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_9(fd not_find_non_open_parent, cmd const[15221], arg ptr[in, struct_vfio_device_ioeventfd_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_10(fd not_find_non_open_parent, cmd const[15221], arg ptr[out, struct_desc_struct_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_11(fd not_find_non_open_parent, cmd const[15221], arg ptr[out, struct_vfio_device_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_12(fd not_find_non_open_parent, cmd const[15221], arg ptr[out, struct_vfio_region_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_13(fd not_find_non_open_parent, cmd const[15221], arg ptr[out, struct_vfio_irq_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_14(fd not_find_non_open_parent, cmd const[15221], arg ptr[out, struct_vfio_pci_hot_reset_info_7826318875969576453])
-ioctl$syz_describe_7826318875969576453_15221_15(fd not_find_non_open_parent, cmd const[15221], arg ptr[out, struct_vfio_pci_dependent_device_7826318875969576453])
-
-struct_desc_struct_7826318875969576453 {
-    field_0    int16
-    field_1    int16
-    field_2    int32
-}
-struct_uuid_t_7826318875969576453 {
-    field_0    array[int8, 16]
-}
-struct_vfio_irq_set_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    int32
-    field_3    int32
-    field_4    int32
-    field_5    array[int8]
-}
-struct_vfio_iommu_type1_dirty_bitmap_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    array[int8]
-}
-struct_vfio_device_info_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    int32
-    field_3    int32
-    field_4    int32
-}
-struct_vfio_region_info_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    int32
-    field_3    int32
-    field_4    int64
-    field_5    int64
-}
-struct_vfio_irq_info_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    int32
-    field_3    int32
-}
-struct_vfio_pci_dependent_device_7826318875969576453 {
-    field_0    int32
-    field_1    int16
-    field_2    int8
-    field_3    int8
-}
-struct_vfio_pci_hot_reset_info_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    int32
-    field_3    array[struct_vfio_pci_dependent_device_7826318875969576453]
-}
-struct_vfio_pci_hot_reset_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    int32
-    field_3    array[int32]
-}
-struct_vfio_device_ioeventfd_7826318875969576453 {
-    field_0    int32
-    field_1    int32
-    field_2    int64
-    field_3    int64
-    field_4    int32
-}
-# driver found at module init function vfio_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L2373
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L2403
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L2403
 # find handler ioctl: vfio_group_fops_unl_ioctl
@@ -249,3 +47,18 @@ struct_util_est_5763775196767522246 {
     field_0    int32
     field_1    int32
 }
+# driver found at (not module init) function vfio_group_fops_unl_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L1502
+# parent id hash: 5763775196767522246
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L1560
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L1474
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/vfio/vfio.c#L1474
+# find handler ioctl: vfio_device_fops_unl_ioctl
+# find handler read: vfio_device_fops_read
+# find handler write: vfio_device_fops_write
+
+resource fd_5763775196767522246_cmd_15210_fd[fd]
+
+# non open fd
+

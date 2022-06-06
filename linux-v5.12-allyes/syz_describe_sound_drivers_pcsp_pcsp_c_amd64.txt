@@ -141,6 +141,7 @@ struct_snd_ctl_card_info_2127882575101404228 {
 # find handler read: snd_disconnect_read
 # find handler write: snd_disconnect_write
 
-resource not_find_non_open_parent[fd]
+resource fd_12319934135558983643_fd[fd]
 
+# non open fd
 

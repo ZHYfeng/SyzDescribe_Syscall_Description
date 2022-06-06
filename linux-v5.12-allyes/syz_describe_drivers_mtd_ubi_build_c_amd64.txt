@@ -30,71 +30,16 @@ struct_ubi_attach_req_4431641944874237320 {
 }
 # driver found at module init function ubi_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1194
 # call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1213
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L1043
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L985
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L461
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L864
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L271
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L271
-# find handler ioctl: vol_cdev_ioctl
-# find handler open: vol_cdev_open
-# find handler read: vol_cdev_read
-# find handler write: vol_cdev_write
-
-resource fd_2857891206416645601_fd[fd]
-
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L275
-syz_open_dev$syz_describe_2857891206416645601_open_0(dev ptr[in, string["/dev/%s_#"]], id intptr, flags flags[open_flags]) fd_2857891206416645601_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L465
-syz_open_dev$syz_describe_2857891206416645601_open_1(dev ptr[in, string["/dev/ubi#"]], id intptr, flags flags[open_flags]) fd_2857891206416645601_fd
-
-ioctl$syz_describe_2857891206416645601_20232(fd fd_2857891206416645601_fd, cmd const[20232], arg ptr[in, array[int8]])
-ioctl$syz_describe_2857891206416645601_1074024193_0(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, int64])
-ioctl$syz_describe_2857891206416645601_1074024193_1(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, struct_ubi_leb_change_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1074024193_2(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, struct_ubi_map_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1074024193_3(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, struct_ubi_set_vol_prop_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1074024194_0(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, int64])
-ioctl$syz_describe_2857891206416645601_1074024194_1(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, struct_ubi_leb_change_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1074024194_2(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, struct_ubi_map_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1074024194_3(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, struct_ubi_set_vol_prop_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1074024196(fd fd_2857891206416645601_fd, cmd const[1074024196], arg ptr[in, array[int8]])
-ioctl$syz_describe_2857891206416645601_1074286336_0(fd fd_2857891206416645601_fd, cmd const[1074286336], arg ptr[in, int64])
-ioctl$syz_describe_2857891206416645601_1074286339_0(fd fd_2857891206416645601_fd, cmd const[1074286339], arg ptr[in, struct_ubi_map_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1074810630_0(fd fd_2857891206416645601_fd, cmd const[1074810630], arg ptr[in, struct_ubi_set_vol_prop_req_2857891206416645601])
-ioctl$syz_describe_2857891206416645601_1082150663(fd fd_2857891206416645601_fd, cmd const[1082150663], arg ptr[in, array[int8]])
-ioctl$syz_describe_2857891206416645601_2147766021(fd fd_2857891206416645601_fd, cmd const[2147766021], arg ptr[in, array[int8]])
-
-struct_ubi_leb_change_req_2857891206416645601 {
-    field_0    int32
-    field_1    int32
-    field_2    int8
-    field_3    array[int8, 7]
-}
-struct_ubi_map_req_2857891206416645601 {
-    field_0    int32
-    field_1    int8
-    field_2    array[int8, 3]
-}
-struct_ubi_set_vol_prop_req_2857891206416645601 {
-    field_0    int8
-    field_1    array[int8, 7]
-    field_2    int64
-}
-# driver found at module init function ubi_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1194
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1213
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L1043
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L985
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L461
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1251
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L985
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L461
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L461
 # find handler ioctl: ubi_cdev_ioctl
 
 resource fd_2060224844463765295_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L275
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L598
 syz_open_dev$syz_describe_2060224844463765295_open_0(dev ptr[in, string["/dev/%s_#"]], id intptr, flags flags[open_flags]) fd_2060224844463765295_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L465
 syz_open_dev$syz_describe_2060224844463765295_open_1(dev ptr[in, string["/dev/ubi#"]], id intptr, flags flags[open_flags]) fd_2060224844463765295_fd
@@ -139,14 +84,62 @@ struct_ubi_rnvol_req_2060224844463765295 {
 }
 # driver found at module init function ubi_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1194
 # call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1213
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L1043
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L985
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L461
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L864
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L271
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L565
-# 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1251
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L985
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L472
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L583
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L583
+# find handler ioctl: vol_cdev_ioctl
+# find handler open: vol_cdev_open
+# find handler read: vol_cdev_read
+# find handler write: vol_cdev_write
+
+resource fd_2857891206416645601_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L598
+syz_open_dev$syz_describe_2857891206416645601_open_0(dev ptr[in, string["/dev/%s_#"]], id intptr, flags flags[open_flags]) fd_2857891206416645601_fd
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L465
+syz_open_dev$syz_describe_2857891206416645601_open_1(dev ptr[in, string["/dev/ubi#"]], id intptr, flags flags[open_flags]) fd_2857891206416645601_fd
+
+ioctl$syz_describe_2857891206416645601_20232(fd fd_2857891206416645601_fd, cmd const[20232], arg ptr[in, array[int8]])
+ioctl$syz_describe_2857891206416645601_1074024193_0(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, int64])
+ioctl$syz_describe_2857891206416645601_1074024193_1(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, struct_ubi_leb_change_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1074024193_2(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, struct_ubi_map_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1074024193_3(fd fd_2857891206416645601_fd, cmd const[1074024193], arg ptr[in, struct_ubi_set_vol_prop_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1074024194_0(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, int64])
+ioctl$syz_describe_2857891206416645601_1074024194_1(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, struct_ubi_leb_change_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1074024194_2(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, struct_ubi_map_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1074024194_3(fd fd_2857891206416645601_fd, cmd const[1074024194], arg ptr[in, struct_ubi_set_vol_prop_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1074024196(fd fd_2857891206416645601_fd, cmd const[1074024196], arg ptr[in, array[int8]])
+ioctl$syz_describe_2857891206416645601_1074286336_0(fd fd_2857891206416645601_fd, cmd const[1074286336], arg ptr[in, int64])
+ioctl$syz_describe_2857891206416645601_1074286339_0(fd fd_2857891206416645601_fd, cmd const[1074286339], arg ptr[in, struct_ubi_map_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1074810630_0(fd fd_2857891206416645601_fd, cmd const[1074810630], arg ptr[in, struct_ubi_set_vol_prop_req_2857891206416645601])
+ioctl$syz_describe_2857891206416645601_1082150663(fd fd_2857891206416645601_fd, cmd const[1082150663], arg ptr[in, array[int8]])
+ioctl$syz_describe_2857891206416645601_2147766021(fd fd_2857891206416645601_fd, cmd const[2147766021], arg ptr[in, array[int8]])
+
+struct_ubi_leb_change_req_2857891206416645601 {
+    field_0    int32
+    field_1    int32
+    field_2    int8
+    field_3    array[int8, 7]
+}
+struct_ubi_map_req_2857891206416645601 {
+    field_0    int32
+    field_1    int8
+    field_2    array[int8, 3]
+}
+struct_ubi_set_vol_prop_req_2857891206416645601 {
+    field_0    int8
+    field_1    array[int8, 7]
+    field_2    int64
+}
+# driver found at module init function ubi_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1194
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L1277
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L685
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L645
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
 # find handler open: ubiblock_open
@@ -155,4 +148,268 @@ resource fd_8579674598905491357_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L415
 syz_open_dev$syz_describe_8579674598905491357_open_0(dev ptr[in, string["/dev/ubiblock#_#"]], id intptr, flags flags[open_flags]) fd_8579674598905491357_fd
+
+# driver found at (not module init) function ubi_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L831
+# parent id hash: 2060224844463765295
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L864
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L271
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L271
+# find handler ioctl: vol_cdev_ioctl
+# find handler open: vol_cdev_open
+# find handler read: vol_cdev_read
+# find handler write: vol_cdev_write
+
+resource fd_2203205898912710553_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L275
+syz_open_dev$syz_describe_2203205898912710553_open_0(dev ptr[in, string["/dev/%s_#"]], id intptr, flags flags[open_flags]) fd_2203205898912710553_fd
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L465
+syz_open_dev$syz_describe_2203205898912710553_open_1(dev ptr[in, string["/dev/ubi#"]], id intptr, flags flags[open_flags]) fd_2203205898912710553_fd
+
+ioctl$syz_describe_2203205898912710553_20232(fd fd_2203205898912710553_fd, cmd const[20232], arg ptr[in, array[int8]])
+ioctl$syz_describe_2203205898912710553_1074024193_0(fd fd_2203205898912710553_fd, cmd const[1074024193], arg ptr[in, int64])
+ioctl$syz_describe_2203205898912710553_1074024193_1(fd fd_2203205898912710553_fd, cmd const[1074024193], arg ptr[in, struct_ubi_leb_change_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1074024193_2(fd fd_2203205898912710553_fd, cmd const[1074024193], arg ptr[in, struct_ubi_map_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1074024193_3(fd fd_2203205898912710553_fd, cmd const[1074024193], arg ptr[in, struct_ubi_set_vol_prop_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1074024194_0(fd fd_2203205898912710553_fd, cmd const[1074024194], arg ptr[in, int64])
+ioctl$syz_describe_2203205898912710553_1074024194_1(fd fd_2203205898912710553_fd, cmd const[1074024194], arg ptr[in, struct_ubi_leb_change_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1074024194_2(fd fd_2203205898912710553_fd, cmd const[1074024194], arg ptr[in, struct_ubi_map_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1074024194_3(fd fd_2203205898912710553_fd, cmd const[1074024194], arg ptr[in, struct_ubi_set_vol_prop_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1074024196(fd fd_2203205898912710553_fd, cmd const[1074024196], arg ptr[in, array[int8]])
+ioctl$syz_describe_2203205898912710553_1074286336_0(fd fd_2203205898912710553_fd, cmd const[1074286336], arg ptr[in, int64])
+ioctl$syz_describe_2203205898912710553_1074286339_0(fd fd_2203205898912710553_fd, cmd const[1074286339], arg ptr[in, struct_ubi_map_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1074810630_0(fd fd_2203205898912710553_fd, cmd const[1074810630], arg ptr[in, struct_ubi_set_vol_prop_req_2203205898912710553])
+ioctl$syz_describe_2203205898912710553_1082150663(fd fd_2203205898912710553_fd, cmd const[1082150663], arg ptr[in, array[int8]])
+ioctl$syz_describe_2203205898912710553_2147766021(fd fd_2203205898912710553_fd, cmd const[2147766021], arg ptr[in, array[int8]])
+
+struct_ubi_leb_change_req_2203205898912710553 {
+    field_0    int32
+    field_1    int32
+    field_2    int8
+    field_3    array[int8, 7]
+}
+struct_ubi_map_req_2203205898912710553 {
+    field_0    int32
+    field_1    int8
+    field_2    array[int8, 3]
+}
+struct_ubi_set_vol_prop_req_2203205898912710553 {
+    field_0    int8
+    field_1    array[int8, 7]
+    field_2    int64
+}
+# driver found at (not module init) function ctrl_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L1003
+# parent id hash: 4431641944874237320
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L1043
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L985
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L472
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L583
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L583
+# find handler ioctl: vol_cdev_ioctl
+# find handler open: vol_cdev_open
+# find handler read: vol_cdev_read
+# find handler write: vol_cdev_write
+
+resource fd_13547322424032149082_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L598
+syz_open_dev$syz_describe_13547322424032149082_open_0(dev ptr[in, string["/dev/%s_#"]], id intptr, flags flags[open_flags]) fd_13547322424032149082_fd
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L465
+syz_open_dev$syz_describe_13547322424032149082_open_1(dev ptr[in, string["/dev/ubi#"]], id intptr, flags flags[open_flags]) fd_13547322424032149082_fd
+
+ioctl$syz_describe_13547322424032149082_20232(fd fd_13547322424032149082_fd, cmd const[20232], arg ptr[in, array[int8]])
+ioctl$syz_describe_13547322424032149082_1074024193_0(fd fd_13547322424032149082_fd, cmd const[1074024193], arg ptr[in, int64])
+ioctl$syz_describe_13547322424032149082_1074024193_1(fd fd_13547322424032149082_fd, cmd const[1074024193], arg ptr[in, struct_ubi_leb_change_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1074024193_2(fd fd_13547322424032149082_fd, cmd const[1074024193], arg ptr[in, struct_ubi_map_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1074024193_3(fd fd_13547322424032149082_fd, cmd const[1074024193], arg ptr[in, struct_ubi_set_vol_prop_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1074024194_0(fd fd_13547322424032149082_fd, cmd const[1074024194], arg ptr[in, int64])
+ioctl$syz_describe_13547322424032149082_1074024194_1(fd fd_13547322424032149082_fd, cmd const[1074024194], arg ptr[in, struct_ubi_leb_change_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1074024194_2(fd fd_13547322424032149082_fd, cmd const[1074024194], arg ptr[in, struct_ubi_map_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1074024194_3(fd fd_13547322424032149082_fd, cmd const[1074024194], arg ptr[in, struct_ubi_set_vol_prop_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1074024196(fd fd_13547322424032149082_fd, cmd const[1074024196], arg ptr[in, array[int8]])
+ioctl$syz_describe_13547322424032149082_1074286336_0(fd fd_13547322424032149082_fd, cmd const[1074286336], arg ptr[in, int64])
+ioctl$syz_describe_13547322424032149082_1074286339_0(fd fd_13547322424032149082_fd, cmd const[1074286339], arg ptr[in, struct_ubi_map_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1074810630_0(fd fd_13547322424032149082_fd, cmd const[1074810630], arg ptr[in, struct_ubi_set_vol_prop_req_13547322424032149082])
+ioctl$syz_describe_13547322424032149082_1082150663(fd fd_13547322424032149082_fd, cmd const[1082150663], arg ptr[in, array[int8]])
+ioctl$syz_describe_13547322424032149082_2147766021(fd fd_13547322424032149082_fd, cmd const[2147766021], arg ptr[in, array[int8]])
+
+struct_ubi_leb_change_req_13547322424032149082 {
+    field_0    int32
+    field_1    int32
+    field_2    int8
+    field_3    array[int8, 7]
+}
+struct_ubi_map_req_13547322424032149082 {
+    field_0    int32
+    field_1    int8
+    field_2    array[int8, 3]
+}
+struct_ubi_set_vol_prop_req_13547322424032149082 {
+    field_0    int8
+    field_1    array[int8, 7]
+    field_2    int64
+}
+# driver found at (not module init) function ctrl_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L1003
+# parent id hash: 4431641944874237320
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L1043
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L985
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L461
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L461
+# find handler ioctl: ubi_cdev_ioctl
+
+resource fd_5456761879132685861_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L598
+syz_open_dev$syz_describe_5456761879132685861_open_0(dev ptr[in, string["/dev/%s_#"]], id intptr, flags flags[open_flags]) fd_5456761879132685861_fd
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/build.c#L465
+syz_open_dev$syz_describe_5456761879132685861_open_1(dev ptr[in, string["/dev/ubi#"]], id intptr, flags flags[open_flags]) fd_5456761879132685861_fd
+
+ioctl$syz_describe_5456761879132685861_1074032385_0(fd fd_5456761879132685861_fd, cmd const[1074032385], arg ptr[in, struct_ubi_mkvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1074032385_1(fd fd_5456761879132685861_fd, cmd const[1074032385], arg ptr[in, struct_ubi_rsvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1074032385_2(fd fd_5456761879132685861_fd, cmd const[1074032385], arg ptr[in, struct_ubi_rnvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1074032388(fd fd_5456761879132685861_fd, cmd const[1074032388], arg ptr[in, array[int8]])
+ioctl$syz_describe_5456761879132685861_1074032389(fd fd_5456761879132685861_fd, cmd const[1074032389], arg ptr[in, array[int8]])
+ioctl$syz_describe_5456761879132685861_1074556674_0(fd fd_5456761879132685861_fd, cmd const[1074556674], arg ptr[in, struct_ubi_mkvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1074556674_1(fd fd_5456761879132685861_fd, cmd const[1074556674], arg ptr[in, struct_ubi_rsvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1074556674_2(fd fd_5456761879132685861_fd, cmd const[1074556674], arg ptr[in, struct_ubi_rnvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1083731712_0(fd fd_5456761879132685861_fd, cmd const[1083731712], arg ptr[in, struct_ubi_mkvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1083731712_1(fd fd_5456761879132685861_fd, cmd const[1083731712], arg ptr[in, struct_ubi_rsvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1083731712_2(fd fd_5456761879132685861_fd, cmd const[1083731712], arg ptr[in, struct_ubi_rnvol_req_5456761879132685861])
+ioctl$syz_describe_5456761879132685861_1360031491_0(fd fd_5456761879132685861_fd, cmd const[1360031491], arg ptr[in, struct_ubi_rnvol_req_5456761879132685861])
+
+struct_ubi_mkvol_req_5456761879132685861 {
+    field_0    int32
+    field_1    int32
+    field_2    int64
+    field_3    int8
+    field_4    int8
+    field_5    int16
+    field_6    array[int8, 4]
+    field_7    array[int8, 128]
+}
+struct_ubi_rsvol_req_5456761879132685861 {
+    field_0    int64
+    field_1    int32
+} [packed]
+struct_anon_86_9148_5456761879132685861 {
+    field_0    int32
+    field_1    int16
+    field_2    array[int8, 2]
+    field_3    array[int8, 128]
+}
+struct_ubi_rnvol_req_5456761879132685861 {
+    field_0    int32
+    field_1    array[int8, 12]
+    field_2    array[struct_anon_86_9148_5456761879132685861, 32]
+}
+# driver found at (not module init) function ubi_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L831
+# parent id hash: 5456761879132685861
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L864
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L271
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L271
+# find handler ioctl: vol_cdev_ioctl
+# find handler open: vol_cdev_open
+# find handler read: vol_cdev_read
+# find handler write: vol_cdev_write
+
+resource fd_11578416966507771029_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/vmt.c#L275
+syz_open_dev$syz_describe_11578416966507771029_open_0(dev ptr[in, string["/dev/%s_#"]], id intptr, flags flags[open_flags]) fd_11578416966507771029_fd
+
+ioctl$syz_describe_11578416966507771029_20232(fd fd_11578416966507771029_fd, cmd const[20232], arg ptr[in, array[int8]])
+ioctl$syz_describe_11578416966507771029_1074024193_0(fd fd_11578416966507771029_fd, cmd const[1074024193], arg ptr[in, int64])
+ioctl$syz_describe_11578416966507771029_1074024193_1(fd fd_11578416966507771029_fd, cmd const[1074024193], arg ptr[in, struct_ubi_leb_change_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1074024193_2(fd fd_11578416966507771029_fd, cmd const[1074024193], arg ptr[in, struct_ubi_map_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1074024193_3(fd fd_11578416966507771029_fd, cmd const[1074024193], arg ptr[in, struct_ubi_set_vol_prop_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1074024194_0(fd fd_11578416966507771029_fd, cmd const[1074024194], arg ptr[in, int64])
+ioctl$syz_describe_11578416966507771029_1074024194_1(fd fd_11578416966507771029_fd, cmd const[1074024194], arg ptr[in, struct_ubi_leb_change_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1074024194_2(fd fd_11578416966507771029_fd, cmd const[1074024194], arg ptr[in, struct_ubi_map_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1074024194_3(fd fd_11578416966507771029_fd, cmd const[1074024194], arg ptr[in, struct_ubi_set_vol_prop_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1074024196(fd fd_11578416966507771029_fd, cmd const[1074024196], arg ptr[in, array[int8]])
+ioctl$syz_describe_11578416966507771029_1074286336_0(fd fd_11578416966507771029_fd, cmd const[1074286336], arg ptr[in, int64])
+ioctl$syz_describe_11578416966507771029_1074286339_0(fd fd_11578416966507771029_fd, cmd const[1074286339], arg ptr[in, struct_ubi_map_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1074810630_0(fd fd_11578416966507771029_fd, cmd const[1074810630], arg ptr[in, struct_ubi_set_vol_prop_req_11578416966507771029])
+ioctl$syz_describe_11578416966507771029_1082150663(fd fd_11578416966507771029_fd, cmd const[1082150663], arg ptr[in, array[int8]])
+ioctl$syz_describe_11578416966507771029_2147766021(fd fd_11578416966507771029_fd, cmd const[2147766021], arg ptr[in, array[int8]])
+
+struct_ubi_leb_change_req_11578416966507771029 {
+    field_0    int32
+    field_1    int32
+    field_2    int8
+    field_3    array[int8, 7]
+}
+struct_ubi_map_req_11578416966507771029 {
+    field_0    int32
+    field_1    int8
+    field_2    array[int8, 3]
+}
+struct_ubi_set_vol_prop_req_11578416966507771029 {
+    field_0    int8
+    field_1    array[int8, 7]
+    field_2    int64
+}
+# driver found at (not module init) function vol_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L378
+# parent id hash: 2203205898912710553
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L565
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+# find handler open: ubiblock_open
+
+resource fd_9539481867076342809_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L415
+syz_open_dev$syz_describe_9539481867076342809_open_0(dev ptr[in, string["/dev/ubiblock#_#"]], id intptr, flags flags[open_flags]) fd_9539481867076342809_fd
+
+# driver found at (not module init) function vol_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L378
+# parent id hash: 2857891206416645601
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L565
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+# find handler open: ubiblock_open
+
+resource fd_16010333889576995566_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L415
+syz_open_dev$syz_describe_16010333889576995566_open_0(dev ptr[in, string["/dev/ubiblock#_#"]], id intptr, flags flags[open_flags]) fd_16010333889576995566_fd
+
+# driver found at (not module init) function vol_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L378
+# parent id hash: 13547322424032149082
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L565
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+# find handler open: ubiblock_open
+
+resource fd_16517440196909933237_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L415
+syz_open_dev$syz_describe_16517440196909933237_open_0(dev ptr[in, string["/dev/ubiblock#_#"]], id intptr, flags flags[open_flags]) fd_16517440196909933237_fd
+
+# driver found at (not module init) function vol_cdev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L378
+# parent id hash: 11578416966507771029
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/cdev.c#L565
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L405
+# find handler open: ubiblock_open
+
+resource fd_2216122474852662994_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/mtd/ubi/block.c#L415
+syz_open_dev$syz_describe_2216122474852662994_open_0(dev ptr[in, string["/dev/ubiblock#_#"]], id intptr, flags flags[open_flags]) fd_2216122474852662994_fd
 

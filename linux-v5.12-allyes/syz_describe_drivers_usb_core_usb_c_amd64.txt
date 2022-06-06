@@ -8,6 +8,19 @@ meta arches["amd64"]
 
 # driver found at module init function usb_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1001
 # call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1019
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/file.c#L124
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/file.c#L124
+# find handler open: usb_open
+
+resource fd_721665456319069407_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/mon/mon_bin.c#L1359
+syz_open_dev$syz_describe_721665456319069407_open_0(dev ptr[in, string["/dev/usbmon#"]], id intptr, flags flags[open_flags]) fd_721665456319069407_fd
+
+# driver found at module init function usb_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1001
+# call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1025
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/devio.c#L2791
 
@@ -18,12 +31,8 @@ meta arches["amd64"]
 
 resource fd_14428240938263620826_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/message.c#L2099
-syz_open_dev$syz_describe_14428240938263620826_open_0(dev ptr[in, string["/dev/#-%s:#.#"]], id intptr, flags flags[open_flags]) fd_14428240938263620826_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/endpoint.c#L194
-openat$syz_describe_14428240938263620826_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/ep_2x"]], flags flags[open_flags], mode const[0]) fd_14428240938263620826_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/mon/mon_bin.c#L1359
-syz_open_dev$syz_describe_14428240938263620826_open_2(dev ptr[in, string["/dev/usbmon#"]], id intptr, flags flags[open_flags]) fd_14428240938263620826_fd
+syz_open_dev$syz_describe_14428240938263620826_open_0(dev ptr[in, string["/dev/usbmon#"]], id intptr, flags flags[open_flags]) fd_14428240938263620826_fd
 
 ioctl$syz_describe_14428240938263620826_21771_0(fd fd_14428240938263620826_fd, cmd const[21771], arg ptr[out, struct_usbdevfs_conninfo_ex_14428240938263620826])
 ioctl$syz_describe_14428240938263620826_21780_0(fd fd_14428240938263620826_fd, cmd const[21780], arg ptr[out, struct_usbdevfs_conninfo_ex_14428240938263620826])
@@ -277,32 +286,3 @@ struct_usbdevfs_conninfo_ex_14428240938263620826 {
     field_4    int8
     field_5    array[int8, 7]
 }
-# driver found at module init function usb_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1001
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1019
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/file.c#L124
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/file.c#L45
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/file.c#L45
-# not find any syscall handler in the structure
-
-resource not_find_non_open_parent[fd]
-
-
-# driver found at module init function usb_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1001
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/usb.c#L1019
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/file.c#L124
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/file.c#L124
-# find handler open: usb_open
-
-resource fd_721665456319069407_fd[fd]
-
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/message.c#L2099
-syz_open_dev$syz_describe_721665456319069407_open_0(dev ptr[in, string["/dev/#-%s:#.#"]], id intptr, flags flags[open_flags]) fd_721665456319069407_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/endpoint.c#L194
-openat$syz_describe_721665456319069407_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/ep_2x"]], flags flags[open_flags], mode const[0]) fd_721665456319069407_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/mon/mon_bin.c#L1359
-syz_open_dev$syz_describe_721665456319069407_open_2(dev ptr[in, string["/dev/usbmon#"]], id intptr, flags flags[open_flags]) fd_721665456319069407_fd
-

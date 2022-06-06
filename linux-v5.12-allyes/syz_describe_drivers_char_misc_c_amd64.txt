@@ -17,35 +17,10 @@ resource fd_735490746618178824_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/mem.c#L1002
 # not get correct value for this device file name
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/xillybus/xillybus_core.c#L1843
-# not get correct value for this device file name
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/pcmcia/cm4000_cs.c#L1817
-syz_open_dev$syz_describe_735490746618178824_open_0(dev ptr[in, string["/dev/cmm#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/pcmcia/cm4040_cs.c#L596
-syz_open_dev$syz_describe_735490746618178824_open_1(dev ptr[in, string["/dev/cmx#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/lp.c#L935
-syz_open_dev$syz_describe_735490746618178824_open_2(dev ptr[in, string["/dev/lp#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/ppdev.c#L797
-syz_open_dev$syz_describe_735490746618178824_open_3(dev ptr[in, string["/dev/parport#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/raw.c#L341
-openat$syz_describe_735490746618178824_open_4(fd const[AT_FDCWD], file ptr[in, string["/dev/rawctl"]], flags flags[open_flags], mode const[0]) fd_735490746618178824_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/pcmcia/scr24x_cs.c#L279
-syz_open_dev$syz_describe_735490746618178824_open_5(dev ptr[in, string["/dev/scr24x#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
+openat$syz_describe_735490746618178824_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/rawctl"]], flags flags[open_flags], mode const[0]) fd_735490746618178824_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L374
-syz_open_dev$syz_describe_735490746618178824_open_6(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
+syz_open_dev$syz_describe_735490746618178824_open_1(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L377
-syz_open_dev$syz_describe_735490746618178824_open_7(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/virtio_console.c#L1406
-syz_open_dev$syz_describe_735490746618178824_open_8(dev ptr[in, string["/dev/vport#p#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
-
-# driver found at module init function misc_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/misc.c#L266
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/misc.c#L278
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/misc.c#L139
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/misc.c#L139
-# not find any syscall handler in the structure
-
-resource not_find_non_open_parent[fd]
-
+syz_open_dev$syz_describe_735490746618178824_open_2(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_735490746618178824_fd
 

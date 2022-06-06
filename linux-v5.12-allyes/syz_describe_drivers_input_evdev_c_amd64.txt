@@ -23,14 +23,12 @@ resource fd_17669353988542654374_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/evdev.c#L1367
 syz_open_dev$syz_describe_17669353988542654374_open_0(dev ptr[in, string["/dev/event#"]], id intptr, flags flags[open_flags]) fd_17669353988542654374_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/input.c#L1924
-syz_open_dev$syz_describe_17669353988542654374_open_1(dev ptr[in, string["/dev/input#"]], id intptr, flags flags[open_flags]) fd_17669353988542654374_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/joydev.c#L931
-syz_open_dev$syz_describe_17669353988542654374_open_2(dev ptr[in, string["/dev/js#"]], id intptr, flags flags[open_flags]) fd_17669353988542654374_fd
+syz_open_dev$syz_describe_17669353988542654374_open_1(dev ptr[in, string["/dev/js#"]], id intptr, flags flags[open_flags]) fd_17669353988542654374_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/mousedev.c#L871
-openat$syz_describe_17669353988542654374_open_3(fd const[AT_FDCWD], file ptr[in, string["/dev/mice"]], flags flags[open_flags], mode const[0]) fd_17669353988542654374_fd
+openat$syz_describe_17669353988542654374_open_2(fd const[AT_FDCWD], file ptr[in, string["/dev/mice"]], flags flags[open_flags], mode const[0]) fd_17669353988542654374_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/input/mousedev.c#L880
-syz_open_dev$syz_describe_17669353988542654374_open_4(dev ptr[in, string["/dev/mouse#"]], id intptr, flags flags[open_flags]) fd_17669353988542654374_fd
+syz_open_dev$syz_describe_17669353988542654374_open_3(dev ptr[in, string["/dev/mouse#"]], id intptr, flags flags[open_flags]) fd_17669353988542654374_fd
 
 ioctl$syz_describe_17669353988542654374_1_0(fd fd_17669353988542654374_fd, cmd const[1], arg array[int8, 32])
 ioctl$syz_describe_17669353988542654374_1_1(fd fd_17669353988542654374_fd, cmd const[1], arg ptr[in, int32])

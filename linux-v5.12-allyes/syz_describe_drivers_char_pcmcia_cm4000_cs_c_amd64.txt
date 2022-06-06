@@ -18,14 +18,10 @@ meta arches["amd64"]
 
 resource fd_16492943031778136529_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/pcmcia/cm4000_cs.c#L1817
-syz_open_dev$syz_describe_16492943031778136529_open_0(dev ptr[in, string["/dev/cmm#"]], id intptr, flags flags[open_flags]) fd_16492943031778136529_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/pcmcia/cm4040_cs.c#L596
-syz_open_dev$syz_describe_16492943031778136529_open_1(dev ptr[in, string["/dev/cmx#"]], id intptr, flags flags[open_flags]) fd_16492943031778136529_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L374
-syz_open_dev$syz_describe_16492943031778136529_open_2(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_16492943031778136529_fd
+syz_open_dev$syz_describe_16492943031778136529_open_0(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_16492943031778136529_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L377
-syz_open_dev$syz_describe_16492943031778136529_open_3(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_16492943031778136529_fd
+syz_open_dev$syz_describe_16492943031778136529_open_1(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_16492943031778136529_fd
 
 ioctl$syz_describe_16492943031778136529_99(fd fd_16492943031778136529_fd, cmd const[99], arg ptr[in, array[int8]])
 ioctl$syz_describe_16492943031778136529_25348_0(fd fd_16492943031778136529_fd, cmd const[25348], arg ptr[in, struct_ptsreq_16492943031778136529])

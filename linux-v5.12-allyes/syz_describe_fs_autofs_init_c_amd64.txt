@@ -40,3 +40,39 @@ struct_autofs_dev_ioctl_16516372306172143176 {
     field_4    struct_local_t_16516372306172143176
     field_5    array[int8]
 }
+# driver found at (not module init) function autofs_dev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L688
+# parent id hash: 16516372306172143176
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L693
+# 01: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L677
+# 02: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L277
+# 03: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L240
+# 04: https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L956
+# 05: https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L940
+# 06: https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L787
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L787
+# not find any syscall handler in the structure
+
+resource fd_16516372306172143176_cmd_113_fd[fd]
+
+# non open fd
+
+# driver found at (not module init) function autofs_dev_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L688
+# parent id hash: 16516372306172143176
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L693
+# 01: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L677
+# 02: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L277
+# 03: https://elixir.bootlin.com/linux/v5.12/source/fs/autofs/dev-ioctl.c#L240
+# 04: https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L956
+# 05: https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L940
+# 06: https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L807
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/fs/open.c#L807
+# not find any syscall handler in the structure
+
+resource fd_16516372306172143176_cmd_113_fd[fd]
+
+# non open fd
+

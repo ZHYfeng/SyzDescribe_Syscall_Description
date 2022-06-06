@@ -6,6 +6,41 @@
 
 meta arches["amd64"]
 
+# driver found at (not module init) function vmw_unlocked_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1148
+# parent id hash: 11515574149107313130
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1151
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L887
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L787
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L799
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L615
+# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+# not find any syscall handler in the structure
+
+resource fd_11515574149107313130_cmd_0_fd[fd]
+
+# non open fd
+
+# driver found at (not module init) function vmw_unlocked_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1148
+# parent id hash: 11515574149107313130
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1151
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1125
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L887
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L787
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L799
+# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L615
+# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+# not find any syscall handler in the structure
+
+resource fd_11515574149107313130_cmd_76_fd[fd]
+
+# non open fd
+
 # driver found at module init function vmwgfx_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1534
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1541

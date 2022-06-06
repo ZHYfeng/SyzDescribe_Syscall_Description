@@ -9,13 +9,8 @@ meta arches["amd64"]
 # driver found at module init function switchtec_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1732
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1747
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pci-driver.c#L1384
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pci-driver.c#L434
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pci-driver.c#L391
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pci-driver.c#L366
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/pci-driver.c#L309
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1599
-# 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1332
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1599
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1332
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/pci/switch/switchtec.c#L1332
 # find handler ioctl: switchtec_dev_ioctl

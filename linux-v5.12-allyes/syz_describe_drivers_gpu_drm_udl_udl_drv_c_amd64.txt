@@ -6,6 +6,22 @@
 
 meta arches["amd64"]
 
+# driver found at (not module init) function drm_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L810
+# parent id hash: 13280200302408716613
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L887
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L787
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L799
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L615
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+# not find any syscall handler in the structure
+
+resource fd_13280200302408716613_cmd_0_fd[fd]
+
+# non open fd
+
 # driver found at module init function udl_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/udl/udl_drv.c#L145
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/udl/udl_drv.c#L145

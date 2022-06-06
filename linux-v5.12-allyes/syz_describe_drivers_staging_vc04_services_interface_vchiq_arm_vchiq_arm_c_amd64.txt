@@ -22,10 +22,8 @@ resource fd_10656740925194166300_fd[fd]
 # not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/fieldbus/dev_core.c#L286
 syz_open_dev$syz_describe_10656740925194166300_open_0(dev ptr[in, string["/dev/fieldbus_dev#"]], id intptr, flags flags[open_flags]) fd_10656740925194166300_fd
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/pi433/pi433_if.c#L1201
-syz_open_dev$syz_describe_10656740925194166300_open_1(dev ptr[in, string["/dev/pi433.#"]], id intptr, flags flags[open_flags]) fd_10656740925194166300_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/staging/vc04_services/interface/vchiq_arm/vchiq_arm.c#L2757
-openat$syz_describe_10656740925194166300_open_2(fd const[AT_FDCWD], file ptr[in, string["/dev/vchiq"]], flags flags[open_flags], mode const[0]) fd_10656740925194166300_fd
+openat$syz_describe_10656740925194166300_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/vchiq"]], flags flags[open_flags], mode const[0]) fd_10656740925194166300_fd
 
 ioctl$syz_describe_10656740925194166300_0(fd fd_10656740925194166300_fd, cmd const[0], arg ptr[in, array[int8]])
 ioctl$syz_describe_10656740925194166300_196_0(fd fd_10656740925194166300_fd, cmd const[196], arg ptr[in, struct_kernel_symbol_10656740925194166300])

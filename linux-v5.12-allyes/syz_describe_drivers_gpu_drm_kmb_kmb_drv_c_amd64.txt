@@ -38,4 +38,5 @@ ioctl$syz_describe_10768167405819443444_0(fd fd_10768167405819443444_fd, cmd con
 
 resource fd_10768167405819443444_cmd_0_fd[fd]
 
+# non open fd
 

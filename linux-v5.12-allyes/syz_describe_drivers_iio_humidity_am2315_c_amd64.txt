@@ -39,6 +39,7 @@ ioctl$syz_describe_2187547634313695424_2147772816_0(fd fd_2187547634313695424_fd
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/iio/industrialio-event.c#L212
 # find handler read: iio_event_chrdev_read
 
-resource not_find_non_open_parent[fd]
+resource fd_12949093909682142464_fd[fd]
 
+# non open fd
 

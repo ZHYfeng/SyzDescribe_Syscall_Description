@@ -9,11 +9,9 @@ meta arches["amd64"]
 # driver found at module init function mmc_blk_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3021
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3045
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L255
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L140
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2896
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2398
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2325
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2896
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2398
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2325
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2325
 # find handler ioctl: mmc_blk_ioctl
@@ -48,11 +46,9 @@ struct_mmc_ioc_cmd_4860653683227213421 {
 # driver found at module init function mmc_blk_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3021
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3045
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L255
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L140
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2906
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2601
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2548
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2906
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2601
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2548
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2548
 # find handler ioctl: mmc_rpmb_ioctl
