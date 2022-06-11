@@ -14,7 +14,7 @@ meta arches["amd64"]
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/sound/sound_core.c#L612
 # find handler open: soundcore_open
 
-resource fd_3716744204715557662_fd[fd]
+#  resource fd_16684488218337743563_fd[fd]
 
 # not get possible device file name
 

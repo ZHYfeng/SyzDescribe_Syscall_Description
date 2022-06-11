@@ -16,11 +16,11 @@ meta arches["amd64"]
 # find handler read: rfkill_fop_read
 # find handler write: rfkill_fop_write
 
-resource fd_9963864578046108488_fd[fd]
+resource fd_4051921652816695319_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/net/rfkill/core.c#L1371
-openat$syz_describe_9963864578046108488_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/rfkill"]], flags flags[open_flags], mode const[0]) fd_9963864578046108488_fd
+openat$syz_describe_4051921652816695319_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/rfkill"]], flags flags[open_flags], mode const[0]) fd_4051921652816695319_fd
 
-ioctl$syz_describe_9963864578046108488_1(fd fd_9963864578046108488_fd, cmd const[1], arg ptr[in, array[int8]])
-ioctl$syz_describe_9963864578046108488_82(fd fd_9963864578046108488_fd, cmd const[82], arg ptr[in, array[int8]])
+ioctl$syz_describe_4051921652816695319_1(fd fd_4051921652816695319_fd, cmd const[1], arg ptr[in, array[int8]])
+ioctl$syz_describe_4051921652816695319_82(fd fd_4051921652816695319_fd, cmd const[82], arg ptr[in, array[int8]])
 

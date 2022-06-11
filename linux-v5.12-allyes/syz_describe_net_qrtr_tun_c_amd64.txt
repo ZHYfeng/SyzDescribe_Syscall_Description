@@ -13,8 +13,8 @@ meta arches["amd64"]
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/net/qrtr/tun.c#L160
 # find handler open: qrtr_tun_open
 
-resource fd_1593819061180061333_fd[fd]
+#  resource fd_8746470953232999428_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/net/qrtr/tun.c#L160
-openat$syz_describe_1593819061180061333_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/qrtr-tun"]], flags flags[open_flags], mode const[0]) fd_1593819061180061333_fd
+# openat$syz_describe_8746470953232999428_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/qrtr-tun"]], flags flags[open_flags], mode const[0]) fd_8746470953232999428_fd
 

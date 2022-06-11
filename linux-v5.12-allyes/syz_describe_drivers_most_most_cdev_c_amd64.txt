@@ -8,19 +8,15 @@ meta arches["amd64"]
 
 # driver found at module init function mod_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L489
 # call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L514
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/core.c#L1259
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/core.c#L1239
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L334
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L87
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L438
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L493
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L438
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L438
 # find handler open: comp_open
 # find handler read: comp_read
 # find handler write: comp_write
 
-resource fd_17352494408259974474_fd[fd]
+#  resource fd_6451608959427016532_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/most/most_cdev.c#L457
 # not get correct value for this device file name

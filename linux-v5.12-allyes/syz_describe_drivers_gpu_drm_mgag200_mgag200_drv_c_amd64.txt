@@ -17,16 +17,16 @@ meta arches["amd64"]
 # find handler open: drm_open
 # find handler read: drm_read
 
-resource fd_11032361783775182958_fd[fd]
+resource fd_1367595899625975076_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/mgag200/mgag200_drv.c#L301
-openat$syz_describe_11032361783775182958_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mgag200"]], flags flags[open_flags], mode const[0]) fd_11032361783775182958_fd
+openat$syz_describe_1367595899625975076_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mgag200"]], flags flags[open_flags], mode const[0]) fd_1367595899625975076_fd
 
-ioctl$syz_describe_11032361783775182958_0(fd fd_11032361783775182958_fd, cmd const[0], arg ptr[in, array[int8]]) fd_11032361783775182958_cmd_0_fd
-ioctl$syz_describe_11032361783775182958_0(fd fd_11032361783775182958_fd, cmd const[0], arg ptr[in, array[int8]]) fd_11032361783775182958_cmd_0_fd
+ioctl$syz_describe_1367595899625975076_0(fd fd_1367595899625975076_fd, cmd const[0], arg ptr[in, array[int8]])
+# ioctl$syz_describe_1367595899625975076_0(fd fd_1367595899625975076_fd, cmd const[0], arg ptr[in, array[int8]]) fd_9181114806015977994_cmd_0_fd
 
 # driver found at (not module init) function drm_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L810
-# parent id hash: 11032361783775182958
+# parent id hash: 1367595899625975076
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L887
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L787
@@ -37,7 +37,7 @@ ioctl$syz_describe_11032361783775182958_0(fd fd_11032361783775182958_fd, cmd con
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
 # not find any syscall handler in the structure
 
-resource fd_11032361783775182958_cmd_0_fd[fd]
+#  resource fd_9181114806015977994_cmd_0_fd[fd]
 
 # non open fd
 

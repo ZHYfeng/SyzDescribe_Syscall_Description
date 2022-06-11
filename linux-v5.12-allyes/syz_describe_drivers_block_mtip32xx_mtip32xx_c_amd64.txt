@@ -16,33 +16,29 @@ meta arches["amd64"]
 # find handler ioctl: mtip_block_ioctl
 # find handler open: mtip_block_open
 
-resource fd_11113595003055145101_fd[fd]
+resource fd_6430993941463050207_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_6430993941463050207_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_6430993941463050207_fd
 
-ioctl$syz_describe_11113595003055145101_781_0(fd fd_11113595003055145101_fd, cmd const[781], arg ptr[out, int16])
-ioctl$syz_describe_11113595003055145101_797_0(fd fd_11113595003055145101_fd, cmd const[797], arg ptr[in, struct_ide_task_request_s_11113595003055145101])
-ioctl$syz_describe_11113595003055145101_797(fd fd_11113595003055145101_fd, cmd const[797], arg ptr[in, array[int8]])
-ioctl$syz_describe_11113595003055145101_797_2(fd fd_11113595003055145101_fd, cmd const[797], arg ptr[out, struct_ide_task_request_s_11113595003055145101])
-ioctl$syz_describe_11113595003055145101_798_0(fd fd_11113595003055145101_fd, cmd const[798], arg array[int8, 7])
-ioctl$syz_describe_11113595003055145101_798_1(fd fd_11113595003055145101_fd, cmd const[798], arg array[int8, 7])
-ioctl$syz_describe_11113595003055145101_799_0(fd fd_11113595003055145101_fd, cmd const[799], arg array[int8, 4])
-ioctl$syz_describe_11113595003055145101_799(fd fd_11113595003055145101_fd, cmd const[799], arg ptr[in, array[int8]])
-ioctl$syz_describe_11113595003055145101_799_2(fd fd_11113595003055145101_fd, cmd const[799], arg array[int8, 4])
-ioctl$syz_describe_11113595003055145101_4705(fd fd_11113595003055145101_fd, cmd const[4705], arg ptr[in, array[int8]])
+ioctl$syz_describe_6430993941463050207_781_0(fd fd_6430993941463050207_fd, cmd const[781], arg ptr[out, int16])
+ioctl$syz_describe_6430993941463050207_797_0(fd fd_6430993941463050207_fd, cmd const[797], arg ptr[inout, struct_ide_task_request_s_6430993941463050207])
+ioctl$syz_describe_6430993941463050207_798_0(fd fd_6430993941463050207_fd, cmd const[798], arg ptr[inout, array[int8, 7]])
+ioctl$syz_describe_6430993941463050207_799_0(fd fd_6430993941463050207_fd, cmd const[799], arg ptr[inout, array[int8, 4]])
+ioctl$syz_describe_6430993941463050207_4705(fd fd_6430993941463050207_fd, cmd const[4705], arg ptr[in, array[int8]])
 
-struct_uclamp_se_11113595003055145101 {
+struct_uclamp_se_6430993941463050207 {
     field_0    int16
     field_1    array[int8, 2]
 }
-union_ide_reg_valid_s_11113595003055145101 {
-    field_0    struct_uclamp_se_11113595003055145101
+union_ide_reg_valid_s_6430993941463050207 {
+    field_0    struct_uclamp_se_6430993941463050207
 }
-struct_ide_task_request_s_11113595003055145101 {
+struct_ide_task_request_s_6430993941463050207 {
     field_0    array[int8, 8]
     field_1    array[int8, 8]
-    field_2    union_ide_reg_valid_s_11113595003055145101
-    field_3    union_ide_reg_valid_s_11113595003055145101
+    field_2    union_ide_reg_valid_s_6430993941463050207
+    field_3    union_ide_reg_valid_s_6430993941463050207
     field_4    int32
     field_5    int32
     field_6    int64

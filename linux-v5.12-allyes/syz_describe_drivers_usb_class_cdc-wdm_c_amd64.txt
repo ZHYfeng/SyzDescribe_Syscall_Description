@@ -9,8 +9,10 @@ meta arches["amd64"]
 # driver found at module init function wdm_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L1178
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L1178
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L980
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L931
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/driver.c#L1057
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/driver.c#L396
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L980
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L931
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L931
 # find handler ioctl: wdm_ioctl
@@ -18,10 +20,10 @@ meta arches["amd64"]
 # find handler read: wdm_read
 # find handler write: wdm_write
 
-resource fd_12437989404487925714_fd[fd]
+resource fd_3281135901476259316_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/cdc-wdm.c#L931
-syz_open_dev$syz_describe_12437989404487925714_open_0(dev ptr[in, string["/dev/cdc-wdm#"]], id intptr, flags flags[open_flags]) fd_12437989404487925714_fd
+syz_open_dev$syz_describe_3281135901476259316_open_0(dev ptr[in, string["/dev/cdc-wdm#"]], id intptr, flags flags[open_flags]) fd_3281135901476259316_fd
 
-ioctl$syz_describe_12437989404487925714_2147633312_0(fd fd_12437989404487925714_fd, cmd const[2147633312], arg ptr[out, int16])
+ioctl$syz_describe_3281135901476259316_2147633312_0(fd fd_3281135901476259316_fd, cmd const[2147633312], arg ptr[out, int16])
 

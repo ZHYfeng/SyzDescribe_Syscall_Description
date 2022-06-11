@@ -15,12 +15,12 @@ meta arches["amd64"]
 # find handler open: xen_mce_chrdev_open
 # find handler read: xen_mce_chrdev_read
 
-resource fd_3279991429881948724_fd[fd]
+resource fd_16793029889699963543_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/xen/mcelog.c#L411
-openat$syz_describe_3279991429881948724_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mcelog"]], flags flags[open_flags], mode const[0]) fd_3279991429881948724_fd
+openat$syz_describe_16793029889699963543_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mcelog"]], flags flags[open_flags], mode const[0]) fd_16793029889699963543_fd
 
-ioctl$syz_describe_3279991429881948724_2147765505(fd fd_3279991429881948724_fd, cmd const[2147765505], arg ptr[in, array[int8]])
-ioctl$syz_describe_3279991429881948724_2147765506(fd fd_3279991429881948724_fd, cmd const[2147765506], arg ptr[in, array[int8]])
-ioctl$syz_describe_3279991429881948724_2147765507(fd fd_3279991429881948724_fd, cmd const[2147765507], arg ptr[in, array[int8]])
+ioctl$syz_describe_16793029889699963543_2147765505(fd fd_16793029889699963543_fd, cmd const[2147765505], arg ptr[in, array[int8]])
+ioctl$syz_describe_16793029889699963543_2147765506(fd fd_16793029889699963543_fd, cmd const[2147765506], arg ptr[in, array[int8]])
+ioctl$syz_describe_16793029889699963543_2147765507(fd fd_16793029889699963543_fd, cmd const[2147765507], arg ptr[in, array[int8]])
 

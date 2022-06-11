@@ -14,44 +14,45 @@ meta arches["amd64"]
 # find handler ioctl: loop_control_ioctl
 # find handler open: nonseekable_open
 
-resource fd_17449073161315692183_fd[fd]
+resource fd_17156368644779550551_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2364
-openat$syz_describe_17449073161315692183_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/loop-control"]], flags flags[open_flags], mode const[0]) fd_17449073161315692183_fd
+openat$syz_describe_17156368644779550551_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/loop-control"]], flags flags[open_flags], mode const[0]) fd_17156368644779550551_fd
 
-ioctl$syz_describe_17449073161315692183_19584(fd fd_17449073161315692183_fd, cmd const[19584], arg ptr[in, array[int8]])
-ioctl$syz_describe_17449073161315692183_19585(fd fd_17449073161315692183_fd, cmd const[19585], arg ptr[in, array[int8]])
-ioctl$syz_describe_17449073161315692183_19586(fd fd_17449073161315692183_fd, cmd const[19586], arg ptr[in, array[int8]])
+ioctl$syz_describe_17156368644779550551_19584(fd fd_17156368644779550551_fd, cmd const[19584], arg ptr[in, array[int8]])
+ioctl$syz_describe_17156368644779550551_19585(fd fd_17156368644779550551_fd, cmd const[19585], arg ptr[in, array[int8]])
+ioctl$syz_describe_17156368644779550551_19586(fd fd_17156368644779550551_fd, cmd const[19586], arg ptr[in, array[int8]])
 
 # driver found at module init function loop_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2320
 # call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2377
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2168
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2369
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2246
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2168
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2168
 # find handler ioctl: lo_ioctl
 # find handler open: lo_open
 
-resource fd_4215046433948166466_fd[fd]
+resource fd_15353969716721061489_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2171
-syz_open_dev$syz_describe_4215046433948166466_open_0(dev ptr[in, string["/dev/loop#"]], id intptr, flags flags[open_flags]) fd_4215046433948166466_fd
+syz_open_dev$syz_describe_15353969716721061489_open_0(dev ptr[in, string["/dev/loop#"]], id intptr, flags flags[open_flags]) fd_15353969716721061489_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/umem.c#L1085
-openat$syz_describe_4215046433948166466_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/umem"]], flags flags[open_flags], mode const[0]) fd_4215046433948166466_fd
+openat$syz_describe_15353969716721061489_open_1(fd const[AT_FDCWD], file ptr[in, string["/dev/umem"]], flags flags[open_flags], mode const[0]) fd_15353969716721061489_fd
 
-ioctl$syz_describe_4215046433948166466_19456(fd fd_4215046433948166466_fd, cmd const[19456], arg ptr[in, array[int8]])
-ioctl$syz_describe_4215046433948166466_19457(fd fd_4215046433948166466_fd, cmd const[19457], arg ptr[in, array[int8]])
-ioctl$syz_describe_4215046433948166466_19458_0(fd fd_4215046433948166466_fd, cmd const[19458], arg ptr[in, struct_loop_info_4215046433948166466])
-ioctl$syz_describe_4215046433948166466_19459_0(fd fd_4215046433948166466_fd, cmd const[19459], arg ptr[out, struct_loop_info_4215046433948166466])
-ioctl$syz_describe_4215046433948166466_19460_0(fd fd_4215046433948166466_fd, cmd const[19460], arg ptr[in, struct_loop_info64_4215046433948166466])
-ioctl$syz_describe_4215046433948166466_19461_0(fd fd_4215046433948166466_fd, cmd const[19461], arg ptr[out, struct_loop_info64_4215046433948166466])
-ioctl$syz_describe_4215046433948166466_19462(fd fd_4215046433948166466_fd, cmd const[19462], arg ptr[in, array[int8]])
-ioctl$syz_describe_4215046433948166466_19463(fd fd_4215046433948166466_fd, cmd const[19463], arg ptr[in, array[int8]])
-ioctl$syz_describe_4215046433948166466_19464(fd fd_4215046433948166466_fd, cmd const[19464], arg ptr[in, array[int8]])
-ioctl$syz_describe_4215046433948166466_19465(fd fd_4215046433948166466_fd, cmd const[19465], arg ptr[in, array[int8]])
-ioctl$syz_describe_4215046433948166466_19466_0(fd fd_4215046433948166466_fd, cmd const[19466], arg ptr[in, struct_loop_config_4215046433948166466])
+ioctl$syz_describe_15353969716721061489_19456(fd fd_15353969716721061489_fd, cmd const[19456], arg ptr[in, array[int8]])
+ioctl$syz_describe_15353969716721061489_19457(fd fd_15353969716721061489_fd, cmd const[19457], arg ptr[in, array[int8]])
+ioctl$syz_describe_15353969716721061489_19458_0(fd fd_15353969716721061489_fd, cmd const[19458], arg ptr[in, struct_loop_info_15353969716721061489])
+ioctl$syz_describe_15353969716721061489_19459_0(fd fd_15353969716721061489_fd, cmd const[19459], arg ptr[out, struct_loop_info_15353969716721061489])
+ioctl$syz_describe_15353969716721061489_19460_0(fd fd_15353969716721061489_fd, cmd const[19460], arg ptr[in, struct_loop_info64_15353969716721061489])
+ioctl$syz_describe_15353969716721061489_19461_0(fd fd_15353969716721061489_fd, cmd const[19461], arg ptr[out, struct_loop_info64_15353969716721061489])
+ioctl$syz_describe_15353969716721061489_19462(fd fd_15353969716721061489_fd, cmd const[19462], arg ptr[in, array[int8]])
+ioctl$syz_describe_15353969716721061489_19463(fd fd_15353969716721061489_fd, cmd const[19463], arg ptr[in, array[int8]])
+ioctl$syz_describe_15353969716721061489_19464(fd fd_15353969716721061489_fd, cmd const[19464], arg ptr[in, array[int8]])
+ioctl$syz_describe_15353969716721061489_19465(fd fd_15353969716721061489_fd, cmd const[19465], arg ptr[in, array[int8]])
+ioctl$syz_describe_15353969716721061489_19466_0(fd fd_15353969716721061489_fd, cmd const[19466], arg ptr[in, struct_loop_config_15353969716721061489])
 
-struct_loop_info64_4215046433948166466 {
+struct_loop_info64_15353969716721061489 {
     field_0    int64
     field_1    int64
     field_2    int64
@@ -66,13 +67,13 @@ struct_loop_info64_4215046433948166466 {
     field_11    array[int8, 32]
     field_12    array[int64, 2]
 }
-struct_loop_config_4215046433948166466 {
+struct_loop_config_15353969716721061489 {
     field_0    int32
     field_1    int32
-    field_2    struct_loop_info64_4215046433948166466
+    field_2    struct_loop_info64_15353969716721061489
     field_3    array[int64, 8]
 }
-struct_loop_info_4215046433948166466 {
+struct_loop_info_15353969716721061489 {
     field_0    int32
     field_1    int64
     field_2    int64
@@ -87,7 +88,7 @@ struct_loop_info_4215046433948166466 {
     field_11    array[int8, 4]
 }
 # driver found at (not module init) function loop_control_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2250
-# parent id hash: 17449073161315692183
+# parent id hash: 17156368644779550551
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2268
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2168
@@ -96,24 +97,24 @@ struct_loop_info_4215046433948166466 {
 # find handler ioctl: lo_ioctl
 # find handler open: lo_open
 
-resource fd_13013834074358883903_fd[fd]
+resource fd_16829254356611959132_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/loop.c#L2171
-syz_open_dev$syz_describe_13013834074358883903_open_0(dev ptr[in, string["/dev/loop#"]], id intptr, flags flags[open_flags]) fd_13013834074358883903_fd
+syz_open_dev$syz_describe_16829254356611959132_open_0(dev ptr[in, string["/dev/loop#"]], id intptr, flags flags[open_flags]) fd_16829254356611959132_fd
 
-ioctl$syz_describe_13013834074358883903_19456(fd fd_13013834074358883903_fd, cmd const[19456], arg ptr[in, array[int8]])
-ioctl$syz_describe_13013834074358883903_19457(fd fd_13013834074358883903_fd, cmd const[19457], arg ptr[in, array[int8]])
-ioctl$syz_describe_13013834074358883903_19458_0(fd fd_13013834074358883903_fd, cmd const[19458], arg ptr[in, struct_loop_info_13013834074358883903])
-ioctl$syz_describe_13013834074358883903_19459_0(fd fd_13013834074358883903_fd, cmd const[19459], arg ptr[out, struct_loop_info_13013834074358883903])
-ioctl$syz_describe_13013834074358883903_19460_0(fd fd_13013834074358883903_fd, cmd const[19460], arg ptr[in, struct_loop_info64_13013834074358883903])
-ioctl$syz_describe_13013834074358883903_19461_0(fd fd_13013834074358883903_fd, cmd const[19461], arg ptr[out, struct_loop_info64_13013834074358883903])
-ioctl$syz_describe_13013834074358883903_19462(fd fd_13013834074358883903_fd, cmd const[19462], arg ptr[in, array[int8]])
-ioctl$syz_describe_13013834074358883903_19463(fd fd_13013834074358883903_fd, cmd const[19463], arg ptr[in, array[int8]])
-ioctl$syz_describe_13013834074358883903_19464(fd fd_13013834074358883903_fd, cmd const[19464], arg ptr[in, array[int8]])
-ioctl$syz_describe_13013834074358883903_19465(fd fd_13013834074358883903_fd, cmd const[19465], arg ptr[in, array[int8]])
-ioctl$syz_describe_13013834074358883903_19466_0(fd fd_13013834074358883903_fd, cmd const[19466], arg ptr[in, struct_loop_config_13013834074358883903])
+ioctl$syz_describe_16829254356611959132_19456(fd fd_16829254356611959132_fd, cmd const[19456], arg ptr[in, array[int8]])
+ioctl$syz_describe_16829254356611959132_19457(fd fd_16829254356611959132_fd, cmd const[19457], arg ptr[in, array[int8]])
+ioctl$syz_describe_16829254356611959132_19458_0(fd fd_16829254356611959132_fd, cmd const[19458], arg ptr[in, struct_loop_info_16829254356611959132])
+ioctl$syz_describe_16829254356611959132_19459_0(fd fd_16829254356611959132_fd, cmd const[19459], arg ptr[out, struct_loop_info_16829254356611959132])
+ioctl$syz_describe_16829254356611959132_19460_0(fd fd_16829254356611959132_fd, cmd const[19460], arg ptr[in, struct_loop_info64_16829254356611959132])
+ioctl$syz_describe_16829254356611959132_19461_0(fd fd_16829254356611959132_fd, cmd const[19461], arg ptr[out, struct_loop_info64_16829254356611959132])
+ioctl$syz_describe_16829254356611959132_19462(fd fd_16829254356611959132_fd, cmd const[19462], arg ptr[in, array[int8]])
+ioctl$syz_describe_16829254356611959132_19463(fd fd_16829254356611959132_fd, cmd const[19463], arg ptr[in, array[int8]])
+ioctl$syz_describe_16829254356611959132_19464(fd fd_16829254356611959132_fd, cmd const[19464], arg ptr[in, array[int8]])
+ioctl$syz_describe_16829254356611959132_19465(fd fd_16829254356611959132_fd, cmd const[19465], arg ptr[in, array[int8]])
+ioctl$syz_describe_16829254356611959132_19466_0(fd fd_16829254356611959132_fd, cmd const[19466], arg ptr[in, struct_loop_config_16829254356611959132])
 
-struct_loop_info64_13013834074358883903 {
+struct_loop_info64_16829254356611959132 {
     field_0    int64
     field_1    int64
     field_2    int64
@@ -128,13 +129,13 @@ struct_loop_info64_13013834074358883903 {
     field_11    array[int8, 32]
     field_12    array[int64, 2]
 }
-struct_loop_config_13013834074358883903 {
+struct_loop_config_16829254356611959132 {
     field_0    int32
     field_1    int32
-    field_2    struct_loop_info64_13013834074358883903
+    field_2    struct_loop_info64_16829254356611959132
     field_3    array[int64, 8]
 }
-struct_loop_info_13013834074358883903 {
+struct_loop_info_16829254356611959132 {
     field_0    int32
     field_1    int64
     field_2    int64

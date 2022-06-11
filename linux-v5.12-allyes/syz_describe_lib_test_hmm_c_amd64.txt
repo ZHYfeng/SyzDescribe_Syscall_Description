@@ -15,16 +15,17 @@ meta arches["amd64"]
 # find handler ioctl: dmirror_fops_unlocked_ioctl
 # find handler open: dmirror_fops_open
 
-resource fd_1303222535222400567_fd[fd]
+resource fd_11492275257548262473_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_11492275257548262473_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_11492275257548262473_fd
 
-ioctl$syz_describe_1303222535222400567_3223865344_0(fd fd_1303222535222400567_fd, cmd const[3223865344], arg ptr[out, struct_hmm_dmirror_cmd_1303222535222400567])
-ioctl$syz_describe_1303222535222400567_3223865345_0(fd fd_1303222535222400567_fd, cmd const[3223865345], arg ptr[out, struct_hmm_dmirror_cmd_1303222535222400567])
-ioctl$syz_describe_1303222535222400567_3223865346_0(fd fd_1303222535222400567_fd, cmd const[3223865346], arg ptr[out, struct_hmm_dmirror_cmd_1303222535222400567])
-ioctl$syz_describe_1303222535222400567_3223865347_0(fd fd_1303222535222400567_fd, cmd const[3223865347], arg ptr[out, struct_hmm_dmirror_cmd_1303222535222400567])
+ioctl$syz_describe_11492275257548262473_3223865344_0(fd fd_11492275257548262473_fd, cmd const[3223865344], arg ptr[out, struct_hmm_dmirror_cmd_11492275257548262473])
+ioctl$syz_describe_11492275257548262473_3223865345_0(fd fd_11492275257548262473_fd, cmd const[3223865345], arg ptr[out, struct_hmm_dmirror_cmd_11492275257548262473])
+ioctl$syz_describe_11492275257548262473_3223865346_0(fd fd_11492275257548262473_fd, cmd const[3223865346], arg ptr[out, struct_hmm_dmirror_cmd_11492275257548262473])
+ioctl$syz_describe_11492275257548262473_3223865347_0(fd fd_11492275257548262473_fd, cmd const[3223865347], arg ptr[out, struct_hmm_dmirror_cmd_11492275257548262473])
 
-struct_hmm_dmirror_cmd_1303222535222400567 {
+struct_hmm_dmirror_cmd_11492275257548262473 {
     field_0    int64
     field_1    int64
     field_2    int64

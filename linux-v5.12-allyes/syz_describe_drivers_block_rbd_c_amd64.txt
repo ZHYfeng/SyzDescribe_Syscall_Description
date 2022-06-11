@@ -18,7 +18,7 @@ meta arches["amd64"]
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/rbd.c#L4938
 # find handler open: rbd_open
 
-resource fd_999792933797335074_fd[fd]
+#  resource fd_9143198365736445349_fd[fd]
 
 # not get possible device file name
 

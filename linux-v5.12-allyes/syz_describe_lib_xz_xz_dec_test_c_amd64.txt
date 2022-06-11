@@ -14,7 +14,7 @@ meta arches["amd64"]
 # find handler open: xz_dec_test_open
 # find handler write: xz_dec_test_write
 
-resource fd_16394200076699576906_fd[fd]
+#  resource fd_2820788275248801847_fd[fd]
 
 # not get possible device file name
 

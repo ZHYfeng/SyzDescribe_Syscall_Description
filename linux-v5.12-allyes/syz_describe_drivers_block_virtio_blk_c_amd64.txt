@@ -14,7 +14,7 @@ meta arches["amd64"]
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/block/virtio_blk.c#L798
 # find handler open: virtblk_open
 
-resource fd_2303652751867387494_fd[fd]
+#  resource fd_6873759483996878492_fd[fd]
 
 # not get possible device file name
 

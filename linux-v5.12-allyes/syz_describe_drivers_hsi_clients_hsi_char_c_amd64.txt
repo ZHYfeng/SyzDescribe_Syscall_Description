@@ -17,24 +17,25 @@ meta arches["amd64"]
 # find handler read: hsc_read
 # find handler write: hsc_write
 
-resource fd_17736114124194382758_fd[fd]
+resource fd_13541553117304798312_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_13541553117304798312_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_13541553117304798312_fd
 
-ioctl$syz_describe_17736114124194382758_27408(fd fd_17736114124194382758_fd, cmd const[27408], arg ptr[in, array[int8]])
-ioctl$syz_describe_17736114124194382758_27409_0(fd fd_17736114124194382758_fd, cmd const[27409], arg ptr[in, int32])
-ioctl$syz_describe_17736114124194382758_27410(fd fd_17736114124194382758_fd, cmd const[27410], arg ptr[in, array[int8]])
-ioctl$syz_describe_17736114124194382758_1074555667_0(fd fd_17736114124194382758_fd, cmd const[1074555667], arg ptr[in, struct_kernel_symbol_17736114124194382758])
-ioctl$syz_describe_17736114124194382758_1074555668_0(fd fd_17736114124194382758_fd, cmd const[1074555668], arg ptr[out, struct_kernel_symbol_17736114124194382758])
-ioctl$syz_describe_17736114124194382758_1074817813_0(fd fd_17736114124194382758_fd, cmd const[1074817813], arg ptr[in, struct_hsc_tx_config_17736114124194382758])
-ioctl$syz_describe_17736114124194382758_1074817814_0(fd fd_17736114124194382758_fd, cmd const[1074817814], arg ptr[out, struct_hsc_tx_config_17736114124194382758])
+ioctl$syz_describe_13541553117304798312_27408(fd fd_13541553117304798312_fd, cmd const[27408], arg ptr[in, array[int8]])
+ioctl$syz_describe_13541553117304798312_27409_0(fd fd_13541553117304798312_fd, cmd const[27409], arg ptr[in, int32])
+ioctl$syz_describe_13541553117304798312_27410(fd fd_13541553117304798312_fd, cmd const[27410], arg ptr[in, array[int8]])
+ioctl$syz_describe_13541553117304798312_1074555667_0(fd fd_13541553117304798312_fd, cmd const[1074555667], arg ptr[in, struct_kernel_symbol_13541553117304798312])
+ioctl$syz_describe_13541553117304798312_1074555668_0(fd fd_13541553117304798312_fd, cmd const[1074555668], arg ptr[out, struct_kernel_symbol_13541553117304798312])
+ioctl$syz_describe_13541553117304798312_1074817813_0(fd fd_13541553117304798312_fd, cmd const[1074817813], arg ptr[in, struct_hsc_tx_config_13541553117304798312])
+ioctl$syz_describe_13541553117304798312_1074817814_0(fd fd_13541553117304798312_fd, cmd const[1074817814], arg ptr[out, struct_hsc_tx_config_13541553117304798312])
 
-struct_kernel_symbol_17736114124194382758 {
+struct_kernel_symbol_13541553117304798312 {
     field_0    int32
     field_1    int32
     field_2    int32
 }
-struct_hsc_tx_config_17736114124194382758 {
+struct_hsc_tx_config_13541553117304798312 {
     field_0    int32
     field_1    int32
     field_2    int32

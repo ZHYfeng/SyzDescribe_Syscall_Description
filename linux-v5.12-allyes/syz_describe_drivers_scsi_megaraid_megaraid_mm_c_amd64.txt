@@ -14,25 +14,23 @@ meta arches["amd64"]
 # find handler ioctl: mraid_mm_unlocked_ioctl
 # find handler open: mraid_mm_open
 
-resource fd_16644551827467036855_fd[fd]
+resource fd_5415957470346639246_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/scsi/megaraid/megaraid_mm.c#L1209
-openat$syz_describe_16644551827467036855_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/megadev0"]], flags flags[open_flags], mode const[0]) fd_16644551827467036855_fd
+openat$syz_describe_5415957470346639246_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/megadev0"]], flags flags[open_flags], mode const[0]) fd_5415957470346639246_fd
 
-ioctl$syz_describe_16644551827467036855_109(fd fd_16644551827467036855_fd, cmd const[109], arg ptr[in, array[int8]])
-ioctl$syz_describe_16644551827467036855_109_1(fd fd_16644551827467036855_fd, cmd const[109], arg array[int8, 16])
-ioctl$syz_describe_16644551827467036855_109_2(fd fd_16644551827467036855_fd, cmd const[109], arg ptr[in, struct_mega_passthru_16644551827467036855])
-ioctl$syz_describe_16644551827467036855_109_3(fd fd_16644551827467036855_fd, cmd const[109], arg ptr[in, struct_uioctl_t_16644551827467036855])
-ioctl$syz_describe_16644551827467036855_109(fd fd_16644551827467036855_fd, cmd const[109], arg ptr[in, array[int8]])
-ioctl$syz_describe_16644551827467036855_109_5(fd fd_16644551827467036855_fd, cmd const[109], arg ptr[out, int32])
-ioctl$syz_describe_16644551827467036855_109_6(fd fd_16644551827467036855_fd, cmd const[109], arg struct_mega_passthru_16644551827467036855)
-ioctl$syz_describe_16644551827467036855_109_7(fd fd_16644551827467036855_fd, cmd const[109], arg struct_mbox_t_31852_16644551827467036855)
-ioctl$syz_describe_16644551827467036855_109_8(fd fd_16644551827467036855_fd, cmd const[109], arg ptr[out, struct_mcontroller_31854_16644551827467036855])
+ioctl$syz_describe_5415957470346639246_109_0(fd fd_5415957470346639246_fd, cmd const[109], arg ptr[in, array[int8, 16]])
+ioctl$syz_describe_5415957470346639246_109_1(fd fd_5415957470346639246_fd, cmd const[109], arg ptr[in, struct_mega_passthru_5415957470346639246])
+ioctl$syz_describe_5415957470346639246_109_2(fd fd_5415957470346639246_fd, cmd const[109], arg ptr[in, struct_uioctl_t_5415957470346639246])
+ioctl$syz_describe_5415957470346639246_109_3(fd fd_5415957470346639246_fd, cmd const[109], arg ptr[out, int32])
+ioctl$syz_describe_5415957470346639246_109_4(fd fd_5415957470346639246_fd, cmd const[109], arg ptr[out, struct_mega_passthru_5415957470346639246])
+ioctl$syz_describe_5415957470346639246_109_5(fd fd_5415957470346639246_fd, cmd const[109], arg ptr[out, struct_mbox_t_31852_5415957470346639246])
+ioctl$syz_describe_5415957470346639246_109_6(fd fd_5415957470346639246_fd, cmd const[109], arg ptr[out, struct_mcontroller_31854_5415957470346639246])
 
-struct_uuid_t_16644551827467036855 {
+struct_uuid_t_5415957470346639246 {
     field_0    array[int8, 16]
 }
-struct_mega_passthru_16644551827467036855 {
+struct_mega_passthru_5415957470346639246 {
     field_0    int8
     field_1    int8
     field_2    int8
@@ -48,7 +46,7 @@ struct_mega_passthru_16644551827467036855 {
     field_12    int32
     field_13    int32
 }
-struct_mbox_t_31852_16644551827467036855 {
+struct_mbox_t_31852_5415957470346639246 {
     field_0    int8
     field_1    int8
     field_2    int16
@@ -64,15 +62,15 @@ struct_mbox_t_31852_16644551827467036855 {
     field_12    int8
     field_13    int8
 } [packed]
-struct_uioctl_t_16644551827467036855 {
+struct_uioctl_t_5415957470346639246 {
     field_0    int32
     field_1    int32
-    field_2    struct_uuid_t_16644551827467036855
+    field_2    struct_uuid_t_5415957470346639246
     field_3    array[int8, 18]
-    field_4    struct_mega_passthru_16644551827467036855
+    field_4    struct_mega_passthru_5415957470346639246
     field_5    ptr[in, int8]
 } [packed]
-struct_mcontroller_31854_16644551827467036855 {
+struct_mcontroller_31854_5415957470346639246 {
     field_0    int64
     field_1    int8
     field_2    int8

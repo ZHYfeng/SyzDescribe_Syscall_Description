@@ -8,16 +8,16 @@ meta arches["amd64"]
 
 # driver found at module init function i915_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_pci.c#L1122
 # call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_pci.c#L1127
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_globals.c#L106
-# 02: https://elixir.bootlin.com/linux/v5.12/source/./drivers/gpu/drm/i915/selftests/i915_request.c#L524
-# 03: https://elixir.bootlin.com/linux/v5.12/source/./drivers/gpu/drm/i915/selftests/mock_gem_device.c#L138
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_pci.c#L1155
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_pci.c#L1082
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L827
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L788
 
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/./drivers/gpu/drm/i915/selftests/mock_gem_device.c#L138
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L788
 # not find any syscall handler in the structure
 
-resource fd_6142509188972423790_fd[fd]
+#  resource fd_15220657937637799337_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/./drivers/gpu/drm/i915/selftests/mock_gem_device.c#L138
-# not get correct value for this device file name
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/i915/i915_drv.c#L788
+# openat$syz_describe_15220657937637799337_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/i915"]], flags flags[open_flags], mode const[0]) fd_15220657937637799337_fd
 

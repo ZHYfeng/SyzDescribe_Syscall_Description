@@ -17,7 +17,7 @@ meta arches["amd64"]
 # find handler read: uio_read
 # find handler write: uio_write
 
-resource fd_5682049289601325518_fd[fd]
+#  resource fd_8790957300776420400_fd[fd]
 
 # not get possible device file name
 

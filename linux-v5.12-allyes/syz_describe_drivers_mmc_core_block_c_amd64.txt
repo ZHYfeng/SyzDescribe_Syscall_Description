@@ -9,25 +9,26 @@ meta arches["amd64"]
 # driver found at module init function mmc_blk_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3021
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3045
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2896
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2398
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2325
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L255
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L140
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2896
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2398
+# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2325
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2325
 # find handler ioctl: mmc_blk_ioctl
 # find handler open: mmc_blk_open
 
-resource fd_4860653683227213421_fd[fd]
+resource fd_10642329663220386702_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_10642329663220386702_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_10642329663220386702_fd
 
-ioctl$syz_describe_4860653683227213421_3221795585_0(fd fd_4860653683227213421_fd, cmd const[3221795585], arg ptr[in, int64])
-ioctl$syz_describe_4860653683227213421_3221795585_1(fd fd_4860653683227213421_fd, cmd const[3221795585], arg struct_mmc_ioc_cmd_4860653683227213421)
-ioctl$syz_describe_4860653683227213421_3221795585(fd fd_4860653683227213421_fd, cmd const[3221795585], arg ptr[in, array[int8]])
-ioctl$syz_describe_4860653683227213421_3225989888(fd fd_4860653683227213421_fd, cmd const[3225989888], arg ptr[in, array[int8]])
-ioctl$syz_describe_4860653683227213421_3225989888(fd fd_4860653683227213421_fd, cmd const[3225989888], arg ptr[in, array[int8]])
+ioctl$syz_describe_10642329663220386702_3221795585_0(fd fd_10642329663220386702_fd, cmd const[3221795585], arg ptr[in, int64])
+ioctl$syz_describe_10642329663220386702_3221795585_1(fd fd_10642329663220386702_fd, cmd const[3221795585], arg ptr[in, struct_mmc_ioc_cmd_10642329663220386702])
+ioctl$syz_describe_10642329663220386702_3225989888(fd fd_10642329663220386702_fd, cmd const[3225989888], arg ptr[in, array[int8]])
 
-struct_mmc_ioc_cmd_4860653683227213421 {
+struct_mmc_ioc_cmd_10642329663220386702 {
     field_0    int32
     field_1    int32
     field_2    int32
@@ -46,25 +47,26 @@ struct_mmc_ioc_cmd_4860653683227213421 {
 # driver found at module init function mmc_blk_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3021
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L3045
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2906
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2601
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2548
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L255
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/bus.c#L140
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2906
+# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2601
+# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2548
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/mmc/core/block.c#L2548
 # find handler ioctl: mmc_rpmb_ioctl
 # find handler open: mmc_rpmb_chrdev_open
 
-resource fd_17029479198534024748_fd[fd]
+resource fd_12786198575188350033_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_12786198575188350033_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_12786198575188350033_fd
 
-ioctl$syz_describe_17029479198534024748_3221795585_0(fd fd_17029479198534024748_fd, cmd const[3221795585], arg ptr[in, int64])
-ioctl$syz_describe_17029479198534024748_3221795585_1(fd fd_17029479198534024748_fd, cmd const[3221795585], arg struct_mmc_ioc_cmd_17029479198534024748)
-ioctl$syz_describe_17029479198534024748_3221795585(fd fd_17029479198534024748_fd, cmd const[3221795585], arg ptr[in, array[int8]])
-ioctl$syz_describe_17029479198534024748_3225989888(fd fd_17029479198534024748_fd, cmd const[3225989888], arg ptr[in, array[int8]])
-ioctl$syz_describe_17029479198534024748_3225989888(fd fd_17029479198534024748_fd, cmd const[3225989888], arg ptr[in, array[int8]])
+ioctl$syz_describe_12786198575188350033_3221795585_0(fd fd_12786198575188350033_fd, cmd const[3221795585], arg ptr[in, int64])
+ioctl$syz_describe_12786198575188350033_3221795585_1(fd fd_12786198575188350033_fd, cmd const[3221795585], arg ptr[in, struct_mmc_ioc_cmd_12786198575188350033])
+ioctl$syz_describe_12786198575188350033_3225989888(fd fd_12786198575188350033_fd, cmd const[3225989888], arg ptr[in, array[int8]])
 
-struct_mmc_ioc_cmd_17029479198534024748 {
+struct_mmc_ioc_cmd_12786198575188350033 {
     field_0    int32
     field_1    int32
     field_2    int32

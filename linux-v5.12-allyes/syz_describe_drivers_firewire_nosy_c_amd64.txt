@@ -9,6 +9,19 @@ meta arches["amd64"]
 # driver found at module init function lynx_pci_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L708
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L708
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L650
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L650
+# not find any syscall handler in the structure
+
+#  resource fd_15482160508890670716_fd[fd]
+
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L646
+# not get correct value for this device file name
+
+# driver found at module init function lynx_pci_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L708
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L708
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L647
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L647
@@ -16,30 +29,18 @@ meta arches["amd64"]
 # find handler open: nosy_open
 # find handler read: nosy_read
 
-resource fd_12271257459542544152_fd[fd]
+resource fd_17755621128189300214_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L646
 # not get correct value for this device file name
+openat$syz_describe_17755621128189300214_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_17755621128189300214_fd
 
-ioctl$syz_describe_12271257459542544152_9729(fd fd_12271257459542544152_fd, cmd const[9729], arg ptr[in, array[int8]])
-ioctl$syz_describe_12271257459542544152_9730(fd fd_12271257459542544152_fd, cmd const[9730], arg ptr[in, array[int8]])
-ioctl$syz_describe_12271257459542544152_1074013698(fd fd_12271257459542544152_fd, cmd const[1074013698], arg ptr[in, array[int8]])
-ioctl$syz_describe_12271257459542544152_2148017664_0(fd fd_12271257459542544152_fd, cmd const[2148017664], arg ptr[out, struct_util_est_12271257459542544152])
+ioctl$syz_describe_17755621128189300214_9729(fd fd_17755621128189300214_fd, cmd const[9729], arg ptr[in, array[int8]])
+ioctl$syz_describe_17755621128189300214_9730(fd fd_17755621128189300214_fd, cmd const[9730], arg ptr[in, array[int8]])
+ioctl$syz_describe_17755621128189300214_1074013698(fd fd_17755621128189300214_fd, cmd const[1074013698], arg ptr[in, array[int8]])
+ioctl$syz_describe_17755621128189300214_2148017664_0(fd fd_17755621128189300214_fd, cmd const[2148017664], arg ptr[out, struct_util_est_17755621128189300214])
 
-struct_util_est_12271257459542544152 {
+struct_util_est_17755621128189300214 {
     field_0    int32
     field_1    int32
 }
-# driver found at module init function lynx_pci_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L708
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L708
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L650
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L650
-# not find any syscall handler in the structure
-
-resource fd_6142509188972423790_fd[fd]
-
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/firewire/nosy.c#L646
-# not get correct value for this device file name
-

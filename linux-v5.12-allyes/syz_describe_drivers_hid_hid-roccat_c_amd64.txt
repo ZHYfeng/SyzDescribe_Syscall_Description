@@ -15,9 +15,10 @@ meta arches["amd64"]
 # find handler open: roccat_open
 # find handler read: roccat_read
 
-resource fd_14947879846868626117_fd[fd]
+resource fd_7083298762332597474_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_7083298762332597474_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_7083298762332597474_fd
 
-ioctl$syz_describe_14947879846868626117_2147764465(fd fd_14947879846868626117_fd, cmd const[2147764465], arg ptr[in, array[int8]])
+ioctl$syz_describe_7083298762332597474_2147764465(fd fd_7083298762332597474_fd, cmd const[2147764465], arg ptr[in, array[int8]])
 

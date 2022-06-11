@@ -20,21 +20,23 @@ meta arches["amd64"]
 # find handler read: ib_umad_read
 # find handler write: ib_umad_write
 
-resource fd_140763865089487765_fd[fd]
+resource fd_5343013213539327150_fd[fd]
 
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/./include/rdma/rdma_vt.h#L447
+# not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1316
-syz_open_dev$syz_describe_140763865089487765_open_0(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
+syz_open_dev$syz_describe_5343013213539327150_open_0(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_5343013213539327150_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1306
-syz_open_dev$syz_describe_140763865089487765_open_1(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
+syz_open_dev$syz_describe_5343013213539327150_open_1(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_5343013213539327150_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/uverbs_main.c#L1153
-syz_open_dev$syz_describe_140763865089487765_open_2(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_140763865089487765_fd
+syz_open_dev$syz_describe_5343013213539327150_open_2(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_5343013213539327150_fd
 
-ioctl$syz_describe_140763865089487765_6915(fd fd_140763865089487765_fd, cmd const[6915], arg ptr[in, array[int8]])
-ioctl$syz_describe_140763865089487765_1074010882(fd fd_140763865089487765_fd, cmd const[1074010882], arg ptr[in, array[int8]])
-ioctl$syz_describe_140763865089487765_3223067393_0(fd fd_140763865089487765_fd, cmd const[3223067393], arg ptr[in, struct_ib_user_mad_reg_req_140763865089487765])
-ioctl$syz_describe_140763865089487765_3223853828_0(fd fd_140763865089487765_fd, cmd const[3223853828], arg ptr[in, struct_ib_user_mad_reg_req2_140763865089487765])
+ioctl$syz_describe_5343013213539327150_6915(fd fd_5343013213539327150_fd, cmd const[6915], arg ptr[in, array[int8]])
+ioctl$syz_describe_5343013213539327150_1074010882(fd fd_5343013213539327150_fd, cmd const[1074010882], arg ptr[in, array[int8]])
+ioctl$syz_describe_5343013213539327150_3223067393_0(fd fd_5343013213539327150_fd, cmd const[3223067393], arg ptr[in, struct_ib_user_mad_reg_req_5343013213539327150])
+ioctl$syz_describe_5343013213539327150_3223853828_0(fd fd_5343013213539327150_fd, cmd const[3223853828], arg ptr[in, struct_ib_user_mad_reg_req2_5343013213539327150])
 
-struct_ib_user_mad_reg_req_140763865089487765 {
+struct_ib_user_mad_reg_req_5343013213539327150 {
     field_0    int32
     field_1    array[int64, 2]
     field_2    int8
@@ -44,7 +46,7 @@ struct_ib_user_mad_reg_req_140763865089487765 {
     field_6    int8
     field_7    int8
 } [packed]
-struct_ib_user_mad_reg_req2_140763865089487765 {
+struct_ib_user_mad_reg_req2_5343013213539327150 {
     field_0    int32
     field_1    int32
     field_2    int8
@@ -67,12 +69,14 @@ struct_ib_user_mad_reg_req2_140763865089487765 {
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1317
 # find handler open: ib_umad_sm_open
 
-resource fd_633673016942799771_fd[fd]
+#  resource fd_3776232648808727777_fd[fd]
 
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/./include/rdma/rdma_vt.h#L447
+# not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1316
-syz_open_dev$syz_describe_633673016942799771_open_0(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
+# syz_open_dev$syz_describe_3776232648808727777_open_0(dev ptr[in, string["/dev/issm#"]], id intptr, flags flags[open_flags]) fd_3776232648808727777_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/user_mad.c#L1306
-syz_open_dev$syz_describe_633673016942799771_open_1(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
+# syz_open_dev$syz_describe_3776232648808727777_open_1(dev ptr[in, string["/dev/umad#"]], id intptr, flags flags[open_flags]) fd_3776232648808727777_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/infiniband/core/uverbs_main.c#L1153
-syz_open_dev$syz_describe_633673016942799771_open_2(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_633673016942799771_fd
+# syz_open_dev$syz_describe_3776232648808727777_open_2(dev ptr[in, string["/dev/uverbs#"]], id intptr, flags flags[open_flags]) fd_3776232648808727777_fd
 

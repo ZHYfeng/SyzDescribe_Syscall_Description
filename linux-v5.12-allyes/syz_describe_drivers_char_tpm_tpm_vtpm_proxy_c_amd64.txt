@@ -14,15 +14,15 @@ meta arches["amd64"]
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L688
 # find handler ioctl: vtpmx_fops_ioctl
 
-resource fd_8649450314682704602_fd[fd]
+resource fd_15085310339230330331_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L688
-openat$syz_describe_8649450314682704602_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/vtpmx"]], flags flags[open_flags], mode const[0]) fd_8649450314682704602_fd
+openat$syz_describe_15085310339230330331_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/vtpmx"]], flags flags[open_flags], mode const[0]) fd_15085310339230330331_fd
 
-ioctl$syz_describe_8649450314682704602_3222577408_0(fd fd_8649450314682704602_fd, cmd const[3222577408], arg ptr[in, struct_vtpm_proxy_new_dev_8649450314682704602]) fd_8649450314682704602_cmd_3222577408_fd
-ioctl$syz_describe_8649450314682704602_3222577408_1(fd fd_8649450314682704602_fd, cmd const[3222577408], arg ptr[out, struct_vtpm_proxy_new_dev_8649450314682704602]) fd_8649450314682704602_cmd_3222577408_fd
+ioctl$syz_describe_15085310339230330331_3222577408_0(fd fd_15085310339230330331_fd, cmd const[3222577408], arg ptr[inout, struct_vtpm_proxy_new_dev_15085310339230330331])
+# ioctl$syz_describe_15085310339230330331_3222577408_0(fd fd_15085310339230330331_fd, cmd const[3222577408], arg ptr[inout, struct_vtpm_proxy_new_dev_15085310339230330331]) fd_4550550017571384823_cmd_3222577408_fd
 
-struct_vtpm_proxy_new_dev_8649450314682704602 {
+struct_vtpm_proxy_new_dev_15085310339230330331 {
     field_0    int32
     field_1    int32
     field_2    int32
@@ -30,22 +30,7 @@ struct_vtpm_proxy_new_dev_8649450314682704602 {
     field_4    int32
 }
 # driver found at (not module init) function vtpmx_fops_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L662
-# parent id hash: 8649450314682704602
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L667
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L641
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L556
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L556
-# find handler read: vtpm_proxy_fops_read
-# find handler write: vtpm_proxy_fops_write
-
-resource fd_8649450314682704602_cmd_3222577408_fd[fd]
-
-# non open fd
-
-# driver found at (not module init) function vtpmx_fops_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L662
-# parent id hash: 8649450314682704602
+# parent id hash: 15085310339230330331
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L667
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L641
@@ -58,15 +43,30 @@ resource fd_8649450314682704602_cmd_3222577408_fd[fd]
 # find handler read: tpm_common_read
 # find handler write: tpm_common_write
 
-resource fd_3912085573824668745_fd[fd]
+#  resource fd_6602549716810911845_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L374
-syz_open_dev$syz_describe_3912085573824668745_open_0(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_3912085573824668745_fd
+# syz_open_dev$syz_describe_6602549716810911845_open_0(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_6602549716810911845_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L377
-syz_open_dev$syz_describe_3912085573824668745_open_1(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_3912085573824668745_fd
+# syz_open_dev$syz_describe_6602549716810911845_open_1(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_6602549716810911845_fd
 
 # driver found at (not module init) function vtpmx_fops_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L662
-# parent id hash: 8649450314682704602
+# parent id hash: 15085310339230330331
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L667
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L641
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L556
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L556
+# find handler read: vtpm_proxy_fops_read
+# find handler write: vtpm_proxy_fops_write
+
+#  resource fd_4550550017571384823_cmd_3222577408_fd[fd]
+
+# non open fd
+
+# driver found at (not module init) function vtpmx_fops_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L662
+# parent id hash: 15085310339230330331
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L667
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm_vtpm_proxy.c#L641
@@ -79,10 +79,10 @@ syz_open_dev$syz_describe_3912085573824668745_open_1(dev ptr[in, string["/dev/tp
 # find handler read: tpm_common_read
 # find handler write: tpm_common_write
 
-resource fd_501453402407060792_fd[fd]
+#  resource fd_12282621534399330106_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L374
-syz_open_dev$syz_describe_501453402407060792_open_0(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_501453402407060792_fd
+# syz_open_dev$syz_describe_12282621534399330106_open_0(dev ptr[in, string["/dev/tpm#"]], id intptr, flags flags[open_flags]) fd_12282621534399330106_fd
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/char/tpm/tpm-chip.c#L377
-syz_open_dev$syz_describe_501453402407060792_open_1(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_501453402407060792_fd
+# syz_open_dev$syz_describe_12282621534399330106_open_1(dev ptr[in, string["/dev/tpmrm#"]], id intptr, flags flags[open_flags]) fd_12282621534399330106_fd
 

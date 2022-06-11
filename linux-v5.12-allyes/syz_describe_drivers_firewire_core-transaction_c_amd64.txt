@@ -15,15 +15,15 @@ meta arches["amd64"]
 # find handler open: fw_device_op_open
 # find handler read: fw_device_op_read
 
-resource fd_4553004347742153717_fd[fd]
+resource fd_15499546941704521923_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_15499546941704521923_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_15499546941704521923_fd
 
-ioctl$syz_describe_4553004347742153717_0_0(fd fd_4553004347742153717_fd, cmd const[0], arg ptr[in, union_ioctl_arg_4553004347742153717])
-ioctl$syz_describe_4553004347742153717_0_1(fd fd_4553004347742153717_fd, cmd const[0], arg ptr[out, union_ioctl_arg_4553004347742153717])
-ioctl$syz_describe_4553004347742153717_35(fd fd_4553004347742153717_fd, cmd const[35], arg ptr[in, array[int8]])
+ioctl$syz_describe_15499546941704521923_0_0(fd fd_15499546941704521923_fd, cmd const[0], arg ptr[inout, union_ioctl_arg_15499546941704521923])
+ioctl$syz_describe_15499546941704521923_35(fd fd_15499546941704521923_fd, cmd const[35], arg ptr[in, array[int8]])
 
-struct_fw_cdev_get_info_4553004347742153717 {
+struct_fw_cdev_get_info_15499546941704521923 {
     field_0    int32
     field_1    int32
     field_2    int64
@@ -31,6 +31,6 @@ struct_fw_cdev_get_info_4553004347742153717 {
     field_4    int64
     field_5    int32
 }
-union_ioctl_arg_4553004347742153717 {
-    field_0    struct_fw_cdev_get_info_4553004347742153717
+union_ioctl_arg_15499546941704521923 {
+    field_0    struct_fw_cdev_get_info_15499546941704521923
 }

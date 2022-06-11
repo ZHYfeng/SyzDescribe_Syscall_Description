@@ -6,25 +6,27 @@
 
 meta arches["amd64"]
 
-# driver found at (not module init) function vmw_unlocked_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1148
-# parent id hash: 11515574149107313130
+# driver found at module init function vmwgfx_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1534
 # call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1151
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L887
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_ioctl.c#L787
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L799
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L615
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1541
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1513
 
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
-# not find any syscall handler in the structure
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1513
+# find handler ioctl: vmw_unlocked_ioctl
+# find handler read: vmw_fops_read
 
-resource fd_11515574149107313130_cmd_0_fd[fd]
+resource fd_6927550281627528244_fd[fd]
 
-# non open fd
+# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1513
+openat$syz_describe_6927550281627528244_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/vmwgfx"]], flags flags[open_flags], mode const[0]) fd_6927550281627528244_fd
+
+ioctl$syz_describe_6927550281627528244_0(fd fd_6927550281627528244_fd, cmd const[0], arg ptr[in, array[int8]])
+# ioctl$syz_describe_6927550281627528244_0(fd fd_6927550281627528244_fd, cmd const[0], arg ptr[in, array[int8]]) fd_16651850578980582664_cmd_0_fd
+ioctl$syz_describe_6927550281627528244_76(fd fd_6927550281627528244_fd, cmd const[76], arg ptr[in, array[int8]])
+ioctl$syz_describe_6927550281627528244_84(fd fd_6927550281627528244_fd, cmd const[84], arg ptr[in, array[int8]])
 
 # driver found at (not module init) function vmw_unlocked_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1148
-# parent id hash: 11515574149107313130
+# parent id hash: 6927550281627528244
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1151
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1125
@@ -37,28 +39,7 @@ resource fd_11515574149107313130_cmd_0_fd[fd]
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/drm_syncobj.c#L590
 # not find any syscall handler in the structure
 
-resource fd_11515574149107313130_cmd_76_fd[fd]
+#  resource fd_16651850578980582664_cmd_0_fd[fd]
 
 # non open fd
-
-# driver found at module init function vmwgfx_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1534
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1541
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1513
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1513
-# find handler ioctl: vmw_unlocked_ioctl
-# find handler read: vmw_fops_read
-
-resource fd_11515574149107313130_fd[fd]
-
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpu/drm/vmwgfx/vmwgfx_drv.c#L1513
-openat$syz_describe_11515574149107313130_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/vmwgfx"]], flags flags[open_flags], mode const[0]) fd_11515574149107313130_fd
-
-ioctl$syz_describe_11515574149107313130_0(fd fd_11515574149107313130_fd, cmd const[0], arg ptr[in, array[int8]]) fd_11515574149107313130_cmd_0_fd
-ioctl$syz_describe_11515574149107313130_0(fd fd_11515574149107313130_fd, cmd const[0], arg ptr[in, array[int8]]) fd_11515574149107313130_cmd_0_fd
-ioctl$syz_describe_11515574149107313130_76(fd fd_11515574149107313130_fd, cmd const[76], arg ptr[in, array[int8]]) fd_11515574149107313130_cmd_76_fd
-ioctl$syz_describe_11515574149107313130_76(fd fd_11515574149107313130_fd, cmd const[76], arg ptr[in, array[int8]]) fd_11515574149107313130_cmd_76_fd
-ioctl$syz_describe_11515574149107313130_84(fd fd_11515574149107313130_fd, cmd const[84], arg ptr[in, array[int8]])
-ioctl$syz_describe_11515574149107313130_84(fd fd_11515574149107313130_fd, cmd const[84], arg ptr[in, array[int8]])
 

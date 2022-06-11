@@ -16,12 +16,11 @@ meta arches["amd64"]
 # find handler read: msr_read
 # find handler write: msr_write
 
-resource fd_208786822353114665_fd[fd]
+resource fd_5615945530076293507_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_5615945530076293507_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_5615945530076293507_fd
 
-ioctl$syz_describe_208786822353114665_3223348128_0(fd fd_208786822353114665_fd, cmd const[3223348128], arg ptr[in, array[int32, 8]])
-ioctl$syz_describe_208786822353114665_3223348128_1(fd fd_208786822353114665_fd, cmd const[3223348128], arg ptr[out, array[int32, 8]])
-ioctl$syz_describe_208786822353114665_3223348129_0(fd fd_208786822353114665_fd, cmd const[3223348129], arg ptr[in, array[int32, 8]])
-ioctl$syz_describe_208786822353114665_3223348129_1(fd fd_208786822353114665_fd, cmd const[3223348129], arg ptr[out, array[int32, 8]])
+ioctl$syz_describe_5615945530076293507_3223348128_0(fd fd_5615945530076293507_fd, cmd const[3223348128], arg ptr[inout, array[int32, 8]])
+ioctl$syz_describe_5615945530076293507_3223348129_0(fd fd_5615945530076293507_fd, cmd const[3223348129], arg ptr[inout, array[int32, 8]])
 

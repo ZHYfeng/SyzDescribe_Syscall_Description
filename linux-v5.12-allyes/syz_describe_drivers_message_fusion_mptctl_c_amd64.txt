@@ -13,54 +13,45 @@ meta arches["amd64"]
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/message/fusion/mptctl.c#L2886
 # find handler ioctl: mptctl_ioctl
 
-resource fd_2945406748937150473_fd[fd]
+resource fd_7899399281916371766_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/message/fusion/mptctl.c#L2886
-openat$syz_describe_2945406748937150473_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mptctl"]], flags flags[open_flags], mode const[0]) fd_2945406748937150473_fd
+openat$syz_describe_7899399281916371766_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/mptctl"]], flags flags[open_flags], mode const[0]) fd_7899399281916371766_fd
 
-ioctl$syz_describe_2945406748937150473_2147506708_0(fd fd_2945406748937150473_fd, cmd const[2147506708], arg ptr[in, struct__hp_host_info_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_2147506708_1(fd fd_2945406748937150473_fd, cmd const[2147506708], arg ptr[out, struct__hp_host_info_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_2150652437_0(fd fd_2945406748937150473_fd, cmd const[2150652437], arg ptr[in, struct__hp_target_info_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_2150652437_1(fd fd_2945406748937150473_fd, cmd const[2150652437], arg ptr[out, struct__hp_target_info_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3221253393_0(fd fd_2945406748937150473_fd, cmd const[3221253393], arg ptr[out, struct_mpt_ioctl_iocinfo_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222039832_0(fd fd_2945406748937150473_fd, cmd const[3222039832], arg ptr[in, struct_mpt_ioctl_diag_reset_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222301967_0(fd fd_2945406748937150473_fd, cmd const[3222301967], arg ptr[in, struct_mpt_fw_xfer_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222301974_0(fd fd_2945406748937150473_fd, cmd const[3222301974], arg ptr[in, struct_mpt_ioctl_eventenable_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222564114_0(fd fd_2945406748937150473_fd, cmd const[3222564114], arg ptr[in, struct_mpt_ioctl_targetinfo_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222564114(fd fd_2945406748937150473_fd, cmd const[3222564114], arg ptr[in, array[int8]])
-ioctl$syz_describe_2945406748937150473_3222564114_2(fd fd_2945406748937150473_fd, cmd const[3222564114], arg ptr[out, struct_mpt_ioctl_targetinfo_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222564117_0(fd fd_2945406748937150473_fd, cmd const[3222564117], arg ptr[in, struct_mpt_ioctl_eventquery_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222564117_1(fd fd_2945406748937150473_fd, cmd const[3222564117], arg ptr[out, struct_mpt_ioctl_eventquery_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3222564121(fd fd_2945406748937150473_fd, cmd const[3222564121], arg ptr[in, array[int8]])
-ioctl$syz_describe_2945406748937150473_3222564121_1(fd fd_2945406748937150473_fd, cmd const[3222564121], arg ptr[in, struct_mpt_ioctl_replace_fw_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3223088407_0(fd fd_2945406748937150473_fd, cmd const[3223088407], arg ptr[in, struct_mpt_ioctl_eventreport_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3223088407_1(fd fd_2945406748937150473_fd, cmd const[3223088407], arg ptr[out, struct__mpt_ioctl_events_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3225185555_0(fd fd_2945406748937150473_fd, cmd const[3225185555], arg ptr[in, struct_mpt_ioctl_test_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3225185555_1(fd fd_2945406748937150473_fd, cmd const[3225185555], arg ptr[out, struct_mpt_ioctl_test_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3225971988(fd fd_2945406748937150473_fd, cmd const[3225971988], arg ptr[in, array[int8]])
-ioctl$syz_describe_2945406748937150473_3225971988_1(fd fd_2945406748937150473_fd, cmd const[3225971988], arg ptr[in, struct_mpt_ioctl_command_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3225971988_2(fd fd_2945406748937150473_fd, cmd const[3225971988], arg ptr[in, struct__MPT_FRAME_HDR_2945406748937150473])
-ioctl$syz_describe_2945406748937150473_3225971988(fd fd_2945406748937150473_fd, cmd const[3225971988], arg ptr[in, array[int8]])
-ioctl$syz_describe_2945406748937150473_3225971988_4(fd fd_2945406748937150473_fd, cmd const[3225971988], arg array[int8, 64])
-ioctl$syz_describe_2945406748937150473_3225971988_5(fd fd_2945406748937150473_fd, cmd const[3225971988], arg array[int8, 128])
+ioctl$syz_describe_7899399281916371766_2147506708_0(fd fd_7899399281916371766_fd, cmd const[2147506708], arg ptr[inout, struct__hp_host_info_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_2150652437_0(fd fd_7899399281916371766_fd, cmd const[2150652437], arg ptr[inout, struct__hp_target_info_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3221253393_0(fd fd_7899399281916371766_fd, cmd const[3221253393], arg ptr[out, struct_mpt_ioctl_iocinfo_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3222039832_0(fd fd_7899399281916371766_fd, cmd const[3222039832], arg ptr[in, struct_mpt_ioctl_diag_reset_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3222301967_0(fd fd_7899399281916371766_fd, cmd const[3222301967], arg ptr[in, struct_mpt_fw_xfer_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3222301974_0(fd fd_7899399281916371766_fd, cmd const[3222301974], arg ptr[in, struct_mpt_ioctl_eventenable_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3222564114_0(fd fd_7899399281916371766_fd, cmd const[3222564114], arg ptr[inout, struct_mpt_ioctl_targetinfo_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3222564117_0(fd fd_7899399281916371766_fd, cmd const[3222564117], arg ptr[inout, struct_mpt_ioctl_eventquery_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3222564121_0(fd fd_7899399281916371766_fd, cmd const[3222564121], arg ptr[in, struct_mpt_ioctl_replace_fw_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3223088407_0(fd fd_7899399281916371766_fd, cmd const[3223088407], arg ptr[in, struct_mpt_ioctl_eventreport_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3223088407_1(fd fd_7899399281916371766_fd, cmd const[3223088407], arg ptr[out, struct__mpt_ioctl_events_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3225185555_0(fd fd_7899399281916371766_fd, cmd const[3225185555], arg ptr[inout, struct_mpt_ioctl_test_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3225971988_0(fd fd_7899399281916371766_fd, cmd const[3225971988], arg ptr[in, struct_mpt_ioctl_command_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3225971988_1(fd fd_7899399281916371766_fd, cmd const[3225971988], arg ptr[in, struct__MPT_FRAME_HDR_7899399281916371766])
+ioctl$syz_describe_7899399281916371766_3225971988_2(fd fd_7899399281916371766_fd, cmd const[3225971988], arg ptr[out, array[int8, 64]])
+ioctl$syz_describe_7899399281916371766_3225971988_3(fd fd_7899399281916371766_fd, cmd const[3225971988], arg ptr[out, array[int8, 128]])
 
-struct_list_head_2945406748937150473 {
-    field_0    ptr[in, struct_list_head_2945406748937150473]
-    field_1    ptr[in, struct_list_head_2945406748937150473]
+struct_list_head_7899399281916371766 {
+    field_0    ptr[in, struct_list_head_7899399281916371766, opt]
+    field_1    ptr[in, struct_list_head_7899399281916371766, opt]
 }
-struct_atomic_t_2945406748937150473 {
+struct_atomic_t_7899399281916371766 {
     field_0    int32
 }
-union_anon_1_2945406748937150473 {
-    field_0    struct_atomic_t_2945406748937150473
+union_anon_1_7899399281916371766 {
+    field_0    struct_atomic_t_7899399281916371766
 }
-struct_kernel_symbol_2945406748937150473 {
+struct_kernel_symbol_7899399281916371766 {
     field_0    int32
     field_1    int32
     field_2    int32
 }
-struct_mpt_ioctl_command_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_command_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
     field_1    int32
     field_2    ptr[in, int8]
     field_3    ptr[in, int8]
@@ -73,12 +64,12 @@ struct_mpt_ioctl_command_2945406748937150473 {
     field_10    int32
     field_11    array[int8, 1]
 }
-struct_kqid_2945406748937150473 {
-    field_0    union_anon_1_2945406748937150473
+struct_kqid_7899399281916371766 {
+    field_0    union_anon_1_7899399281916371766
     field_1    int32
 }
-struct_mpt_ioctl_iocinfo_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_iocinfo_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
     field_1    int32
     field_2    int32
     field_3    int32
@@ -92,50 +83,50 @@ struct_mpt_ioctl_iocinfo_2945406748937150473 {
     field_11    int8
     field_12    int8
     field_13    array[int8, 2]
-    field_14    struct_kqid_2945406748937150473
+    field_14    struct_kqid_7899399281916371766
 }
-struct_mpt_ioctl_targetinfo_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_targetinfo_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
     field_1    int32
     field_2    array[int32, 1]
 }
-struct_mpt_ioctl_test_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_test_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
     field_1    array[int8, 32]
     field_2    int32
     field_3    array[int8, 12]
 }
-struct_mpt_ioctl_eventquery_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_eventquery_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
     field_1    int16
     field_2    int16
     field_3    int32
 }
-struct_mpt_ioctl_eventenable_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_eventenable_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
     field_1    int32
 }
-struct_mpt_ioctl_eventreport_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
-    field_1    array[struct__mpt_ioctl_events_2945406748937150473, 1]
+struct_mpt_ioctl_eventreport_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
+    field_1    array[struct__mpt_ioctl_events_7899399281916371766, 1]
 }
-struct_mpt_ioctl_replace_fw_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_replace_fw_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
     field_1    int32
     field_2    array[int8, 1]
 }
-struct_mpt_ioctl_diag_reset_2945406748937150473 {
-    field_0    struct_kernel_symbol_2945406748937150473
+struct_mpt_ioctl_diag_reset_7899399281916371766 {
+    field_0    struct_kernel_symbol_7899399281916371766
 }
-struct__hp_header_2945406748937150473 {
+struct__hp_header_7899399281916371766 {
     field_0    int32
     field_1    int32
     field_2    int32
     field_3    int32
     field_4    int32
 }
-struct__hp_host_info_2945406748937150473 {
-    field_0    struct__hp_header_2945406748937150473
+struct__hp_host_info_7899399281916371766 {
+    field_0    struct__hp_header_7899399281916371766
     field_1    int16
     field_2    int16
     field_3    int16
@@ -153,8 +144,8 @@ struct__hp_host_info_2945406748937150473 {
     field_15    int32
     field_16    int32
 }
-struct__hp_target_info_2945406748937150473 {
-    field_0    struct__hp_header_2945406748937150473
+struct__hp_target_info_7899399281916371766 {
+    field_0    struct__hp_header_7899399281916371766
     field_1    int32
     field_2    int32
     field_3    int32
@@ -163,28 +154,28 @@ struct__hp_target_info_2945406748937150473 {
     field_6    int8
     field_7    array[int8, 7]
 }
-struct_anon_96_2945406748937150473 {
-    field_0    struct_list_head_2945406748937150473
+struct_anon_96_7899399281916371766 {
+    field_0    struct_list_head_7899399281916371766
     field_1    int32
     field_2    int32
     field_3    ptr[in, int8]
 }
-union__MPT_FRAME_TRACKER_2945406748937150473 {
-    field_0    struct_anon_96_2945406748937150473
+union__MPT_FRAME_TRACKER_7899399281916371766 {
+    field_0    struct_anon_96_7899399281916371766
 }
-union_anon_92_2945406748937150473 {
-    field_0    union__MPT_FRAME_TRACKER_2945406748937150473
+union_anon_92_7899399281916371766 {
+    field_0    union__MPT_FRAME_TRACKER_7899399281916371766
     field_1    array[int8, 32]
 }
-struct__MPT_FRAME_HDR_2945406748937150473 {
-    field_0    union_anon_92_2945406748937150473
+struct__MPT_FRAME_HDR_7899399281916371766 {
+    field_0    union_anon_92_7899399281916371766
 }
-struct__mpt_ioctl_events_2945406748937150473 {
+struct__mpt_ioctl_events_7899399281916371766 {
     field_0    int32
     field_1    int32
     field_2    array[int32, 2]
 }
-struct_mpt_fw_xfer_2945406748937150473 {
+struct_mpt_fw_xfer_7899399281916371766 {
     field_0    int32
     field_1    int32
     field_2    ptr[in, int8]

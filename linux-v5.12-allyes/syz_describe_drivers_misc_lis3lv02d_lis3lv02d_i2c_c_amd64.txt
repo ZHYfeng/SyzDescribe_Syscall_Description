@@ -16,7 +16,7 @@ meta arches["amd64"]
 # find handler open: lis3lv02d_misc_open
 # find handler read: lis3lv02d_misc_read
 
-resource fd_12552407239146334857_fd[fd]
+#  resource fd_5820810897968657448_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/misc/lis3lv02d/lis3lv02d.c#L1246
 # not get correct value for this device file name

@@ -16,35 +16,32 @@ meta arches["amd64"]
 # find handler read: fb_read
 # find handler write: fb_write
 
-resource fd_8543308504459793421_fd[fd]
+resource fd_15307791809024755521_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/video/fbdev/core/fbcon.c#L3332
-openat$syz_describe_8543308504459793421_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/fbcon"]], flags flags[open_flags], mode const[0]) fd_8543308504459793421_fd
+openat$syz_describe_15307791809024755521_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/fbcon"]], flags flags[open_flags], mode const[0]) fd_15307791809024755521_fd
 
-ioctl$syz_describe_8543308504459793421_17920_0(fd fd_8543308504459793421_fd, cmd const[17920], arg ptr[out, struct_fb_var_screeninfo_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17921_0(fd fd_8543308504459793421_fd, cmd const[17921], arg ptr[in, struct_fb_var_screeninfo_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17921_1(fd fd_8543308504459793421_fd, cmd const[17921], arg ptr[out, struct_fb_var_screeninfo_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17922_0(fd fd_8543308504459793421_fd, cmd const[17922], arg ptr[out, struct_fb_fix_screeninfo_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17924_0(fd fd_8543308504459793421_fd, cmd const[17924], arg ptr[in, struct_fb_cmap_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17925_0(fd fd_8543308504459793421_fd, cmd const[17925], arg ptr[in, struct_fb_cmap_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17926_0(fd fd_8543308504459793421_fd, cmd const[17926], arg ptr[in, struct_fb_var_screeninfo_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17926_1(fd fd_8543308504459793421_fd, cmd const[17926], arg ptr[out, struct_fb_var_screeninfo_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17935_0(fd fd_8543308504459793421_fd, cmd const[17935], arg ptr[in, struct_util_est_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17935_1(fd fd_8543308504459793421_fd, cmd const[17935], arg ptr[out, struct_util_est_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17936_0(fd fd_8543308504459793421_fd, cmd const[17936], arg ptr[in, struct_util_est_8543308504459793421])
-ioctl$syz_describe_8543308504459793421_17937(fd fd_8543308504459793421_fd, cmd const[17937], arg ptr[in, array[int8]])
-ioctl$syz_describe_8543308504459793421_3228059144(fd fd_8543308504459793421_fd, cmd const[3228059144], arg ptr[in, array[int8]])
+ioctl$syz_describe_15307791809024755521_17920_0(fd fd_15307791809024755521_fd, cmd const[17920], arg ptr[out, struct_fb_var_screeninfo_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17921_0(fd fd_15307791809024755521_fd, cmd const[17921], arg ptr[inout, struct_fb_var_screeninfo_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17922_0(fd fd_15307791809024755521_fd, cmd const[17922], arg ptr[out, struct_fb_fix_screeninfo_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17924_0(fd fd_15307791809024755521_fd, cmd const[17924], arg ptr[in, struct_fb_cmap_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17925_0(fd fd_15307791809024755521_fd, cmd const[17925], arg ptr[in, struct_fb_cmap_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17926_0(fd fd_15307791809024755521_fd, cmd const[17926], arg ptr[inout, struct_fb_var_screeninfo_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17935_0(fd fd_15307791809024755521_fd, cmd const[17935], arg ptr[inout, struct_util_est_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17936_0(fd fd_15307791809024755521_fd, cmd const[17936], arg ptr[in, struct_util_est_15307791809024755521])
+ioctl$syz_describe_15307791809024755521_17937(fd fd_15307791809024755521_fd, cmd const[17937], arg ptr[in, array[int8]])
+ioctl$syz_describe_15307791809024755521_3228059144(fd fd_15307791809024755521_fd, cmd const[3228059144], arg ptr[in, array[int8]])
 
-struct_util_est_8543308504459793421 {
+struct_util_est_15307791809024755521 {
     field_0    int32
     field_1    int32
 }
-struct_kernel_symbol_8543308504459793421 {
+struct_kernel_symbol_15307791809024755521 {
     field_0    int32
     field_1    int32
     field_2    int32
 }
-struct_fb_var_screeninfo_8543308504459793421 {
+struct_fb_var_screeninfo_15307791809024755521 {
     field_0    int32
     field_1    int32
     field_2    int32
@@ -53,10 +50,10 @@ struct_fb_var_screeninfo_8543308504459793421 {
     field_5    int32
     field_6    int32
     field_7    int32
-    field_8    struct_kernel_symbol_8543308504459793421
-    field_9    struct_kernel_symbol_8543308504459793421
-    field_10    struct_kernel_symbol_8543308504459793421
-    field_11    struct_kernel_symbol_8543308504459793421
+    field_8    struct_kernel_symbol_15307791809024755521
+    field_9    struct_kernel_symbol_15307791809024755521
+    field_10    struct_kernel_symbol_15307791809024755521
+    field_11    struct_kernel_symbol_15307791809024755521
     field_12    int32
     field_13    int32
     field_14    int32
@@ -75,7 +72,7 @@ struct_fb_var_screeninfo_8543308504459793421 {
     field_27    int32
     field_28    array[int32, 4]
 }
-struct_fb_fix_screeninfo_8543308504459793421 {
+struct_fb_fix_screeninfo_15307791809024755521 {
     field_0    array[int8, 16]
     field_1    int64
     field_2    int32
@@ -92,7 +89,7 @@ struct_fb_fix_screeninfo_8543308504459793421 {
     field_13    int16
     field_14    array[int16, 2]
 }
-struct_fb_cmap_8543308504459793421 {
+struct_fb_cmap_15307791809024755521 {
     field_0    int32
     field_1    int32
     field_2    ptr[in, int16]

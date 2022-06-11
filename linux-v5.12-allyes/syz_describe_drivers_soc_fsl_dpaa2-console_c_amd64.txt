@@ -15,10 +15,10 @@ meta arches["amd64"]
 # find handler open: dpaa2_mc_console_open
 # find handler read: dpaa2_console_read
 
-resource fd_11974989045427511644_fd[fd]
+#  resource fd_11004786636073145190_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/soc/fsl/dpaa2-console.c#L279
-openat$syz_describe_11974989045427511644_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/dpaa2_mc_console"]], flags flags[open_flags], mode const[0]) fd_11974989045427511644_fd
+# openat$syz_describe_11004786636073145190_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/dpaa2_mc_console"]], flags flags[open_flags], mode const[0]) fd_11004786636073145190_fd
 
 # driver found at module init function dpaa2_console_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/soc/fsl/dpaa2-console.c#L325
 # call chain: 
@@ -29,8 +29,8 @@ openat$syz_describe_11974989045427511644_open_0(fd const[AT_FDCWD], file ptr[in,
 # find handler open: dpaa2_aiop_console_open
 # find handler read: dpaa2_console_read
 
-resource fd_14001439396894141890_fd[fd]
+#  resource fd_3015020980481117557_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/soc/fsl/dpaa2-console.c#L286
-openat$syz_describe_14001439396894141890_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/dpaa2_aiop_console"]], flags flags[open_flags], mode const[0]) fd_14001439396894141890_fd
+# openat$syz_describe_3015020980481117557_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/dpaa2_aiop_console"]], flags flags[open_flags], mode const[0]) fd_3015020980481117557_fd
 

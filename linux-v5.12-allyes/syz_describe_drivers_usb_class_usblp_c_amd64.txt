@@ -9,7 +9,9 @@ meta arches["amd64"]
 # driver found at module init function usblp_driver_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/usblp.c#L1468
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/usblp.c#L1468
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/usblp.c#L1208
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/driver.c#L1057
+# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/core/driver.c#L396
+# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/usblp.c#L1208
 
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/usblp.c#L1208
 # find handler ioctl: usblp_ioctl
@@ -17,13 +19,12 @@ meta arches["amd64"]
 # find handler read: usblp_read
 # find handler write: usblp_write
 
-resource fd_3376947871281972908_fd[fd]
+resource fd_3578019774239683281_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/usb/class/usblp.c#L1208
-syz_open_dev$syz_describe_3376947871281972908_open_0(dev ptr[in, string["/dev/lp#"]], id intptr, flags flags[open_flags]) fd_3376947871281972908_fd
+syz_open_dev$syz_describe_3578019774239683281_open_0(dev ptr[in, string["/dev/lp#"]], id intptr, flags flags[open_flags]) fd_3578019774239683281_fd
 
-ioctl$syz_describe_3376947871281972908_80(fd fd_3376947871281972908_fd, cmd const[80], arg ptr[in, array[int8]])
-ioctl$syz_describe_3376947871281972908_80_1(fd fd_3376947871281972908_fd, cmd const[80], arg ptr[out, int32])
-ioctl$syz_describe_3376947871281972908_1540(fd fd_3376947871281972908_fd, cmd const[1540], arg ptr[in, array[int8]])
-ioctl$syz_describe_3376947871281972908_1547_0(fd fd_3376947871281972908_fd, cmd const[1547], arg ptr[out, int32])
+ioctl$syz_describe_3578019774239683281_80_0(fd fd_3578019774239683281_fd, cmd const[80], arg ptr[out, int32])
+ioctl$syz_describe_3578019774239683281_1540(fd fd_3578019774239683281_fd, cmd const[1540], arg ptr[in, array[int8]])
+ioctl$syz_describe_3578019774239683281_1547_0(fd fd_3578019774239683281_fd, cmd const[1547], arg ptr[out, int32])
 

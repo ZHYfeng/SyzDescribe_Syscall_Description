@@ -14,7 +14,7 @@ meta arches["amd64"]
 # find handler open: cpuid_open
 # find handler read: cpuid_read
 
-resource fd_8901885984752017805_fd[fd]
+#  resource fd_4453203493694777005_fd[fd]
 
 # not get possible device file name
 

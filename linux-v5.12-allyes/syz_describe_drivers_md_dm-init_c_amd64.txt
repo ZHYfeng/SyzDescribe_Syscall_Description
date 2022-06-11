@@ -16,84 +16,67 @@ meta arches["amd64"]
 # find handler ioctl: dm_blk_ioctl
 # find handler open: dm_blk_open
 
-resource fd_8451306547773195743_fd[fd]
+resource fd_3538852432397996086_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_3538852432397996086_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_3538852432397996086_fd
 
-ioctl$syz_describe_8451306547773195743_2338_0(fd fd_8451306547773195743_fd, cmd const[2338], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2338_1(fd fd_8451306547773195743_fd, cmd const[2338], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2338_2(fd fd_8451306547773195743_fd, cmd const[2338], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2338_3(fd fd_8451306547773195743_fd, cmd const[2338], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2338_4(fd fd_8451306547773195743_fd, cmd const[2338], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2338_5(fd fd_8451306547773195743_fd, cmd const[2338], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2344_0(fd fd_8451306547773195743_fd, cmd const[2344], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2344_1(fd fd_8451306547773195743_fd, cmd const[2344], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2344_2(fd fd_8451306547773195743_fd, cmd const[2344], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2344_3(fd fd_8451306547773195743_fd, cmd const[2344], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2344_4(fd fd_8451306547773195743_fd, cmd const[2344], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2344_5(fd fd_8451306547773195743_fd, cmd const[2344], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2345(fd fd_8451306547773195743_fd, cmd const[2345], arg ptr[in, array[int8]])
-ioctl$syz_describe_8451306547773195743_2354_0(fd fd_8451306547773195743_fd, cmd const[2354], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2354_1(fd fd_8451306547773195743_fd, cmd const[2354], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2354_2(fd fd_8451306547773195743_fd, cmd const[2354], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2354_3(fd fd_8451306547773195743_fd, cmd const[2354], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2354_4(fd fd_8451306547773195743_fd, cmd const[2354], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2354_5(fd fd_8451306547773195743_fd, cmd const[2354], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2355_0(fd fd_8451306547773195743_fd, cmd const[2355], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2355_1(fd fd_8451306547773195743_fd, cmd const[2355], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2355_2(fd fd_8451306547773195743_fd, cmd const[2355], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2355_3(fd fd_8451306547773195743_fd, cmd const[2355], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2355_4(fd fd_8451306547773195743_fd, cmd const[2355], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2355_5(fd fd_8451306547773195743_fd, cmd const[2355], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2356(fd fd_8451306547773195743_fd, cmd const[2356], arg ptr[in, array[int8]])
-ioctl$syz_describe_8451306547773195743_2357(fd fd_8451306547773195743_fd, cmd const[2357], arg ptr[in, array[int8]])
-ioctl$syz_describe_8451306547773195743_1074006315(fd fd_8451306547773195743_fd, cmd const[1074006315], arg ptr[in, array[int8]])
-ioctl$syz_describe_8451306547773195743_1074530608(fd fd_8451306547773195743_fd, cmd const[1074530608], arg ptr[in, array[int8]])
-ioctl$syz_describe_8451306547773195743_1075054881_0(fd fd_8451306547773195743_fd, cmd const[1075054881], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1075054881_1(fd fd_8451306547773195743_fd, cmd const[1075054881], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1075054881_2(fd fd_8451306547773195743_fd, cmd const[1075054881], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1075054881_3(fd fd_8451306547773195743_fd, cmd const[1075054881], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1075054881_4(fd fd_8451306547773195743_fd, cmd const[1075054881], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1075054881_5(fd fd_8451306547773195743_fd, cmd const[1075054881], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1078462755_0(fd fd_8451306547773195743_fd, cmd const[1078462755], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1078462755_1(fd fd_8451306547773195743_fd, cmd const[1078462755], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1078462755_2(fd fd_8451306547773195743_fd, cmd const[1078462755], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1078462755_3(fd fd_8451306547773195743_fd, cmd const[1078462755], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1078462755_4(fd fd_8451306547773195743_fd, cmd const[1078462755], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_1078462755_5(fd fd_8451306547773195743_fd, cmd const[1078462755], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148272400_0(fd fd_8451306547773195743_fd, cmd const[2148272400], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148272400_1(fd fd_8451306547773195743_fd, cmd const[2148272400], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148272400_2(fd fd_8451306547773195743_fd, cmd const[2148272400], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148272400_3(fd fd_8451306547773195743_fd, cmd const[2148272400], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148272400_4(fd fd_8451306547773195743_fd, cmd const[2148272400], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148272400_5(fd fd_8451306547773195743_fd, cmd const[2148272400], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148796690_0(fd fd_8451306547773195743_fd, cmd const[2148796690], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148796690_1(fd fd_8451306547773195743_fd, cmd const[2148796690], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148796690_2(fd fd_8451306547773195743_fd, cmd const[2148796690], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148796690_3(fd fd_8451306547773195743_fd, cmd const[2148796690], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148796690_4(fd fd_8451306547773195743_fd, cmd const[2148796690], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2148796690_5(fd fd_8451306547773195743_fd, cmd const[2148796690], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2152204561_0(fd fd_8451306547773195743_fd, cmd const[2152204561], arg ptr[in, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2152204561_1(fd fd_8451306547773195743_fd, cmd const[2152204561], arg ptr[in, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2152204561_2(fd fd_8451306547773195743_fd, cmd const[2152204561], arg ptr[out, struct_uid_gid_extent_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2152204561_3(fd fd_8451306547773195743_fd, cmd const[2152204561], arg ptr[out, struct_mdu_disk_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2152204561_4(fd fd_8451306547773195743_fd, cmd const[2152204561], arg ptr[out, struct_mdu_array_info_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2152204561_5(fd fd_8451306547773195743_fd, cmd const[2152204561], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
-ioctl$syz_describe_8451306547773195743_2415921429_0(fd fd_8451306547773195743_fd, cmd const[2415921429], arg ptr[out, struct_mdu_bitmap_file_s_8451306547773195743])
+ioctl$syz_describe_3538852432397996086_2338_0(fd fd_3538852432397996086_fd, cmd const[2338], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2338_1(fd fd_3538852432397996086_fd, cmd const[2338], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2338_2(fd fd_3538852432397996086_fd, cmd const[2338], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2338_3(fd fd_3538852432397996086_fd, cmd const[2338], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2344_0(fd fd_3538852432397996086_fd, cmd const[2344], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2344_1(fd fd_3538852432397996086_fd, cmd const[2344], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2344_2(fd fd_3538852432397996086_fd, cmd const[2344], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2344_3(fd fd_3538852432397996086_fd, cmd const[2344], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2345(fd fd_3538852432397996086_fd, cmd const[2345], arg ptr[in, array[int8]])
+ioctl$syz_describe_3538852432397996086_2354_0(fd fd_3538852432397996086_fd, cmd const[2354], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2354_1(fd fd_3538852432397996086_fd, cmd const[2354], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2354_2(fd fd_3538852432397996086_fd, cmd const[2354], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2354_3(fd fd_3538852432397996086_fd, cmd const[2354], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2355_0(fd fd_3538852432397996086_fd, cmd const[2355], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2355_1(fd fd_3538852432397996086_fd, cmd const[2355], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2355_2(fd fd_3538852432397996086_fd, cmd const[2355], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2355_3(fd fd_3538852432397996086_fd, cmd const[2355], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2356(fd fd_3538852432397996086_fd, cmd const[2356], arg ptr[in, array[int8]])
+ioctl$syz_describe_3538852432397996086_2357(fd fd_3538852432397996086_fd, cmd const[2357], arg ptr[in, array[int8]])
+ioctl$syz_describe_3538852432397996086_1074006315(fd fd_3538852432397996086_fd, cmd const[1074006315], arg ptr[in, array[int8]])
+ioctl$syz_describe_3538852432397996086_1074530608(fd fd_3538852432397996086_fd, cmd const[1074530608], arg ptr[in, array[int8]])
+ioctl$syz_describe_3538852432397996086_1075054881_0(fd fd_3538852432397996086_fd, cmd const[1075054881], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_1075054881_1(fd fd_3538852432397996086_fd, cmd const[1075054881], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_1075054881_2(fd fd_3538852432397996086_fd, cmd const[1075054881], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_1075054881_3(fd fd_3538852432397996086_fd, cmd const[1075054881], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_1078462755_0(fd fd_3538852432397996086_fd, cmd const[1078462755], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_1078462755_1(fd fd_3538852432397996086_fd, cmd const[1078462755], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_1078462755_2(fd fd_3538852432397996086_fd, cmd const[1078462755], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_1078462755_3(fd fd_3538852432397996086_fd, cmd const[1078462755], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148272400_0(fd fd_3538852432397996086_fd, cmd const[2148272400], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148272400_1(fd fd_3538852432397996086_fd, cmd const[2148272400], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148272400_2(fd fd_3538852432397996086_fd, cmd const[2148272400], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148272400_3(fd fd_3538852432397996086_fd, cmd const[2148272400], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148796690_0(fd fd_3538852432397996086_fd, cmd const[2148796690], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148796690_1(fd fd_3538852432397996086_fd, cmd const[2148796690], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148796690_2(fd fd_3538852432397996086_fd, cmd const[2148796690], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2148796690_3(fd fd_3538852432397996086_fd, cmd const[2148796690], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2152204561_0(fd fd_3538852432397996086_fd, cmd const[2152204561], arg ptr[out, struct_uid_gid_extent_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2152204561_1(fd fd_3538852432397996086_fd, cmd const[2152204561], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2152204561_2(fd fd_3538852432397996086_fd, cmd const[2152204561], arg ptr[inout, struct_mdu_disk_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2152204561_3(fd fd_3538852432397996086_fd, cmd const[2152204561], arg ptr[inout, struct_mdu_array_info_s_3538852432397996086])
+ioctl$syz_describe_3538852432397996086_2415921429_0(fd fd_3538852432397996086_fd, cmd const[2415921429], arg ptr[out, struct_mdu_bitmap_file_s_3538852432397996086])
 
-struct_uid_gid_extent_8451306547773195743 {
+struct_uid_gid_extent_3538852432397996086 {
     field_0    int32
     field_1    int32
     field_2    int32
 }
-struct_mdu_disk_info_s_8451306547773195743 {
+struct_mdu_disk_info_s_3538852432397996086 {
     field_0    int32
     field_1    int32
     field_2    int32
     field_3    int32
     field_4    int32
 }
-struct_mdu_array_info_s_8451306547773195743 {
+struct_mdu_array_info_s_3538852432397996086 {
     field_0    int32
     field_1    int32
     field_2    int32
@@ -113,7 +96,7 @@ struct_mdu_array_info_s_8451306547773195743 {
     field_16    int32
     field_17    int32
 }
-struct_mdu_bitmap_file_s_8451306547773195743 {
+struct_mdu_bitmap_file_s_3538852432397996086 {
     field_0    array[int8, 4096]
 }
 # driver found at module init function dm_init_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm-init.c#L264
@@ -127,85 +110,67 @@ struct_mdu_bitmap_file_s_8451306547773195743 {
 # find handler ioctl: dm_blk_ioctl
 # find handler open: dm_blk_open
 
-resource fd_13804708546037006228_fd[fd]
+resource fd_14657695184922827810_fd[fd]
 
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/md/dm.c#L1899
-syz_open_dev$syz_describe_13804708546037006228_open_0(dev ptr[in, string["/dev/dm-#"]], id intptr, flags flags[open_flags]) fd_13804708546037006228_fd
+syz_open_dev$syz_describe_14657695184922827810_open_0(dev ptr[in, string["/dev/dm-#"]], id intptr, flags flags[open_flags]) fd_14657695184922827810_fd
 
-ioctl$syz_describe_13804708546037006228_2338_0(fd fd_13804708546037006228_fd, cmd const[2338], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2338_1(fd fd_13804708546037006228_fd, cmd const[2338], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2338_2(fd fd_13804708546037006228_fd, cmd const[2338], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2338_3(fd fd_13804708546037006228_fd, cmd const[2338], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2338_4(fd fd_13804708546037006228_fd, cmd const[2338], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2338_5(fd fd_13804708546037006228_fd, cmd const[2338], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2344_0(fd fd_13804708546037006228_fd, cmd const[2344], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2344_1(fd fd_13804708546037006228_fd, cmd const[2344], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2344_2(fd fd_13804708546037006228_fd, cmd const[2344], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2344_3(fd fd_13804708546037006228_fd, cmd const[2344], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2344_4(fd fd_13804708546037006228_fd, cmd const[2344], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2344_5(fd fd_13804708546037006228_fd, cmd const[2344], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2345(fd fd_13804708546037006228_fd, cmd const[2345], arg ptr[in, array[int8]])
-ioctl$syz_describe_13804708546037006228_2354_0(fd fd_13804708546037006228_fd, cmd const[2354], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2354_1(fd fd_13804708546037006228_fd, cmd const[2354], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2354_2(fd fd_13804708546037006228_fd, cmd const[2354], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2354_3(fd fd_13804708546037006228_fd, cmd const[2354], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2354_4(fd fd_13804708546037006228_fd, cmd const[2354], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2354_5(fd fd_13804708546037006228_fd, cmd const[2354], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2355_0(fd fd_13804708546037006228_fd, cmd const[2355], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2355_1(fd fd_13804708546037006228_fd, cmd const[2355], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2355_2(fd fd_13804708546037006228_fd, cmd const[2355], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2355_3(fd fd_13804708546037006228_fd, cmd const[2355], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2355_4(fd fd_13804708546037006228_fd, cmd const[2355], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2355_5(fd fd_13804708546037006228_fd, cmd const[2355], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2356(fd fd_13804708546037006228_fd, cmd const[2356], arg ptr[in, array[int8]])
-ioctl$syz_describe_13804708546037006228_2357(fd fd_13804708546037006228_fd, cmd const[2357], arg ptr[in, array[int8]])
-ioctl$syz_describe_13804708546037006228_1074006315(fd fd_13804708546037006228_fd, cmd const[1074006315], arg ptr[in, array[int8]])
-ioctl$syz_describe_13804708546037006228_1074530608(fd fd_13804708546037006228_fd, cmd const[1074530608], arg ptr[in, array[int8]])
-ioctl$syz_describe_13804708546037006228_1075054881_0(fd fd_13804708546037006228_fd, cmd const[1075054881], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1075054881_1(fd fd_13804708546037006228_fd, cmd const[1075054881], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1075054881_2(fd fd_13804708546037006228_fd, cmd const[1075054881], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1075054881_3(fd fd_13804708546037006228_fd, cmd const[1075054881], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1075054881_4(fd fd_13804708546037006228_fd, cmd const[1075054881], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1075054881_5(fd fd_13804708546037006228_fd, cmd const[1075054881], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1078462755_0(fd fd_13804708546037006228_fd, cmd const[1078462755], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1078462755_1(fd fd_13804708546037006228_fd, cmd const[1078462755], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1078462755_2(fd fd_13804708546037006228_fd, cmd const[1078462755], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1078462755_3(fd fd_13804708546037006228_fd, cmd const[1078462755], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1078462755_4(fd fd_13804708546037006228_fd, cmd const[1078462755], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_1078462755_5(fd fd_13804708546037006228_fd, cmd const[1078462755], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148272400_0(fd fd_13804708546037006228_fd, cmd const[2148272400], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148272400_1(fd fd_13804708546037006228_fd, cmd const[2148272400], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148272400_2(fd fd_13804708546037006228_fd, cmd const[2148272400], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148272400_3(fd fd_13804708546037006228_fd, cmd const[2148272400], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148272400_4(fd fd_13804708546037006228_fd, cmd const[2148272400], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148272400_5(fd fd_13804708546037006228_fd, cmd const[2148272400], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148796690_0(fd fd_13804708546037006228_fd, cmd const[2148796690], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148796690_1(fd fd_13804708546037006228_fd, cmd const[2148796690], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148796690_2(fd fd_13804708546037006228_fd, cmd const[2148796690], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148796690_3(fd fd_13804708546037006228_fd, cmd const[2148796690], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148796690_4(fd fd_13804708546037006228_fd, cmd const[2148796690], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2148796690_5(fd fd_13804708546037006228_fd, cmd const[2148796690], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2152204561_0(fd fd_13804708546037006228_fd, cmd const[2152204561], arg ptr[in, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2152204561_1(fd fd_13804708546037006228_fd, cmd const[2152204561], arg ptr[in, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2152204561_2(fd fd_13804708546037006228_fd, cmd const[2152204561], arg ptr[out, struct_uid_gid_extent_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2152204561_3(fd fd_13804708546037006228_fd, cmd const[2152204561], arg ptr[out, struct_mdu_disk_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2152204561_4(fd fd_13804708546037006228_fd, cmd const[2152204561], arg ptr[out, struct_mdu_array_info_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2152204561_5(fd fd_13804708546037006228_fd, cmd const[2152204561], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
-ioctl$syz_describe_13804708546037006228_2415921429_0(fd fd_13804708546037006228_fd, cmd const[2415921429], arg ptr[out, struct_mdu_bitmap_file_s_13804708546037006228])
+ioctl$syz_describe_14657695184922827810_2338_0(fd fd_14657695184922827810_fd, cmd const[2338], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2338_1(fd fd_14657695184922827810_fd, cmd const[2338], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2338_2(fd fd_14657695184922827810_fd, cmd const[2338], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2338_3(fd fd_14657695184922827810_fd, cmd const[2338], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2344_0(fd fd_14657695184922827810_fd, cmd const[2344], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2344_1(fd fd_14657695184922827810_fd, cmd const[2344], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2344_2(fd fd_14657695184922827810_fd, cmd const[2344], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2344_3(fd fd_14657695184922827810_fd, cmd const[2344], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2345(fd fd_14657695184922827810_fd, cmd const[2345], arg ptr[in, array[int8]])
+ioctl$syz_describe_14657695184922827810_2354_0(fd fd_14657695184922827810_fd, cmd const[2354], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2354_1(fd fd_14657695184922827810_fd, cmd const[2354], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2354_2(fd fd_14657695184922827810_fd, cmd const[2354], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2354_3(fd fd_14657695184922827810_fd, cmd const[2354], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2355_0(fd fd_14657695184922827810_fd, cmd const[2355], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2355_1(fd fd_14657695184922827810_fd, cmd const[2355], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2355_2(fd fd_14657695184922827810_fd, cmd const[2355], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2355_3(fd fd_14657695184922827810_fd, cmd const[2355], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2356(fd fd_14657695184922827810_fd, cmd const[2356], arg ptr[in, array[int8]])
+ioctl$syz_describe_14657695184922827810_2357(fd fd_14657695184922827810_fd, cmd const[2357], arg ptr[in, array[int8]])
+ioctl$syz_describe_14657695184922827810_1074006315(fd fd_14657695184922827810_fd, cmd const[1074006315], arg ptr[in, array[int8]])
+ioctl$syz_describe_14657695184922827810_1074530608(fd fd_14657695184922827810_fd, cmd const[1074530608], arg ptr[in, array[int8]])
+ioctl$syz_describe_14657695184922827810_1075054881_0(fd fd_14657695184922827810_fd, cmd const[1075054881], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_1075054881_1(fd fd_14657695184922827810_fd, cmd const[1075054881], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_1075054881_2(fd fd_14657695184922827810_fd, cmd const[1075054881], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_1075054881_3(fd fd_14657695184922827810_fd, cmd const[1075054881], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_1078462755_0(fd fd_14657695184922827810_fd, cmd const[1078462755], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_1078462755_1(fd fd_14657695184922827810_fd, cmd const[1078462755], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_1078462755_2(fd fd_14657695184922827810_fd, cmd const[1078462755], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_1078462755_3(fd fd_14657695184922827810_fd, cmd const[1078462755], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148272400_0(fd fd_14657695184922827810_fd, cmd const[2148272400], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148272400_1(fd fd_14657695184922827810_fd, cmd const[2148272400], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148272400_2(fd fd_14657695184922827810_fd, cmd const[2148272400], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148272400_3(fd fd_14657695184922827810_fd, cmd const[2148272400], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148796690_0(fd fd_14657695184922827810_fd, cmd const[2148796690], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148796690_1(fd fd_14657695184922827810_fd, cmd const[2148796690], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148796690_2(fd fd_14657695184922827810_fd, cmd const[2148796690], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2148796690_3(fd fd_14657695184922827810_fd, cmd const[2148796690], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2152204561_0(fd fd_14657695184922827810_fd, cmd const[2152204561], arg ptr[out, struct_uid_gid_extent_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2152204561_1(fd fd_14657695184922827810_fd, cmd const[2152204561], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2152204561_2(fd fd_14657695184922827810_fd, cmd const[2152204561], arg ptr[inout, struct_mdu_disk_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2152204561_3(fd fd_14657695184922827810_fd, cmd const[2152204561], arg ptr[inout, struct_mdu_array_info_s_14657695184922827810])
+ioctl$syz_describe_14657695184922827810_2415921429_0(fd fd_14657695184922827810_fd, cmd const[2415921429], arg ptr[out, struct_mdu_bitmap_file_s_14657695184922827810])
 
-struct_uid_gid_extent_13804708546037006228 {
+struct_uid_gid_extent_14657695184922827810 {
     field_0    int32
     field_1    int32
     field_2    int32
 }
-struct_mdu_disk_info_s_13804708546037006228 {
+struct_mdu_disk_info_s_14657695184922827810 {
     field_0    int32
     field_1    int32
     field_2    int32
     field_3    int32
     field_4    int32
 }
-struct_mdu_array_info_s_13804708546037006228 {
+struct_mdu_array_info_s_14657695184922827810 {
     field_0    int32
     field_1    int32
     field_2    int32
@@ -225,6 +190,6 @@ struct_mdu_array_info_s_13804708546037006228 {
     field_16    int32
     field_17    int32
 }
-struct_mdu_bitmap_file_s_13804708546037006228 {
+struct_mdu_bitmap_file_s_14657695184922827810 {
     field_0    array[int8, 4096]
 }

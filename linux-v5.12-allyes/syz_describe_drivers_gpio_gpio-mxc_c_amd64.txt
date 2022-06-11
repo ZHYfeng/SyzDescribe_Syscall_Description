@@ -20,69 +20,60 @@ meta arches["amd64"]
 # find handler open: gpio_chrdev_open
 # find handler read: lineinfo_watch_read
 
-resource fd_11533483689521290910_fd[fd]
+resource fd_390885847841144746_fd[fd]
 
-# device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-sysfs.c#L638
-# not get correct value for this device file name
 # device file name in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib.c#L610
-syz_open_dev$syz_describe_11533483689521290910_open_0(dev ptr[in, string["/dev/gpiochip#"]], id intptr, flags flags[open_flags]) fd_11533483689521290910_fd
+syz_open_dev$syz_describe_390885847841144746_open_0(dev ptr[in, string["/dev/gpiochip#"]], id intptr, flags flags[open_flags]) fd_390885847841144746_fd
 
-ioctl$syz_describe_11533483689521290910_2151986177_0(fd fd_11533483689521290910_fd, cmd const[2151986177], arg ptr[out, struct_gpiochip_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3221533708_0(fd fd_11533483689521290910_fd, cmd const[3221533708], arg ptr[in, int32])
-ioctl$syz_describe_11533483689521290910_3224417284_0(fd fd_11533483689521290910_fd, cmd const[3224417284], arg ptr[in, struct_gpioevent_request_11533483689521290910]) fd_11533483689521290910_cmd_3224417284_fd
-ioctl$syz_describe_11533483689521290910_3224417284_1(fd fd_11533483689521290910_fd, cmd const[3224417284], arg ptr[out, struct_gpioevent_request_11533483689521290910]) fd_11533483689521290910_cmd_3224417284_fd
-ioctl$syz_describe_11533483689521290910_3225990146_0(fd fd_11533483689521290910_fd, cmd const[3225990146], arg ptr[in, struct_gpioline_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3225990146_1(fd fd_11533483689521290910_fd, cmd const[3225990146], arg ptr[out, struct_gpioline_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3225990155_0(fd fd_11533483689521290910_fd, cmd const[3225990155], arg ptr[in, struct_gpioline_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3225990155_1(fd fd_11533483689521290910_fd, cmd const[3225990155], arg ptr[out, struct_gpioline_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3238048773_0(fd fd_11533483689521290910_fd, cmd const[3238048773], arg ptr[in, struct_gpio_v2_line_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3238048773_1(fd fd_11533483689521290910_fd, cmd const[3238048773], arg ptr[out, struct_gpio_v2_line_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3238048774_0(fd fd_11533483689521290910_fd, cmd const[3238048774], arg ptr[in, struct_gpio_v2_line_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3238048774_1(fd fd_11533483689521290910_fd, cmd const[3238048774], arg ptr[out, struct_gpio_v2_line_info_11533483689521290910])
-ioctl$syz_describe_11533483689521290910_3245126659_0(fd fd_11533483689521290910_fd, cmd const[3245126659], arg ptr[in, struct_gpiohandle_request_11533483689521290910]) fd_11533483689521290910_cmd_3245126659_fd
-ioctl$syz_describe_11533483689521290910_3245126659_1(fd fd_11533483689521290910_fd, cmd const[3245126659], arg ptr[out, struct_gpiohandle_request_11533483689521290910]) fd_11533483689521290910_cmd_3245126659_fd
-ioctl$syz_describe_11533483689521290910_3260068871_0(fd fd_11533483689521290910_fd, cmd const[3260068871], arg ptr[in, struct_gpio_v2_line_request_11533483689521290910]) fd_11533483689521290910_cmd_3260068871_fd
-ioctl$syz_describe_11533483689521290910_3260068871_1(fd fd_11533483689521290910_fd, cmd const[3260068871], arg ptr[out, struct_gpio_v2_line_request_11533483689521290910]) fd_11533483689521290910_cmd_3260068871_fd
+ioctl$syz_describe_390885847841144746_2151986177_0(fd fd_390885847841144746_fd, cmd const[2151986177], arg ptr[out, struct_gpiochip_info_390885847841144746])
+ioctl$syz_describe_390885847841144746_3221533708_0(fd fd_390885847841144746_fd, cmd const[3221533708], arg ptr[in, int32])
+ioctl$syz_describe_390885847841144746_3224417284_0(fd fd_390885847841144746_fd, cmd const[3224417284], arg ptr[inout, struct_gpioevent_request_390885847841144746]) fd_9522042247493404486_cmd_3224417284_fd
+ioctl$syz_describe_390885847841144746_3225990146_0(fd fd_390885847841144746_fd, cmd const[3225990146], arg ptr[inout, struct_gpioline_info_390885847841144746])
+ioctl$syz_describe_390885847841144746_3225990155_0(fd fd_390885847841144746_fd, cmd const[3225990155], arg ptr[inout, struct_gpioline_info_390885847841144746])
+ioctl$syz_describe_390885847841144746_3238048773_0(fd fd_390885847841144746_fd, cmd const[3238048773], arg ptr[inout, struct_gpio_v2_line_info_390885847841144746])
+ioctl$syz_describe_390885847841144746_3238048774_0(fd fd_390885847841144746_fd, cmd const[3238048774], arg ptr[inout, struct_gpio_v2_line_info_390885847841144746])
+ioctl$syz_describe_390885847841144746_3245126659_0(fd fd_390885847841144746_fd, cmd const[3245126659], arg ptr[inout, struct_gpiohandle_request_390885847841144746]) fd_9994413514307671487_cmd_3245126659_fd
+ioctl$syz_describe_390885847841144746_3260068871_0(fd fd_390885847841144746_fd, cmd const[3260068871], arg ptr[inout, struct_gpio_v2_line_request_390885847841144746]) fd_18125913789635924382_cmd_3260068871_fd
 
-union_anon_0_11533483689521290910 {
+union_anon_0_390885847841144746 {
     field_0    int64
 }
-struct_gpio_v2_line_attribute_11533483689521290910 {
+struct_gpio_v2_line_attribute_390885847841144746 {
     field_0    int32
     field_1    int32
-    field_2    union_anon_0_11533483689521290910
+    field_2    union_anon_0_390885847841144746
 }
-struct_gpio_v2_line_info_11533483689521290910 {
+struct_gpio_v2_line_info_390885847841144746 {
     field_0    array[int8, 32]
     field_1    array[int8, 32]
     field_2    int32
     field_3    int32
     field_4    int64
-    field_5    array[struct_gpio_v2_line_attribute_11533483689521290910, 10]
+    field_5    array[struct_gpio_v2_line_attribute_390885847841144746, 10]
     field_6    array[int32, 4]
 }
-struct_gpio_v2_line_config_attribute_11533483689521290910 {
-    field_0    struct_gpio_v2_line_attribute_11533483689521290910
+struct_gpio_v2_line_config_attribute_390885847841144746 {
+    field_0    struct_gpio_v2_line_attribute_390885847841144746
     field_1    int64
 }
-struct_gpio_v2_line_config_11533483689521290910 {
+struct_gpio_v2_line_config_390885847841144746 {
     field_0    int64
     field_1    int32
     field_2    array[int32, 5]
-    field_3    array[struct_gpio_v2_line_config_attribute_11533483689521290910, 10]
+    field_3    array[struct_gpio_v2_line_config_attribute_390885847841144746, 10]
 }
-struct_gpioline_info_11533483689521290910 {
+struct_gpioline_info_390885847841144746 {
     field_0    int32
     field_1    int32
     field_2    array[int8, 32]
     field_3    array[int8, 32]
 }
-struct_gpiochip_info_11533483689521290910 {
+struct_gpiochip_info_390885847841144746 {
     field_0    array[int8, 32]
     field_1    array[int8, 32]
     field_2    int32
 }
-struct_gpiohandle_request_11533483689521290910 {
+struct_gpiohandle_request_390885847841144746 {
     field_0    array[int32, 64]
     field_1    int32
     field_2    array[int8, 64]
@@ -90,126 +81,24 @@ struct_gpiohandle_request_11533483689521290910 {
     field_4    int32
     field_5    int32
 }
-struct_gpioevent_request_11533483689521290910 {
+struct_gpioevent_request_390885847841144746 {
     field_0    int32
     field_1    int32
     field_2    int32
     field_3    array[int8, 32]
     field_4    int32
 }
-struct_gpio_v2_line_request_11533483689521290910 {
+struct_gpio_v2_line_request_390885847841144746 {
     field_0    array[int32, 64]
     field_1    array[int8, 32]
-    field_2    struct_gpio_v2_line_config_11533483689521290910
+    field_2    struct_gpio_v2_line_config_390885847841144746
     field_3    int32
     field_4    int32
     field_5    array[int32, 5]
     field_6    int32
 }
-# driver found at module init function gpio_mxc_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L544
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L548
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L439
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-devres.c#L510
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib.c#L751
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib.c#L502
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2360
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2121
-# 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1816
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1816
-# find handler ioctl: lineevent_ioctl
-# find handler read: lineevent_read
-
-resource fd_1531456048712533871_fd[fd]
-
-# non open fd
-
-ioctl$syz_describe_1531456048712533871_3225465864_0(fd fd_1531456048712533871_fd, cmd const[3225465864], arg ptr[out, struct_gpiohandle_data_1531456048712533871])
-
-struct_gpiohandle_data_1531456048712533871 {
-    field_0    array[int8, 64]
-}
-# driver found at module init function gpio_mxc_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L544
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L548
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L439
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-devres.c#L510
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib.c#L751
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib.c#L502
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2360
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2119
-# 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L372
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L372
-# find handler ioctl: linehandle_ioctl
-
-resource fd_15401564445353242316_fd[fd]
-
-# non open fd
-
-ioctl$syz_describe_15401564445353242316_3225465864_0(fd fd_15401564445353242316_fd, cmd const[3225465864], arg ptr[out, struct_gpiohandle_data_15401564445353242316])
-ioctl$syz_describe_15401564445353242316_3225465865_0(fd fd_15401564445353242316_fd, cmd const[3225465865], arg ptr[in, struct_gpiohandle_data_15401564445353242316])
-ioctl$syz_describe_15401564445353242316_3225465865_1(fd fd_15401564445353242316_fd, cmd const[3225465865], arg ptr[in, struct_gpiohandle_config_15401564445353242316])
-ioctl$syz_describe_15401564445353242316_3225465865_2(fd fd_15401564445353242316_fd, cmd const[3225465865], arg ptr[out, struct_gpiohandle_data_15401564445353242316])
-ioctl$syz_describe_15401564445353242316_3226776586_0(fd fd_15401564445353242316_fd, cmd const[3226776586], arg ptr[in, struct_gpiohandle_config_15401564445353242316])
-
-struct_gpiohandle_data_15401564445353242316 {
-    field_0    array[int8, 64]
-}
-struct_gpiohandle_config_15401564445353242316 {
-    field_0    int32
-    field_1    array[int8, 64]
-    field_2    array[int32, 4]
-}
-# driver found at module init function gpio_mxc_init() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L544
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L548
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpio-mxc.c#L439
-# 02: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-devres.c#L510
-# 03: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib.c#L751
-# 04: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib.c#L502
-# 05: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2360
-# 06: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2132
-# 07: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1427
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1427
-# find handler ioctl: linereq_ioctl
-# find handler read: linereq_read
-
-resource fd_7906613510539341366_fd[fd]
-
-# non open fd
-
-ioctl$syz_describe_7906613510539341366_3222320142_0(fd fd_7906613510539341366_fd, cmd const[3222320142], arg ptr[in, struct_cpu_itimer_7906613510539341366])
-ioctl$syz_describe_7906613510539341366_3222320142_1(fd fd_7906613510539341366_fd, cmd const[3222320142], arg ptr[out, struct_cpu_itimer_7906613510539341366])
-ioctl$syz_describe_7906613510539341366_3222320143_0(fd fd_7906613510539341366_fd, cmd const[3222320143], arg ptr[in, struct_cpu_itimer_7906613510539341366])
-ioctl$syz_describe_7906613510539341366_3239097357_0(fd fd_7906613510539341366_fd, cmd const[3239097357], arg ptr[in, struct_gpio_v2_line_config_7906613510539341366])
-
-union_anon_0_7906613510539341366 {
-    field_0    int64
-}
-struct_cpu_itimer_7906613510539341366 {
-    field_0    int64
-    field_1    int64
-}
-struct_gpio_v2_line_attribute_7906613510539341366 {
-    field_0    int32
-    field_1    int32
-    field_2    union_anon_0_7906613510539341366
-}
-struct_gpio_v2_line_config_attribute_7906613510539341366 {
-    field_0    struct_gpio_v2_line_attribute_7906613510539341366
-    field_1    int64
-}
-struct_gpio_v2_line_config_7906613510539341366 {
-    field_0    int64
-    field_1    int32
-    field_2    array[int32, 5]
-    field_3    array[struct_gpio_v2_line_config_attribute_7906613510539341366, 10]
-}
 # driver found at (not module init) function gpio_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2104
-# parent id hash: 11533483689521290910
+# parent id hash: 390885847841144746
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2119
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L372
@@ -217,45 +106,25 @@ struct_gpio_v2_line_config_7906613510539341366 {
 # syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L372
 # find handler ioctl: linehandle_ioctl
 
-resource fd_11533483689521290910_cmd_3245126659_fd[fd]
+resource fd_9994413514307671487_cmd_3245126659_fd[fd]
 
 # non open fd
 
-ioctl$syz_describe_8575219122296088502_3225465864_0(fd fd_11533483689521290910_cmd_3245126659_fd, cmd const[3225465864], arg ptr[out, struct_gpiohandle_data_8575219122296088502])
-ioctl$syz_describe_8575219122296088502_3225465865_0(fd fd_11533483689521290910_cmd_3245126659_fd, cmd const[3225465865], arg ptr[in, struct_gpiohandle_data_8575219122296088502])
-ioctl$syz_describe_8575219122296088502_3225465865_1(fd fd_11533483689521290910_cmd_3245126659_fd, cmd const[3225465865], arg ptr[in, struct_gpiohandle_config_8575219122296088502])
-ioctl$syz_describe_8575219122296088502_3225465865_2(fd fd_11533483689521290910_cmd_3245126659_fd, cmd const[3225465865], arg ptr[out, struct_gpiohandle_data_8575219122296088502])
-ioctl$syz_describe_8575219122296088502_3226776586_0(fd fd_11533483689521290910_cmd_3245126659_fd, cmd const[3226776586], arg ptr[in, struct_gpiohandle_config_8575219122296088502])
+ioctl$syz_describe_9994413514307671487_3225465864_0(fd fd_9994413514307671487_cmd_3245126659_fd, cmd const[3225465864], arg ptr[out, struct_gpiohandle_data_9994413514307671487])
+ioctl$syz_describe_9994413514307671487_3225465865_0(fd fd_9994413514307671487_cmd_3245126659_fd, cmd const[3225465865], arg ptr[in, struct_gpiohandle_config_9994413514307671487])
+ioctl$syz_describe_9994413514307671487_3225465865_1(fd fd_9994413514307671487_cmd_3245126659_fd, cmd const[3225465865], arg ptr[inout, struct_gpiohandle_data_9994413514307671487])
+ioctl$syz_describe_9994413514307671487_3226776586_0(fd fd_9994413514307671487_cmd_3245126659_fd, cmd const[3226776586], arg ptr[in, struct_gpiohandle_config_9994413514307671487])
 
-struct_gpiohandle_data_8575219122296088502 {
+struct_gpiohandle_data_9994413514307671487 {
     field_0    array[int8, 64]
 }
-struct_gpiohandle_config_8575219122296088502 {
+struct_gpiohandle_config_9994413514307671487 {
     field_0    int32
     field_1    array[int8, 64]
     field_2    array[int32, 4]
 }
 # driver found at (not module init) function gpio_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2104
-# parent id hash: 11533483689521290910
-# call chain: 
-# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2121
-# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1816
-
-# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1816
-# find handler ioctl: lineevent_ioctl
-# find handler read: lineevent_read
-
-resource fd_11533483689521290910_cmd_3224417284_fd[fd]
-
-# non open fd
-
-ioctl$syz_describe_6749474390154702533_3225465864_0(fd fd_11533483689521290910_cmd_3224417284_fd, cmd const[3225465864], arg ptr[out, struct_gpiohandle_data_6749474390154702533])
-
-struct_gpiohandle_data_6749474390154702533 {
-    field_0    array[int8, 64]
-}
-# driver found at (not module init) function gpio_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2104
-# parent id hash: 11533483689521290910
+# parent id hash: 390885847841144746
 # call chain: 
 # 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2132
 # 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1427
@@ -264,34 +133,52 @@ struct_gpiohandle_data_6749474390154702533 {
 # find handler ioctl: linereq_ioctl
 # find handler read: linereq_read
 
-resource fd_11533483689521290910_cmd_3260068871_fd[fd]
+resource fd_18125913789635924382_cmd_3260068871_fd[fd]
 
 # non open fd
 
-ioctl$syz_describe_999545403529848300_3222320142_0(fd fd_11533483689521290910_cmd_3260068871_fd, cmd const[3222320142], arg ptr[in, struct_cpu_itimer_999545403529848300])
-ioctl$syz_describe_999545403529848300_3222320142_1(fd fd_11533483689521290910_cmd_3260068871_fd, cmd const[3222320142], arg ptr[out, struct_cpu_itimer_999545403529848300])
-ioctl$syz_describe_999545403529848300_3222320143_0(fd fd_11533483689521290910_cmd_3260068871_fd, cmd const[3222320143], arg ptr[in, struct_cpu_itimer_999545403529848300])
-ioctl$syz_describe_999545403529848300_3239097357_0(fd fd_11533483689521290910_cmd_3260068871_fd, cmd const[3239097357], arg ptr[in, struct_gpio_v2_line_config_999545403529848300])
+ioctl$syz_describe_18125913789635924382_3222320142_0(fd fd_18125913789635924382_cmd_3260068871_fd, cmd const[3222320142], arg ptr[inout, struct_cpu_itimer_18125913789635924382])
+ioctl$syz_describe_18125913789635924382_3222320143_0(fd fd_18125913789635924382_cmd_3260068871_fd, cmd const[3222320143], arg ptr[in, struct_cpu_itimer_18125913789635924382])
+ioctl$syz_describe_18125913789635924382_3239097357_0(fd fd_18125913789635924382_cmd_3260068871_fd, cmd const[3239097357], arg ptr[in, struct_gpio_v2_line_config_18125913789635924382])
 
-union_anon_0_999545403529848300 {
+union_anon_0_18125913789635924382 {
     field_0    int64
 }
-struct_cpu_itimer_999545403529848300 {
+struct_cpu_itimer_18125913789635924382 {
     field_0    int64
     field_1    int64
 }
-struct_gpio_v2_line_attribute_999545403529848300 {
+struct_gpio_v2_line_attribute_18125913789635924382 {
     field_0    int32
     field_1    int32
-    field_2    union_anon_0_999545403529848300
+    field_2    union_anon_0_18125913789635924382
 }
-struct_gpio_v2_line_config_attribute_999545403529848300 {
-    field_0    struct_gpio_v2_line_attribute_999545403529848300
+struct_gpio_v2_line_config_attribute_18125913789635924382 {
+    field_0    struct_gpio_v2_line_attribute_18125913789635924382
     field_1    int64
 }
-struct_gpio_v2_line_config_999545403529848300 {
+struct_gpio_v2_line_config_18125913789635924382 {
     field_0    int64
     field_1    int32
     field_2    array[int32, 5]
-    field_3    array[struct_gpio_v2_line_config_attribute_999545403529848300, 10]
+    field_3    array[struct_gpio_v2_line_config_attribute_18125913789635924382, 10]
+}
+# driver found at (not module init) function gpio_ioctl() in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2104
+# parent id hash: 390885847841144746
+# call chain: 
+# 00: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L2121
+# 01: https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1816
+
+# syscalls handler structure in https://elixir.bootlin.com/linux/v5.12/source/drivers/gpio/gpiolib-cdev.c#L1816
+# find handler ioctl: lineevent_ioctl
+# find handler read: lineevent_read
+
+resource fd_9522042247493404486_cmd_3224417284_fd[fd]
+
+# non open fd
+
+ioctl$syz_describe_9522042247493404486_3225465864_0(fd fd_9522042247493404486_cmd_3224417284_fd, cmd const[3225465864], arg ptr[out, struct_gpiohandle_data_9522042247493404486])
+
+struct_gpiohandle_data_9522042247493404486 {
+    field_0    array[int8, 64]
 }

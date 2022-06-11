@@ -15,27 +15,28 @@ meta arches["amd64"]
 # find handler ioctl: tap_ioctl
 # find handler open: tap_open
 
-resource fd_6006552226987258486_fd[fd]
+resource fd_15077318927717942580_fd[fd]
 
 # not get possible device file name
+openat$syz_describe_15077318927717942580_open_0(fd const[AT_FDCWD], file ptr[in, string["/dev/incorrect_device_file_name"]], flags flags[open_flags], mode const[0]) fd_15077318927717942580_fd
 
-ioctl$syz_describe_6006552226987258486_35108_0(fd fd_6006552226987258486_fd, cmd const[35108], arg ptr[in, struct_sockaddr_6006552226987258486])
-ioctl$syz_describe_6006552226987258486_35111_0(fd fd_6006552226987258486_fd, cmd const[35111], arg array[int8, 16])
-ioctl$syz_describe_6006552226987258486_35111_1(fd fd_6006552226987258486_fd, cmd const[35111], arg ptr[out, struct_sockaddr_6006552226987258486])
-ioctl$syz_describe_6006552226987258486_1074025674(fd fd_6006552226987258486_fd, cmd const[1074025674], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_1074025680(fd fd_6006552226987258486_fd, cmd const[1074025680], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_1074025684(fd fd_6006552226987258486_fd, cmd const[1074025684], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_1074025688(fd fd_6006552226987258486_fd, cmd const[1074025688], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_1074025689(fd fd_6006552226987258486_fd, cmd const[1074025689], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_1074025692(fd fd_6006552226987258486_fd, cmd const[1074025692], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_1074025694(fd fd_6006552226987258486_fd, cmd const[1074025694], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_2147767503(fd fd_6006552226987258486_fd, cmd const[2147767503], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_2147767506_0(fd fd_6006552226987258486_fd, cmd const[2147767506], arg array[int8, 16])
-ioctl$syz_describe_6006552226987258486_2147767511(fd fd_6006552226987258486_fd, cmd const[2147767511], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_2147767517(fd fd_6006552226987258486_fd, cmd const[2147767517], arg ptr[in, array[int8]])
-ioctl$syz_describe_6006552226987258486_2147767519(fd fd_6006552226987258486_fd, cmd const[2147767519], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_35108_0(fd fd_15077318927717942580_fd, cmd const[35108], arg ptr[in, struct_sockaddr_15077318927717942580])
+ioctl$syz_describe_15077318927717942580_35111_0(fd fd_15077318927717942580_fd, cmd const[35111], arg ptr[out, array[int8, 16]])
+ioctl$syz_describe_15077318927717942580_35111_1(fd fd_15077318927717942580_fd, cmd const[35111], arg ptr[out, struct_sockaddr_15077318927717942580])
+ioctl$syz_describe_15077318927717942580_1074025674(fd fd_15077318927717942580_fd, cmd const[1074025674], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_1074025680(fd fd_15077318927717942580_fd, cmd const[1074025680], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_1074025684(fd fd_15077318927717942580_fd, cmd const[1074025684], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_1074025688(fd fd_15077318927717942580_fd, cmd const[1074025688], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_1074025689(fd fd_15077318927717942580_fd, cmd const[1074025689], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_1074025692(fd fd_15077318927717942580_fd, cmd const[1074025692], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_1074025694(fd fd_15077318927717942580_fd, cmd const[1074025694], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_2147767503(fd fd_15077318927717942580_fd, cmd const[2147767503], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_2147767506_0(fd fd_15077318927717942580_fd, cmd const[2147767506], arg ptr[out, array[int8, 16]])
+ioctl$syz_describe_15077318927717942580_2147767511(fd fd_15077318927717942580_fd, cmd const[2147767511], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_2147767517(fd fd_15077318927717942580_fd, cmd const[2147767517], arg ptr[in, array[int8]])
+ioctl$syz_describe_15077318927717942580_2147767519(fd fd_15077318927717942580_fd, cmd const[2147767519], arg ptr[in, array[int8]])
 
-struct_sockaddr_6006552226987258486 {
+struct_sockaddr_15077318927717942580 {
     field_0    int16
     field_1    array[int8, 14]
 }
