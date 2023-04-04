@@ -45,12 +45,12 @@ ioctl$syz_describe_17228226188400824030_3223092226_0(fd fd_17228226188400824030_
 # syscalls handler structure in https://elixir.bootlin.com/linux/v6.2/source/drivers/media/mc/mc-request.c#L312
 # find handler ioctl: media_request_ioctl
 
-resource not_find_non_open_parent[fd]
+# resource not_find_non_open_parent[fd]
 
 # non open fd
 
-ioctl$syz_describe_15750223979665554675_31872(fd not_find_non_open_parent, cmd const[31872], arg ptr[in, array[int8]])
-ioctl$syz_describe_15750223979665554675_31873(fd not_find_non_open_parent, cmd const[31873], arg ptr[in, array[int8]])
+# ioctl$syz_describe_15750223979665554675_31872(fd not_find_non_open_parent, cmd const[31872], arg ptr[in, array[int8]])
+# ioctl$syz_describe_15750223979665554675_31873(fd not_find_non_open_parent, cmd const[31873], arg ptr[in, array[int8]])
 
 # driver found at module init function media_ioctl() in https://elixir.bootlin.com/linux/v6.2/source/drivers/media/mc/mc-devnode.c#L122
 # parent id hash: 17228226188400824030
@@ -67,6 +67,6 @@ ioctl$syz_describe_15750223979665554675_31873(fd not_find_non_open_parent, cmd c
 
 # non open fd
 
-ioctl$syz_describe_17317038584003692536_31872(fd not_find_non_open_parent, cmd const[31872], arg ptr[in, array[int8]])
-ioctl$syz_describe_17317038584003692536_31873(fd not_find_non_open_parent, cmd const[31873], arg ptr[in, array[int8]])
+# ioctl$syz_describe_17317038584003692536_31872(fd not_find_non_open_parent, cmd const[31872], arg ptr[in, array[int8]])
+# ioctl$syz_describe_17317038584003692536_31873(fd not_find_non_open_parent, cmd const[31873], arg ptr[in, array[int8]])
 
